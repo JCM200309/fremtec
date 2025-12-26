@@ -91,7 +91,7 @@ const IndustrialPage: React.FC = () => {
               <p className="text-gray-500">Soluciones de riego y extracción para el sector agropecuario.</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="/fotos/fotos-tio/paneles-industriales.jpeg" className="w-full h-72 object-cover rounded-[40px] mb-8 shadow-xl" alt="Estacion Solar" />
+              <img src="/fotos/fotos-tio/paneles-industrial.jpeg" className="w-full h-72 object-cover rounded-[40px] mb-8 shadow-xl" alt="Estacion Solar" />
               <h3 className="text-2xl font-bold mb-2">Estaciones de Carga</h3>
               <p className="text-gray-500">Carga de dispositivos en espacios públicos y privados.</p>
             </div>
