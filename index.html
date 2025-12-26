@@ -16,10 +16,9 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#36aba1", // Teal from logo
-                        "secondary": "#fbc02d", // Yellow from logo
-                        "background-light": "#f8fafd",
-                        "background-dark": "#101922",
+                        "primary": "#36aba1", // Teal
+                        "secondary": "#fbc02d", // Yellow
+                        "background-dark": "#0a1a1a", // Deep forest green from PDF
                     },
                     fontFamily: {
                         "display": ["Space Grotesk", "sans-serif"],
@@ -30,11 +29,11 @@
         }
     </script>
     <style>
-        body { font-family: 'Noto Sans', sans-serif; margin: 0; padding: 0; }
+        body { font-family: 'Noto Sans', sans-serif; margin: 0; padding: 0; background-color: #f8fafd; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .logo-text { color: #36aba1; letter-spacing: 0.15em; font-family: 'Space Grotesk', sans-serif; font-weight: 300; }
-        html { scroll-behavior: smooth; }
+        .decor-circle { position: absolute; border: 1px solid rgba(251, 192, 45, 0.3); border-radius: 50%; pointer-events: none; }
     </style>
 <script type="importmap">
 {
@@ -50,7 +49,8 @@
 }
 </script>
 </head>
-<body class="bg-background-light text-[#111418]">
+<body>
     <div id="root"></div>
+    <script type="module" src="/main.tsx"></script>
 </body>
 </html>
