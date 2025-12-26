@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Fremtec - Energía Solar Argentina",
+  "description": "Una plataforma moderna para soluciones fotovoltaicas residenciales e industriales en Argentina, con asistencia inteligente para el cálculo de eficiencia energética.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
