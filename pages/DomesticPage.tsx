@@ -1,16 +1,18 @@
 
 import React from 'react';
+import { useNavigate} from 'react-router-dom';
 import DomesticSolutions from '../components/DomesticSolutions';
 
 
 const DomesticPage: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col">
       {/* Sector Hero Hogar - Imagen: Domestica_hero.jpg */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-background-dark/30 z-10"></div>
         <img
-          src="/fotos/Casa ejemplo Domestica.jpg"
+          src="/fotos/fotos-tio/casa-aereo.jpeg"
           alt="Domestica_hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -43,6 +45,7 @@ const DomesticPage: React.FC = () => {
                 icon: "settings_input_antenna", 
                 desc: "Conectado a la red eléctrica. Ideal para reducir la factura de luz inyectando excedentes bajo la Ley 27.424.",
                 features: ["Ahorro directo", "Inyección a red", "Bajo mantenimiento"]
+                
               },
               { 
                 name: "Híbrido", 
@@ -72,8 +75,11 @@ const DomesticPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-4 rounded-2xl font-black transition-all ${system.active ? 'bg-secondary text-background-dark hover:brightness-110' : 'bg-primary text-white hover:bg-teal-700'}`}>
-                  Solicitar Presupuesto
+                <button 
+                  onClick={() => navigate('/presupuesto')}
+                  className={`w-full py-4 rounded-2xl font-black transition-all ${system.active ? 'bg-secondary text-background-dark hover:brightness-110' : 'bg-primary text-white hover:bg-teal-700'}`} link>
+                    Solicitar Presupuesto
+                  
                 </button>
               </div>
             ))}

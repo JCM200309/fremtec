@@ -8,7 +8,7 @@ const IndustrialPage: React.FC = () => {
       {/* Industrial Hero - Imagen: industria.jpg */}
       <section className="relative bg-background-dark py-40 px-6 text-white overflow-hidden">
         <div className="decor-circle w-[600px] h-[600px] -top-1/2 -left-40 opacity-20"></div>
-        <div className="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 opacity-40 bg-[url('/fotos/fotos-tio/industrial-header.jpeg')] bg-cover bg-center"></div>
         <div className="relative z-10 max-w-[1000px] mx-auto text-center">
           <span className="inline-block px-5 py-2 rounded-full bg-secondary/20 text-secondary border border-secondary/30 text-xs font-bold uppercase tracking-[0.2em] mb-8">Engineering & Efficiency Argentina</span>
           <h1 className="text-5xl md:text-8xl font-black mb-8 leading-tight tracking-tighter drop-shadow-lg">
@@ -91,7 +91,7 @@ const IndustrialPage: React.FC = () => {
               <p className="text-gray-500">Soluciones de riego y extracción para el sector agropecuario.</p>
             </div>
             <div className="flex flex-col items-center">
-              <img src="https://images.unsplash.com/photo-1594818379496-da1e345b0ded?auto=format&fit=crop&w=600&q=80" className="w-full h-72 object-cover rounded-[40px] mb-8 shadow-xl" alt="Estacion Solar" />
+              <img src="/fotos/fotos-tio/paneles-industriales.jpeg" className="w-full h-72 object-cover rounded-[40px] mb-8 shadow-xl" alt="Estacion Solar" />
               <h3 className="text-2xl font-bold mb-2">Estaciones de Carga</h3>
               <p className="text-gray-500">Carga de dispositivos en espacios públicos y privados.</p>
             </div>

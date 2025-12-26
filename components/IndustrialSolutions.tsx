@@ -1,7 +1,9 @@
 
 import React from 'react';
+import { useNavigate} from 'react-router-dom';
 
 const IndustrialSolutions: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <section id="industria" className="w-full py-24 px-6 bg-background-light">
       <div className="max-w-[1200px] mx-auto">
@@ -66,7 +68,9 @@ const IndustrialSolutions: React.FC = () => {
             <h3 className="text-white text-3xl font-bold mb-2">¿Tu empresa gasta mucho en energía?</h3>
             <p className="text-teal-50 text-lg">Realizamos auditorías energéticas gratuitas para proyectos industriales.</p>
           </div>
-          <button className="relative z-10 px-8 py-4 bg-secondary text-gray-900 font-bold rounded-xl hover:scale-105 transition-transform">
+          <button
+           onClick={() => navigate('/presupuesto')}
+          className="relative z-10 px-8 py-4 bg-secondary text-gray-900 font-bold rounded-xl hover:scale-105 transition-transform">
             Solicitar Auditoría
           </button>
           <div className="absolute right-0 top-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/4"></div>
