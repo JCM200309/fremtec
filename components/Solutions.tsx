@@ -10,7 +10,7 @@ const Solutions: React.FC = () => {
       title: "Soluciones Industriales",
       subtitle: "INDUSTRIA",
       description: "Maximice la eficiencia operativa y reduzca la huella de carbono de su empresa con parques solares a gran escala.",
-      image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/fotos/fotos-tio/industrial-centro.jpeg",
       icon: "factory",
       path: "/industrial",
       color: "primary"
@@ -19,7 +19,7 @@ const Solutions: React.FC = () => {
       title: "Soluciones Domésticas",
       subtitle: "HOGAR",
       description: "Independencia energética y ahorro significativo en su factura de luz residencial con kits de fácil instalación.",
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/fotos/fotos-tio/panel-domestico-index.jpeg",
       icon: "home",
       path: "/residencial",
       color: "secondary"
