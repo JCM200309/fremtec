@@ -2,6 +2,7 @@
 import React from 'react';
 import DomesticSolutions from '../components/DomesticSolutions';
 
+
 const DomesticPage: React.FC = () => {
   return (
     <div className="flex flex-col">
@@ -9,7 +10,7 @@ const DomesticPage: React.FC = () => {
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-background-dark/30 z-10"></div>
         <img 
-          src="../fotos/Casa ejemplo Domestica.jpg" 
+          src="../public/fotos/Casa ejemplo Domestica.jpg" 
           alt="Domestica_hero" 
           className="absolute inset-0 w-full h-full object-cover"
         />

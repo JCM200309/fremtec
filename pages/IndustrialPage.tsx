@@ -80,13 +80,13 @@ const IndustrialPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="flex flex-col items-center">
               {/* Imagen: termotanque */}
-              <img src="../fotos/termotanque.jpg" className="w-full h-72 object-cover rounded-[40px] mb-8 shadow-xl" alt="Termotanque Solar" />
+              <img src="../public/fotos/termotanque.jpg" className="w-full h-72 object-cover rounded-[40px] mb-8 shadow-xl" alt="Termotanque Solar" />
               <h3 className="text-2xl font-bold mb-2">Termotanques Industriales</h3>
               <p className="text-gray-500">Capacidad de alto rendimiento para consumos comerciales.</p>
             </div>
             <div className="flex flex-col items-center">
               {/* Imagen: bombeo_solar.jpg */}
-              <img src="../fotos/bombeo_solar.jpg" className="w-full h-72 object-cover rounded-[40px] mb-8 shadow-xl" alt="Bombeo Solar" />
+              <img src="../public/fotos/bombeo_solar.jpg" className="w-full h-72 object-cover rounded-[40px] mb-8 shadow-xl" alt="Bombeo Solar" />
               <h3 className="text-2xl font-bold mb-2">Bombeo Solar</h3>
               <p className="text-gray-500">Soluciones de riego y extracción para el sector agropecuario.</p>
             </div>
