@@ -42,9 +42,12 @@ const Navbar: React.FC = () => {
               FAQ
             </Link>
           </nav>
-          <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-teal-700 text-white text-sm font-bold transition-all shadow-md hover:shadow-lg whitespace-nowrap">
+          <Link 
+            to="/presupuesto"
+            className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-teal-700 text-white text-sm font-bold transition-all shadow-md hover:shadow-lg whitespace-nowrap"
+          >
             Solicitar Presupuesto
-          </button>
+          </Link>
         </div>
         
         {/* Mobile Menu Icon */}

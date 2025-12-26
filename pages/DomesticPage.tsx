@@ -5,19 +5,20 @@ import DomesticSolutions from '../components/DomesticSolutions';
 const DomesticPage: React.FC = () => {
   return (
     <div className="flex flex-col">
-      {/* Sector Hero Hogar */}
-      <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
+      {/* Sector Hero Hogar - Imagen: Domestica_hero.jpg */}
+      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-background-dark/30 z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1518005020250-675f0f0fd17b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
-          alt="Hogar Solar" 
+          src="https://images.unsplash.com/photo-1592833159155-c62df1b35624?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+          alt="Domestica_hero" 
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative z-20 text-center px-6 max-w-[900px]">
-          <h1 className="text-white text-5xl md:text-7xl font-black mb-6 leading-tight">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-background-dark text-xs font-black uppercase tracking-widest mb-6 shadow-xl">Hogar Sustentable</span>
+          <h1 className="text-white text-5xl md:text-7xl font-black mb-6 leading-tight drop-shadow-2xl">
             Tu Hogar, <span className="text-secondary">Tu Energía</span>
           </h1>
-          <p className="text-white/90 text-xl font-medium max-w-[600px] mx-auto">
+          <p className="text-white/95 text-xl font-medium max-w-[650px] mx-auto drop-shadow-md">
             Asesoramos y dimensionamos sistemas solares a medida para el confort de tu familia y el ahorro real.
           </p>
         </div>
@@ -27,11 +28,11 @@ const DomesticPage: React.FC = () => {
 
       {/* Tipos de Sistemas Residenciales */}
       <section className="bg-white py-24 px-6 relative overflow-hidden">
-        <div className="decor-circle w-[400px] h-[400px] -top-20 -right-20"></div>
+        <div className="decor-circle w-[400px] h-[400px] -top-20 -right-20 opacity-50"></div>
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 underline decoration-secondary decoration-4 underline-offset-8">Tecnología para tu Vivienda</h2>
-            <p className="text-gray-500 max-w-[600px] mx-auto">Nos especializamos en el diseño e instalación de sistemas adaptados a tus necesidades.</p>
+            <p className="text-gray-500 max-w-[600px] mx-auto">Nos especializamos en el diseño e instalación de sistemas adaptados a tus necesidades extraídas de nuestra experiencia en Argentina.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -39,24 +40,24 @@ const DomesticPage: React.FC = () => {
               { 
                 name: "On-Grid", 
                 icon: "settings_input_antenna", 
-                desc: "Conectado a la red eléctrica. Ideal para reducir la factura de luz inyectando excedentes (Ley 27.424).",
+                desc: "Conectado a la red eléctrica. Ideal para reducir la factura de luz inyectando excedentes bajo la Ley 27.424.",
                 features: ["Ahorro directo", "Inyección a red", "Bajo mantenimiento"]
               },
               { 
                 name: "Híbrido", 
                 icon: "battery_charging_full", 
                 active: true,
-                desc: "Lo mejor de ambos mundos: ahorro mediante la red y respaldo de baterías para cortes de suministro.",
-                features: ["Backup energético", "Gestión inteligente", "Seguridad 24/7"]
+                desc: "Backup energético mediante red y baterías. Seguridad ante cortes de suministro y gestión inteligente.",
+                features: ["Respaldo 24/7", "Máxima eficiencia", "Energía ininterrumpida"]
               },
               { 
                 name: "Off-Grid", 
                 icon: "power_off", 
-                desc: "Independencia total de la red eléctrica. Ideal para campos, zonas aisladas o casas de fin de semana.",
-                features: ["100% Autónomo", "Baterías ciclo profundo", "Zonas remotas"]
+                desc: "Independencia total. Ideal para zonas aisladas o campos donde la red no llega, con almacenamiento de alta capacidad.",
+                features: ["100% Autónomo", "Baterías de Litio", "Zonas remotas"]
               }
             ].map((system, i) => (
-              <div key={i} className={`group p-8 rounded-[40px] border-2 transition-all duration-300 flex flex-col ${system.active ? 'border-secondary bg-background-dark text-white' : 'border-gray-100 bg-white hover:border-primary'}`}>
+              <div key={i} className={`group p-8 rounded-[40px] border-2 transition-all duration-300 flex flex-col ${system.active ? 'border-secondary bg-background-dark text-white shadow-2xl scale-105' : 'border-gray-100 bg-white hover:border-primary'}`}>
                 <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 ${system.active ? 'bg-secondary text-background-dark' : 'bg-primary/10 text-primary'}`}>
                   <span className="material-symbols-outlined text-4xl">{system.icon}</span>
                 </div>
@@ -70,24 +71,12 @@ const DomesticPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-4 rounded-2xl font-black transition-all ${system.active ? 'bg-secondary text-background-dark hover:scale-105' : 'bg-primary text-white hover:bg-teal-700'}`}>
-                  Solicitar Dimensionamiento
+                <button className={`w-full py-4 rounded-2xl font-black transition-all ${system.active ? 'bg-secondary text-background-dark hover:brightness-110' : 'bg-primary text-white hover:bg-teal-700'}`}>
+                  Solicitar Presupuesto
                 </button>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Post-Venta Quote */}
-      <section className="py-24 px-6 bg-background-dark text-white text-center">
-        <div className="max-w-[800px] mx-auto">
-          <span className="text-secondary text-5xl font-display mb-8 block">“</span>
-          <p className="text-2xl md:text-3xl italic leading-relaxed mb-8">
-            Nuestra prioridad es que tengas una solución confiable, con ahorro real y soporte técnico de ingeniería cuando lo necesites.
-          </p>
-          <div className="h-1 w-20 bg-secondary mx-auto mb-6"></div>
-          <div className="uppercase tracking-[0.3em] text-xs font-bold text-gray-400">Garantía y Acompañamiento Fremtec</div>
         </div>
       </section>
     </div>

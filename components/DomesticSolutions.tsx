@@ -25,7 +25,7 @@ const DomesticSolutions: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {benefits.map((b, i) => (
-                <div key={i} className="flex flex-col gap-2 p-4 rounded-xl hover:bg-gray-50 transition-colors">
+                <div key={i} className="flex flex-col gap-2 p-4 rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100">
                   <span className="material-symbols-outlined text-primary text-3xl mb-1">{b.icon}</span>
                   <h4 className="font-bold text-[#111418]">{b.title}</h4>
                   <p className="text-gray-500 text-sm leading-relaxed">{b.desc}</p>
@@ -34,16 +34,17 @@ const DomesticSolutions: React.FC = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl">
+            <div className="aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl">
+              {/* Imagen: Casa ejemplo domestica.jpg */}
               <img 
-                src="https://images.unsplash.com/photo-1613665813446-82a78c44b8fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Instalación Residencial" 
+                src="https://images.unsplash.com/photo-1590060417650-cc30b6f95931?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                alt="Casa ejemplo domestica" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hidden md:block max-w-[200px]">
-              <div className="text-primary text-4xl font-black mb-1">0$</div>
-              <div className="text-gray-500 text-xs font-bold uppercase">Costo de mantenimiento anual estimado</div>
+            <div className="absolute -bottom-10 -left-10 bg-white p-10 rounded-[40px] shadow-2xl border border-gray-50 hidden md:block max-w-[280px]">
+              <div className="text-primary text-5xl font-black mb-2 italic">85%</div>
+              <div className="text-gray-900 text-sm font-bold uppercase tracking-widest">Ahorro promedio reportado por nuestros clientes</div>
             </div>
           </div>
         </div>

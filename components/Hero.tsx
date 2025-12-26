@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   const navigate = useNavigate();
@@ -21,17 +21,17 @@ const Hero: React.FC = () => {
           Soluciones fotovoltaicas de vanguardia para su hogar o industria. Reduzca costos y cuide el planeta con la tecnología de Fremtec.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
-          <button 
-            onClick={() => navigate('/residencial')} 
+          <Link 
+            to="/presupuesto" 
             className="flex items-center justify-center rounded-lg h-14 px-10 bg-primary hover:bg-teal-700 text-white text-lg font-bold shadow-lg transition-transform hover:scale-105 w-full sm:w-auto"
           >
-            Hogar Inteligente
-          </button>
+            Solicitar Presupuesto
+          </Link>
           <button 
             onClick={() => navigate('/industrial')} 
             className="flex items-center justify-center rounded-lg h-14 px-10 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white text-lg font-bold transition-all w-full sm:w-auto"
           >
-            Sector Industrial
+            Ver Proyectos
           </button>
         </div>
       </div>
