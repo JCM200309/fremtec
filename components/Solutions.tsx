@@ -1,7 +1,10 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Solutions: React.FC = () => {
+  const navigate = useNavigate();
+
   const solutions = [
     {
       title: "Soluciones Industriales",
@@ -9,7 +12,7 @@ const Solutions: React.FC = () => {
       description: "Maximice la eficiencia operativa y reduzca la huella de carbono de su empresa con parques solares a gran escala.",
       image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       icon: "factory",
-      anchor: "#industria",
+      path: "/industrial",
       color: "primary"
     },
     {
@@ -18,7 +21,7 @@ const Solutions: React.FC = () => {
       description: "Independencia energética y ahorro significativo en su factura de luz residencial con kits de fácil instalación.",
       image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       icon: "home",
-      anchor: "#domestica",
+      path: "/residencial",
       color: "secondary"
     }
   ];
@@ -49,13 +52,13 @@ const Solutions: React.FC = () => {
                 <p className="text-gray-600 mb-8 flex-1 leading-relaxed text-lg">
                   {sol.description}
                 </p>
-                <a 
-                  className={`inline-flex items-center font-bold transition-all group-hover:translate-x-2 ${sol.color === 'primary' ? 'text-primary' : 'text-secondary'}`} 
-                  href={sol.anchor}
+                <button 
+                  onClick={() => navigate(sol.path)}
+                  className={`inline-flex items-center font-bold transition-all group-hover:translate-x-2 text-left ${sol.color === 'primary' ? 'text-primary' : 'text-secondary'}`}
                 >
-                  Conocer más
+                  Ver soluciones completas
                   <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                </a>
+                </button>
               </div>
             </div>
           ))}
