@@ -19,20 +19,32 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Componente para animar el contenido de la página
+const PageWrapper: React.FC<{children: React.ReactNode}> = ({ children }) => {
+  const location = useLocation();
+  return (
+    <div key={location.pathname} className="animate-page-entry w-full">
+      {children}
+    </div>
+  );
+};
+
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen w-full overflow-x-hidden bg-[#f8fafd]">
         <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/residencial" element={<DomesticPage />} />
-            <Route path="/industrial" element={<IndustrialPage />} />
-            <Route path="/faq" element={<FAQPage />} />
-            <Route path="/presupuesto" element={<PresupuestoPage />} />
-          </Routes>
+        <main className="flex-grow flex flex-col items-center">
+          <PageWrapper>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/residencial" element={<DomesticPage />} />
+              <Route path="/industrial" element={<IndustrialPage />} />
+              <Route path="/faq" element={<FAQPage />} />
+              <Route path="/presupuesto" element={<PresupuestoPage />} />
+            </Routes>
+          </PageWrapper>
         </main>
         <Footer />
       </div>
