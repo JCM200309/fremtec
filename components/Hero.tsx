@@ -1,44 +1,61 @@
 
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const Hero: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative w-full h-[600px] md:h-[680px] flex items-center justify-center bg-cover bg-center overflow-hidden"
+    <section className="relative w-full h-[700px] md:h-[850px] flex items-center justify-center bg-cover bg-center overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`
+        backgroundImage: `linear-gradient(rgba(10, 26, 26, 0.45) 0%, rgba(10, 26, 26, 0.85) 100%), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`
       }}>
-      <div className="container px-4 md:px-6 max-w-[1280px] text-center flex flex-col items-center gap-6 z-10">
-        <span className="bg-secondary/20 text-secondary backdrop-blur-sm border border-secondary/30 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider">
-          Energía Renovable Argentina
-        </span>
-        <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-black leading-tight tracking-[-0.033em] max-w-[900px]">
-          Energía Limpia para el Futuro de Argentina
+      
+      {/* Ornamentación geométrica de fondo */}
+      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+        <div className="decor-circle w-[800px] h-[800px] -top-96 -left-96"></div>
+        <div className="decor-circle w-[600px] h-[600px] -bottom-48 -right-48"></div>
+      </div>
+
+      <div className="container px-4 md:px-6 max-w-[1280px] text-center flex flex-col items-center z-10">
+        
+        {/* LOGO PROTAGONISTA */}
+        <div className="animate-brand-entry mb-12">
+          <Logo variant="hero" />
+        </div>
+
+        <div className="h-1 w-24 bg-secondary mb-10 rounded-full"></div>
+
+        <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-black leading-tight tracking-[-0.03em] max-w-[1000px] mb-8">
+          El Poder del Sol en <br className="hidden md:block" />
+          <span className="text-secondary italic">Tus Manos</span>
         </h1>
-        <p className="text-gray-200 text-lg md:text-xl font-normal leading-relaxed max-w-[720px]">
-          Soluciones fotovoltaicas de vanguardia para su hogar o industria. Reduzca costos y cuide el planeta con la tecnología de Fremtec.
+        
+        <p className="text-gray-200 text-lg md:text-2xl font-light leading-relaxed max-w-[720px] mb-12 border-l-2 border-secondary/30 pl-6">
+          Soluciones fotovoltaicas de alta ingeniería para el sector residencial e industrial de Argentina.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
+
+        <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
           <Link 
             to="/presupuesto" 
-            className="flex items-center justify-center rounded-lg h-14 px-10 bg-primary hover:bg-teal-700 text-white text-lg font-bold shadow-lg transition-transform hover:scale-105 w-full sm:w-auto"
+            className="flex items-center justify-center rounded-xl h-16 px-12 bg-primary hover:bg-teal-600 text-white text-lg font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto"
           >
-            Solicitar Presupuesto
+            Comenzar mi Proyecto
           </Link>
           <button 
             onClick={() => navigate('/industrial')} 
-            className="flex items-center justify-center rounded-lg h-14 px-10 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white text-lg font-bold transition-all w-full sm:w-auto"
+            className="flex items-center justify-center rounded-xl h-16 px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white text-lg font-medium transition-all w-full sm:w-auto"
           >
-            Ver Proyectos
+            Casos de Éxito
           </button>
         </div>
       </div>
       
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-white/50 text-xs uppercase tracking-widest mb-2 font-bold">Descubrir</span>
-        <span className="material-symbols-outlined text-white/50">keyboard_arrow_down</span>
+      {/* Indicador de scroll */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-40">
+        <span className="text-white text-[10px] uppercase tracking-[0.4em] mb-4 font-bold">Explorar Fremtec</span>
+        <div className="w-px h-16 bg-gradient-to-b from-secondary to-transparent"></div>
       </div>
     </section>
   );

@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <script>
         tailwind.config = {
@@ -18,22 +18,34 @@
                     colors: {
                         "primary": "#36aba1", // Teal
                         "secondary": "#fbc02d", // Yellow
-                        "background-dark": "#0a1a1a", // Deep forest green from PDF
+                        "background-dark": "#0a1a1a",
                     },
                     fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "body": ["Noto Sans", "sans-serif"],
+                        "display": ["Barlow", "sans-serif"],
+                        "body": ["Barlow", "sans-serif"],
                     }
                 },
             },
         }
     </script>
     <style>
-        body { font-family: 'Noto Sans', sans-serif; margin: 0; padding: 0; background-color: #f8fafd; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+        body { 
+            font-family: 'Barlow', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f8fafd; 
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Barlow', sans-serif; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .logo-text { color: #36aba1; letter-spacing: 0.15em; font-family: 'Space Grotesk', sans-serif; font-weight: 300; }
+        .logo-text { color: #36aba1; letter-spacing: 0.25em; font-family: 'Barlow', sans-serif; font-weight: 200; }
         .decor-circle { position: absolute; border: 1px solid rgba(251, 192, 45, 0.3); border-radius: 50%; pointer-events: none; }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-brand-entry { animation: fadeInDown 0.8s ease-out forwards; }
     </style>
 <script type="importmap">
 {
