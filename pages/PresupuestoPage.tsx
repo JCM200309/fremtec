@@ -1,8 +1,16 @@
-
 import React, { useState } from 'react';
 
+type FormData = {
+  name: string;
+  email: string;
+  phone: string;
+  location: string;
+  type: string;
+  details: string;
+};
+
 const PresupuestoPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
@@ -10,14 +18,60 @@ const PresupuestoPage: React.FC = () => {
     type: 'residencial',
     details: ''
   });
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMsg, setErrorMsg] = useState<string>('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    // Simular envío
-    setTimeout(() => setSubmitted(false), 5000);
+    setStatus('loading');
+    setErrorMsg('');
+
+    try {
+      const res = await fetch('/api/presupuesto', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        throw new Error(data?.error || 'No se pudo enviar la solicitud.');
+      }
+
+      setStatus('success');
+
+      // opcional: limpiar form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        location: '',
+        type: 'residencial',
+        details: ''
+      });
+
+      // volver a estado idle después de 5s (si querés)
+      setTimeout(() => setStatus('idle'), 5000);
+    } catch (err: any) {
+      setStatus('error');
+      setErrorMsg(err?.message || 'Error enviando el formulario.');
+      setTimeout(() => setStatus('idle'), 6000);
+    }
   };
+
+  const buttonText =
+    status === 'loading' ? 'Enviando...' :
+    status === 'success' ? '¡Solicitud Enviada!' :
+    status === 'error' ? 'Error al enviar' :
+    'Enviar Solicitud';
+
+  const buttonClass =
+    status === 'success' ? 'bg-green-500 text-white' :
+    status === 'error' ? 'bg-red-500 text-white' :
+    status === 'loading' ? 'bg-primary/80 text-white cursor-not-allowed' :
+    'bg-primary text-white hover:bg-teal-700 hover:scale-[1.02]';
 
   return (
     <div className="min-h-screen pt-20 pb-20 px-6">
@@ -25,65 +79,91 @@ const PresupuestoPage: React.FC = () => {
         <div className="text-center mb-16">
           <span className="text-primary font-bold uppercase tracking-widest text-sm">Cotización Online</span>
           <h1 className="text-4xl md:text-6xl font-black text-background-dark mt-4 mb-6">Solicitá tu Presupuesto</h1>
-          <p className="text-gray-500 text-xl max-w-[600px] mx-auto">Completá el formulario y uno de nuestros ingenieros te contactará para realizar un dimensionamiento a medida.</p>
+          <p className="text-gray-500 text-xl max-w-[600px] mx-auto">
+            Completá el formulario y uno de nuestros ingenieros te contactará para realizar un dimensionamiento a medida.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 bg-white p-8 md:p-12 rounded-[50px] shadow-2xl border border-gray-100">
           <div>
             <h2 className="text-2xl font-bold mb-8">Información del Proyecto</h2>
+
+            {/* Mensajito de error opcional */}
+            {status === 'error' && (
+              <div className="mb-6 p-4 rounded-2xl bg-red-50 border border-red-200 text-red-700">
+                {errorMsg || 'Hubo un problema enviando tu solicitud. Probá de nuevo.'}
+              </div>
+            )}
+
+            {/* Mensajito success opcional */}
+            {status === 'success' && (
+              <div className="mb-6 p-4 rounded-2xl bg-green-50 border border-green-200 text-green-700">
+                ¡Listo! Recibimos tu solicitud y te contactamos a la brevedad.
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Nombre Completo</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   required
                   className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
                   placeholder="Ej: Juan Pérez"
                   value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  disabled={status === 'loading'}
                 />
               </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">Email</label>
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     required
                     className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
                     placeholder="juan@ejemplo.com"
                     value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    disabled={status === 'loading'}
                   />
                 </div>
+
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">WhatsApp / Teléfono</label>
-                  <input 
-                    type="tel" 
+                  <input
+                    type="tel"
                     required
                     className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
                     placeholder="+54 9 11 ..."
                     value={formData.phone}
-                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    disabled={status === 'loading'}
                   />
                 </div>
               </div>
+
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Ubicación (Ciudad/Provincia)</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   required
                   className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
                   placeholder="Ej: CABA, Buenos Aires"
                   value={formData.location}
-                  onChange={(e) => setFormData({...formData, location: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                  disabled={status === 'loading'}
                 />
               </div>
+
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Tipo de Solución</label>
-                <select 
+                <select
                   className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
                   value={formData.type}
-                  onChange={(e) => setFormData({...formData, type: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                  disabled={status === 'loading'}
                 >
                   <option value="residencial">Residencial (Hogar)</option>
                   <option value="industrial">Industrial / Corporativo</option>
@@ -91,21 +171,25 @@ const PresupuestoPage: React.FC = () => {
                   <option value="otro">Otro</option>
                 </select>
               </div>
+
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Detalles del Proyecto / Consumo Mensual (kWh)</label>
-                <textarea 
+                <textarea
                   rows={4}
                   className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none resize-none"
                   placeholder="Contanos sobre tu necesidad energética..."
                   value={formData.details}
-                  onChange={(e) => setFormData({...formData, details: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, details: e.target.value })}
+                  disabled={status === 'loading'}
                 ></textarea>
               </div>
-              <button 
-                type="submit" 
-                className={`w-full py-5 rounded-2xl font-black text-lg transition-all shadow-xl ${submitted ? 'bg-green-500 text-white' : 'bg-primary text-white hover:bg-teal-700 hover:scale-[1.02]'}`}
+
+              <button
+                type="submit"
+                disabled={status === 'loading'}
+                className={`w-full py-5 rounded-2xl font-black text-lg transition-all shadow-xl ${buttonClass}`}
               >
-                {submitted ? '¡Solicitud Enviada!' : 'Enviar Solicitud'}
+                {buttonText}
               </button>
             </form>
           </div>
@@ -129,6 +213,7 @@ const PresupuestoPage: React.FC = () => {
                 ))}
               </div>
             </div>
+
             <div className="mt-12 pt-8 border-t border-white/10">
               <p className="text-secondary font-bold text-lg mb-4">Atención Inmediata</p>
               <div className="flex flex-col gap-3 text-gray-300">
@@ -142,6 +227,7 @@ const PresupuestoPage: React.FC = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

@@ -1,0 +1,3 @@
+1) Ver si es seguro la forma de mandar mails
+2) Tema dominio mas hosting en vercel
+3) Mejorar la visualizacion en mobile
