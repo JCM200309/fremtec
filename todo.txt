@@ -1,3 +1,12 @@
 1) Ver si es seguro la forma de mandar mails
 2) Tema dominio mas hosting en vercel
 3) Mejorar la visualizacion en mobile
+4) Limpiar archivos basura
+
+
+SEO:
+1) Mejorar Seo y Seo con IA
+2) Optimizar Imagenes y nombres (Tinipng)
+
+Proponer:
+1) Boton para Whatsapp

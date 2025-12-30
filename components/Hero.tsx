@@ -7,10 +7,12 @@ const Hero: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative w-full h-[750px] md:h-[90vh] flex items-center justify-center bg-cover bg-center overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(rgba(10, 26, 26, 0.45) 0%, rgba(10, 26, 26, 0.85) 100%), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`
-      }}>
+    <section
+  className="relative w-full h-[750px] md:h-[90vh] pb-28 md:pb-32 flex items-center justify-center bg-cover bg-center overflow-hidden"
+  style={{
+    backgroundImage: `linear-gradient(rgba(10, 26, 26, 0.45) 0%, rgba(10, 26, 26, 0.85) 100%), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`
+  }}
+>
       
       {/* Ornamentación geométrica de fondo */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
@@ -53,10 +55,11 @@ const Hero: React.FC = () => {
       </div>
       
       {/* Indicador de scroll - ARREGLADO Y ANIMADO */}
-      <div className="absolute bottom-12 left-1/2 animate-bounce-slow z-30 flex flex-col items-center pointer-events-none">
-        <span className="text-white text-[9px] uppercase tracking-[0.6em] mb-4 font-black opacity-60">Explorar</span>
-        <div className="w-0.5 h-16 bg-gradient-to-b from-secondary via-secondary to-transparent rounded-full shadow-[0_0_15px_rgba(251,192,45,0.4)]"></div>
-      </div>
+     <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow z-30 flex flex-col items-center pointer-events-none">
+  <span className="text-white text-[9px] uppercase tracking-[0.6em] mb-4 font-black opacity-60">Explorar</span>
+  <div className="w-0.5 h-14 md:h-16 bg-gradient-to-b from-secondary via-secondary to-transparent rounded-full shadow-[0_0_15px_rgba(251,192,45,0.4)]"></div>
+</div>
+
     </section>
   );
 };
