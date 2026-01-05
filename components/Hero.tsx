@@ -5,8 +5,12 @@ import Logo from './Logo';
 
 const Hero: React.FC = () => {
   const navigate = useNavigate();
+  {/* Este es el que funciona en version desktop pero no mobile
+    className="relative w-full h-screen md:h-[calc(100vh-80px)] flex items-center justify-center bg-cover bg-center overflow-hidden"
+    */}
 
   return (
+    
     <section
   className="relative w-full h-screen md:h-[calc(100vh-80px)] flex items-center justify-center bg-cover bg-center overflow-hidden"
   style={{
