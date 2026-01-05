@@ -8,11 +8,13 @@ const Hero: React.FC = () => {
 
   return (
     <section
-  className="relative w-full h-[calc(100vh-80px)] md:h-[calc(100vh-96px)] flex items-center justify-center bg-cover bg-center overflow-hidden"
+  className="relative w-full h-screen md:h-[calc(100vh-80px)] flex items-center justify-center bg-cover bg-center overflow-hidden"
   style={{
     backgroundImage: `linear-gradient(rgba(10, 26, 26, 0.45) 0%, rgba(10, 26, 26, 0.85) 100%), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`
   }}
 >
+  
+
 
       
       {/* Ornamentación geométrica de fondo */}
@@ -59,7 +61,7 @@ const Hero: React.FC = () => {
       </div>
       
       {/* Indicador de scroll - ARREGLADO Y ANIMADO */}
-     <div className="absolute bottom-16 md:bottom-6 left-1/2 -translate-x-1/2 animate-bounce-slow z-30 flex flex-col items-center pointer-events-none">
+     <div className="absolute bottom-16 md:bottom-2 left-1/2 -translate-x-1/2 animate-bounce-slow z-30 flex flex-col items-center pointer-events-none">
   <span className="text-white text-[9px] uppercase tracking-[0.6em] mb-4 font-black opacity-60">Explorar</span>
   <div className="w-0.5 h-14 md:h-16 bg-gradient-to-b from-secondary via-secondary to-transparent rounded-full shadow-[0_0_15px_rgba(251,192,45,0.4)]"></div>
 </div>
