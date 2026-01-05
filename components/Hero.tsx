@@ -8,11 +8,12 @@ const Hero: React.FC = () => {
 
   return (
     <section
-  className="relative w-full h-[750px] md:h-[90vh] pb-28 md:pb-32 flex items-center justify-center bg-cover bg-center overflow-hidden"
+  className="relative w-full h-[calc(100vh-80px)] md:h-[calc(100vh-96px)] flex items-center justify-center bg-cover bg-center overflow-hidden"
   style={{
     backgroundImage: `linear-gradient(rgba(10, 26, 26, 0.45) 0%, rgba(10, 26, 26, 0.85) 100%), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`
   }}
 >
+
       
       {/* Ornamentación geométrica de fondo */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
@@ -20,14 +21,17 @@ const Hero: React.FC = () => {
         <div className="decor-circle w-[600px] h-[600px] -bottom-48 -right-48"></div>
       </div>
 
-      <div className="container px-4 md:px-6 max-w-[1280px] text-center flex flex-col items-center z-10">
+      <div className="container px-4 md:px-6 max-w-[1280px] text-center flex flex-col items-center z-10 pb-20 md:pb-24">
+
         
-        {/* LOGO PROTAGONISTA */}
-        <div className="animate-brand-entry mb-12">
+        {/* LOGO PROTAGONISTA 
+        
+        <div className="animate-brand-entry mb-10 mt-12 w-40 md:w-48 opacity-90">
           <Logo variant="hero" />
         </div>
-
+        
         <div className="h-1 w-24 bg-secondary mb-10 rounded-full"></div>
+        */}
 
         <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-black leading-tight tracking-[-0.03em] max-w-[1000px] mb-8">
           El Poder del Sol en <br className="hidden md:block" />
@@ -55,7 +59,7 @@ const Hero: React.FC = () => {
       </div>
       
       {/* Indicador de scroll - ARREGLADO Y ANIMADO */}
-     <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow z-30 flex flex-col items-center pointer-events-none">
+     <div className="absolute bottom-16 md:bottom-6 left-1/2 -translate-x-1/2 animate-bounce-slow z-30 flex flex-col items-center pointer-events-none">
   <span className="text-white text-[9px] uppercase tracking-[0.6em] mb-4 font-black opacity-60">Explorar</span>
   <div className="w-0.5 h-14 md:h-16 bg-gradient-to-b from-secondary via-secondary to-transparent rounded-full shadow-[0_0_15px_rgba(251,192,45,0.4)]"></div>
 </div>
