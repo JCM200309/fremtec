@@ -15,14 +15,12 @@ const Hero: React.FC = () => {
   return (
     
     <section
-  className="relative w-full h-[calc(100vh-100px)] sm:h-[calc(100vh-90px)] lg:h-[calc(100vh-80px)] flex items-center justify-center bg-cover bg-center overflow-hidden"
+    
+  className="relative w-full  h-auto sm:h-[calc(100vh-90px)] lg:h-[calc(100vh-80px)] flex items-center justify-center bg-cover bg-center overflow-hidden"
   style={{
     backgroundImage: `linear-gradient(rgba(10, 26, 26, 0.45) 0%, rgba(10, 26, 26, 0.85) 100%), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`
   }}
 >
-  
-
-
       
       {/* Ornamentación geométrica de fondo */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
