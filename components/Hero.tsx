@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
   return (
     
     <section
-  className="relative w-full h-[calc(100vh-220px)] sm:h-[calc(100vh-90px)] lg:h-[calc(100vh-80px)] flex items-center justify-center bg-cover bg-center overflow-hidden"
+  className="relative w-full h-[calc(100vh-180px)] sm:h-[calc(100vh-90px)] lg:h-[calc(100vh-80px)] flex items-center justify-center bg-cover bg-center overflow-hidden"
   style={{
     backgroundImage: `linear-gradient(rgba(10, 26, 26, 0.45) 0%, rgba(10, 26, 26, 0.85) 100%), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`
   }}
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
         
         <div className="h-1 w-24 bg-secondary mb-10 rounded-full"></div>
         */}
-
+        
         <h1 className="text-white pt-20 text-4xl sm:text-6xl md:text-6xl lg:text-7xl font-black leading-tight tracking-[-0.03em] max-w-[1000px] mb-8">
           El Poder del Sol en <br className="hidden md:block" />
           <span className="text-secondary italic">Tus Manos</span>
