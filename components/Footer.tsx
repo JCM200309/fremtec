@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   return (
@@ -9,8 +10,13 @@ const Footer: React.FC = () => {
           {/* Brand Column */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-2 text-[#111418]">
-              <span className="material-symbols-outlined text-primary text-3xl">solar_power</span>
-              <span className="text-2xl font-bold">Fremtec</span>
+              {/* LOGO PROTAGONISTA */}
+        
+              <div className="animate-brand-entry w-40 md:w-48 opacity-90">
+                <Logo/>
+              </div>
+              
+             
             </div>
             <p className="text-gray-500 text-base leading-relaxed">
               Liderando la revolución solar en Argentina. Compromiso, calidad y eficiencia energética para un futuro sostenible.
