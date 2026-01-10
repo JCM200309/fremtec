@@ -1,22 +1,33 @@
 
 import React from 'react';
 import IndustrialSolutions from '../components/IndustrialSolutions';
+import { Link } from 'react-router-dom';
 
 const IndustrialPage: React.FC = () => {
   return (
     <div className="flex flex-col">
       {/* Industrial Hero - Imagen: industria.jpg */}
-      <section className="relative bg-background-dark py-40 px-6 text-white overflow-hidden">
+      
+      <section className="relative w-full h-auto sm:h-[calc(100vh-90px)] lg:h-[calc(100vh-80px)] bg-background-dark py-20 px-6 text-white overflow-hidden">
         <div className="decor-circle w-[600px] h-[600px] -top-1/2 -left-40 opacity-20"></div>
         <div className="absolute inset-0 opacity-40 bg-[url('/fotos/fotos-tio/industrial-header.jpeg')] bg-cover bg-center"></div>
         <div className="relative z-10 max-w-[1000px] mx-auto text-center">
-          <span className="inline-block px-5 py-2 rounded-full bg-secondary/20 text-secondary border border-secondary/30 text-xs font-bold uppercase tracking-[0.2em] mb-8">Engineering & Efficiency Argentina</span>
-          <h1 className="text-5xl md:text-8xl font-black mb-8 leading-tight tracking-tighter drop-shadow-lg">
+          {/* <span className="inline-block px-5 py-2 rounded-full bg-secondary/20 text-secondary border border-secondary/30 text-xs font-bold uppercase tracking-[0.2em] mb-8">Engineering & Efficiency Argentina</span> */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl 2xl:text-9xl font-black mb-8 leading-tight tracking-tighter drop-shadow-lg lg:pt-5 2xl:pt-20">
             Energía para <br/><span className="text-primary italic">Tu Industria</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-[700px] mx-auto leading-relaxed drop-shadow-md">
+          <p className="text-xl text-gray-300 max-w-[700px] mx-auto leading-relaxed drop-shadow-md sm:text-2xl md:text-2xl lg:text-3xl">
             Optimizamos costos operativos mediante ingeniería solar de alta precisión y servicios de auditoría energética especializada.
           </p>
+
+          <div className="flex flex-col sm:flex-row gap-6 lg:w-full lg:justify-center sm:w-auto sm:text-sm py-20">
+            <Link 
+              to="/presupuesto" 
+              className="flex items-center justify-center rounded-xl h-14 2xl:h-16 px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto 2xl:text-2xl">
+              Comenzar mi Proyecto
+            </Link>
+          </div>
+          
         </div>
       </section>
 
