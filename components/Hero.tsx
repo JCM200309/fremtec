@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
         <div className="h-1 w-24 bg-secondary mb-10 rounded-full"></div>
         */}
         
-        <h1 className="text-white pt-20 text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-7xl font-black leading-tight tracking-[-0.03em] max-w-[1000px] mb-8">
+        <h1 className="text-white pt-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-7xl font-black leading-tight tracking-[-0.03em] max-w-[1000px] mb-8">
           El Poder del Sol en <br className="hidden md:block" />
           <span className="text-secondary italic">Tus Manos</span>
         </h1>
@@ -52,13 +52,13 @@ const Hero: React.FC = () => {
         <div className="flex flex-col sm:flex-row gap-6 lg:w-full lg:justify-center sm:w-auto sm:text-sm">
           <Link 
             to="/presupuesto" 
-            className="flex items-center justify-center rounded-xl h-14 px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto"
+            className="flex items-center justify-center rounded-xl h-14 2xl:h-16 px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto 2xl:text-2xl"
           >
             Comenzar mi Proyecto
           </Link>
           <button 
             onClick={() => navigate('/industrial')} 
-            className="flex items-center justify-center rounded-xl h-14 px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium transition-all w-full sm:w-auto"
+            className="flex items-center justify-center rounded-xl h-14 2xl:h-16 px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium transition-all w-full sm:w-auto 2xl:text-2xl"
           >
             Casos de Éxito
           </button>
