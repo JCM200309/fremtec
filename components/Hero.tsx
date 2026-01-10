@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
         <div className="h-1 w-24 bg-secondary mb-10 rounded-full"></div>
         */}
         
-        <h1 className="text-white pt-20 text-4xl sm:text-6xl md:text-6xl lg:text-8xl font-black leading-tight tracking-[-0.03em] max-w-[1000px] mb-8">
+        <h1 className="text-white pt-20 text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-7xl font-black leading-tight tracking-[-0.03em] max-w-[1000px] mb-8">
           El Poder del Sol en <br className="hidden md:block" />
           <span className="text-secondary italic">Tus Manos</span>
         </h1>
