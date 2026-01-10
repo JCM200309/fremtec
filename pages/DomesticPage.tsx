@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useNavigate} from 'react-router-dom';
+import {Link , useNavigate} from 'react-router-dom';
 import DomesticSolutions from '../components/DomesticSolutions';
 
 
@@ -9,7 +9,7 @@ const DomesticPage: React.FC = () => {
   return (
     <div className="flex flex-col">
       {/* Sector Hero Hogar - Imagen: Domestica_hero.jpg */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="hero-correct-size flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-background-dark/30 z-10"></div>
         <img
           src="/fotos/fotos-tio/casa-aereo.jpeg"
@@ -18,12 +18,20 @@ const DomesticPage: React.FC = () => {
         />
         <div className="relative z-20 text-center px-6 max-w-[900px]">
           <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-background-dark text-xs font-black uppercase tracking-widest mb-6 shadow-xl">Hogar Sustentable</span>
-          <h1 className="text-white text-5xl md:text-7xl font-black mb-6 leading-tight drop-shadow-2xl">
+          <h1 className="text-white font-black mb-6 leading-tight drop-shadow-2xl title-hero-texts">
             Tu Hogar, <span className="text-secondary">Tu Energía</span>
           </h1>
-          <p className="text-white/95 text-xl font-medium max-w-[650px] mx-auto drop-shadow-md">
+          <p className="text-white/95 mx-auto drop-shadow-md p-hero-texts">
             Asesoramos y dimensionamos sistemas solares a medida para el confort de tu familia y el ahorro real.
           </p>
+
+          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto sm:text-sm py-20 buttons-hero-texts buttons-hero-size">
+                      <Link 
+                        to="/presupuesto" 
+                        className="flex items-center justify-center rounded-xl h-14 2xl:h-16 px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto ">
+                        Nuestros proyectos residenciales
+                      </Link>
+                    </div>
         </div>
       </section>
 

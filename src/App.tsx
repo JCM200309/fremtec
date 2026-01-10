@@ -1,15 +1,14 @@
-
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 // Importar las páginas
-import HomePage from './pages/HomePage';
-import DomesticPage from './pages/DomesticPage';
-import IndustrialPage from './pages/IndustrialPage';
-import FAQPage from './pages/FAQPage';
-import PresupuestoPage from './pages/PresupuestoPage';
+import HomePage from '../pages/HomePage';
+import DomesticPage from '../pages/DomesticPage';
+import IndustrialPage from '../pages/IndustrialPage';
+import FAQPage from '../pages/FAQPage';
+import PresupuestoPage from '../pages/PresupuestoPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();

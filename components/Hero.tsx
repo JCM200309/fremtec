@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
     
     <section
     
-  className="relative w-full h-auto sm:h-[calc(100vh-90px)] lg:h-[calc(100vh-80px)] flex items-center justify-center bg-cover bg-center overflow-hidden"
+  className="hero-correct-size flex items-center justify-center bg-cover bg-center overflow-hidden"
   style={{
     backgroundImage: `linear-gradient(rgba(10, 26, 26, 0.45) 0%, rgba(10, 26, 26, 0.85) 100%), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`
   }}
@@ -40,25 +40,25 @@ const Hero: React.FC = () => {
         <div className="h-1 w-24 bg-secondary mb-10 rounded-full"></div>
         */}
         
-        <h1 className="text-white pt-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl 2xl:text-7xl font-black leading-tight tracking-[-0.03em] max-w-[1000px] mb-8">
+        <h1 className="text-white pt-20 title-hero-texts font-black leading-tight tracking-[-0.03em] max-w-[1000px] mb-8">
           El Poder del Sol en <br className="hidden md:block" />
           <span className="text-secondary italic">Tus Manos</span>
         </h1>
         
-        <p className="text-gray-200 text-base sm:text-2xl md:text-2xl lg:text-3xl font-light leading-relaxed max-w-[720px] mb-12 border-l-2 border-secondary/30 pl-6">
+        <p className="text-gray-200 text-base  p-hero-texts font-light leading-relaxed max-w-[720px] mb-12 border-l-2 border-secondary/30 pl-6">
           Soluciones fotovoltaicas de alta ingeniería para el sector residencial e industrial de Argentina.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-6 lg:w-full lg:justify-center sm:w-auto sm:text-sm">
+        <div className="flex flex-col sm:flex-row gap-6 lg:w-full lg:justify-center sm:w-auto buttons-hero-texts buttons-hero-size">
           <Link 
             to="/presupuesto" 
-            className="flex items-center justify-center rounded-xl h-14 2xl:h-16 px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto 2xl:text-2xl"
+            className="flex items-center justify-center rounded-xl px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto "
           >
             Comenzar mi Proyecto
           </Link>
           <button 
             onClick={() => navigate('/industrial')} 
-            className="flex items-center justify-center rounded-xl h-14 2xl:h-16 px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium transition-all w-full sm:w-auto 2xl:text-2xl"
+            className="flex items-center justify-center rounded-xl px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium transition-all w-full sm:w-auto "
           >
             Casos de Éxito
           </button>
