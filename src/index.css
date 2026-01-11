@@ -11,14 +11,14 @@
   }
 
   .buttons-hero-texts{
-    @apply text-xl! 2xl:text-2xl!;
+    @apply text-2xl! 2xl:text-2xl!;
   }
 
   .buttons-hero-size{
-    @apply h-14! 2xl:h-16!
+    @apply h-16! 2xl:h-18!
   }
 
   .hero-correct-size{
-    @apply relative w-full h-[calc(100vh-160px)] sm:h-[calc(100vh-90px)] lg:h-[calc(100vh-80px)] 
+    @apply relative w-full! h-[calc(100vh-80px)]! sm:h-[calc(100vh-90px)]! lg:h-[calc(100vh-80px)]! 
   }
 }
