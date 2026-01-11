@@ -23,10 +23,10 @@ const IndustrialPage: React.FC = () => {
             Optimizamos costos operativos mediante ingeniería solar de alta precisión y servicios de auditoría energética especializada.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto buttons-hero-texts buttons-hero-size">
+          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto buttons-hero-texts">
             <Link 
               to="/presupuesto" 
-              className="flex items-center justify-center rounded-xl px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto h-14">
+              className="flex items-center justify-center rounded-xl px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto h-14 buttons-hero-size">
               Nuestros proyectos industriales
             </Link>
           </div>

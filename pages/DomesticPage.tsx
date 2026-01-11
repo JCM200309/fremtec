@@ -25,10 +25,10 @@ const DomesticPage: React.FC = () => {
             Asesoramos y dimensionamos sistemas solares a medida para el confort de tu familia y el ahorro real.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto sm:text-sm py-20 buttons-hero-texts buttons-hero-size">
+          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto sm:text-sm py-20 buttons-hero-texts ">
                       <Link 
                         to="/presupuesto" 
-                        className="flex items-center justify-center rounded-xl h-14 2xl:h-16 px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto ">
+                        className="flex items-center justify-center rounded-xl h-14 2xl:h-16 px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto buttons-hero-size">
                         Nuestros proyectos residenciales
                       </Link>
                     </div>
