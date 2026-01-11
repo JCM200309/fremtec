@@ -15,7 +15,7 @@
   }
 
   .buttons-hero-size{
-    @apply h-16! 2xl:h-18!
+    @apply h-16! 2xl:h-18! py-10
   }
 
   .hero-correct-size{

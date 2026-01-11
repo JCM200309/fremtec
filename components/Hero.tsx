@@ -42,13 +42,13 @@ const Hero: React.FC = () => {
         <div className="flex flex-col sm:flex-row gap-6 lg:w-full lg:justify-center sm:w-auto buttons-hero-texts buttons-hero-size">
           <Link 
             to="/presupuesto" 
-            className="flex items-center justify-center rounded-xl px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto "
+            className="flex items-center justify-center rounded-xl px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto py-5"
           >
             Comenzar mi Proyecto
           </Link>
           <button 
             onClick={() => navigate('/industrial')} 
-            className="flex items-center justify-center rounded-xl px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium transition-all w-full sm:w-auto "
+            className="flex items-center justify-center rounded-xl px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium transition-all w-full sm:w-auto py-5 "
           >
             Casos de Éxito
           </button>
