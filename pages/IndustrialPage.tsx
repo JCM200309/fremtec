@@ -8,26 +8,28 @@ const IndustrialPage: React.FC = () => {
     <div className="flex flex-col">
       {/* Industrial Hero - Imagen: industria.jpg */}
       
-      <section className="hero-correct-size bg-background-dark py-20 px-6 text-white overflow-hidden items">
-        <div className="decor-circle w-[600px] h-[600px] -top-1/2 -left-40 opacity-20"></div>
-        <div className="absolute inset-0 opacity-40 bg-[url('/fotos/fotos-tio/industrial-header.jpeg')] bg-cover bg-center"></div>
-        <div className="relative z-10 max-w-[1000px] mx-auto text-center">
-          {/* <span className="inline-block px-5 py-2 rounded-full bg-secondary/20 text-secondary border border-secondary/30 text-xs font-bold uppercase tracking-[0.2em] mb-8">Engineering & Efficiency Argentina</span> */}
-          <h1 className="title-hero-texts font-black mb-6 leading-tight tracking-tighter drop-shadow-lg lg:pt-5 2xl:pt-20">
+      <section className="hero-correct-size relative flex items-center justify-center bg-background-dark text-white overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <div className="decor-circle w-[600px] h-[600px] -top-1/2 -left-40 opacity-20"></div>
+          <div className="absolute inset-0 opacity-45 bg-[url('/fotos/fotos-tio/industrial-header.jpeg')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background-dark/90"></div>
+        </div>
+        
+        <div className="relative z-10 container px-4 md:px-6 max-w-[1280px] text-center flex flex-col items-center justify-center min-h-[60vh]">
+          <h1 className="title-hero-texts font-black mb-6 leading-tight tracking-tighter drop-shadow-xl">
             Energía para <br/><span className="text-primary italic">Tu Industria</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-[700px] mx-auto leading-relaxed drop-shadow-md p-hero-texts">
+          <p className="text-xl text-gray-200 max-w-[700px] mx-auto leading-relaxed drop-shadow-md p-hero-texts mb-12">
             Optimizamos costos operativos mediante ingeniería solar de alta precisión y servicios de auditoría energética especializada.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto sm:text-sm py-20 buttons-hero-texts buttons-hero-size">
+          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto buttons-hero-texts buttons-hero-size">
             <Link 
               to="/presupuesto" 
-              className="flex items-center justify-center rounded-xl h-14 2xl:h-16 px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto ">
+              className="flex items-center justify-center rounded-xl px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto h-14">
               Nuestros proyectos industriales
             </Link>
           </div>
-          
         </div>
       </section>
 

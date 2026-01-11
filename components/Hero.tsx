@@ -28,24 +28,14 @@ const Hero: React.FC = () => {
         <div className="decor-circle w-[600px] h-[600px] -bottom-48 -right-48"></div>
       </div>
 
-      <div className="container px-4 md:px-6 max-w-[1280px] text-center flex flex-col items-center z-10 pb-20 md:pb-24">
-
+      <div className="container px-4 md:px-6 max-w-[1280px] text-center flex flex-col items-center justify-center z-10 min-h-[60vh]">
         
-        {/* LOGO PROTAGONISTA 
-        
-        <div className="animate-brand-entry mb-10 mt-12 w-40 md:w-48 opacity-90">
-          <Logo variant="hero" />
-        </div>
-        
-        <div className="h-1 w-24 bg-secondary mb-10 rounded-full"></div>
-        */}
-        
-        <h1 className="text-white pt-20 title-hero-texts font-black leading-tight tracking-[-0.03em] max-w-[1000px] mb-8">
+        <h1 className="text-white title-hero-texts font-black leading-tight tracking-[-0.03em] max-w-[1000px] mb-8">
           El Poder del Sol en <br className="hidden md:block" />
           <span className="text-secondary italic">Tus Manos</span>
         </h1>
         
-        <p className="text-gray-200 text-base  p-hero-texts font-light leading-relaxed max-w-[720px] mb-12 border-l-2 border-secondary/30 pl-6">
+        <p className="text-gray-200 text-base p-hero-texts font-light leading-relaxed max-w-[720px] mb-12 border-l-2 border-secondary/30 pl-6 text-left md:text-center md:border-l-0 md:pl-0">
           Soluciones fotovoltaicas de alta ingeniería para el sector residencial e industrial de Argentina.
         </p>
 
