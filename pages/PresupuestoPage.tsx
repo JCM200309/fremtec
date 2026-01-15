@@ -54,7 +54,6 @@ const [fileStatus, setFileStatus] = useState<UploadStatus>("idle");
         method: 'POST',
         body: fd,
       });
-
       const data = await res.json().catch(() => ({}));
 
       if (!res.ok) {
@@ -76,11 +75,18 @@ const [fileStatus, setFileStatus] = useState<UploadStatus>("idle");
 
       // volver a estado idle después de 5s (si querés)
       setTimeout(() => setStatus('idle'), 5000);
+
+    {/* Logueo error anterior   
     } catch (err: any) {
       setStatus('error');
       setErrorMsg(err?.message || 'Error enviando el formulario.');
       setTimeout(() => setStatus('idle'), 6000);
+    }*/}
+    } catch (e) {
+      console.error("ERROR /api/presupuesto:", e);
+      console.error("STACK:", e?.stack);
     }
+
   };
 
   const buttonText =
