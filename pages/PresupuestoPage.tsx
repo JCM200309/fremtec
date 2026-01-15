@@ -1,42 +1,58 @@
 import FileUploader from '@/components/FileUploader';
 import React, { useState } from 'react';
 
-type FormData = {
+type presupuestoForm = {
   name: string;
   email: string;
   phone: string;
   location: string;
   type: string;
   details: string;
-  file: File;
+  file: File | null;
 };
 
 const PresupuestoPage: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<presupuestoForm>({
     name: '',
     email: '',
     phone: '',
     location: '',
     type: 'residencial',
     details: '',
-    file: ''
+    file: null 
   });
 
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState<string>('');
   const [file, setFile] = useState<File | null>(null);
-  const [fileStatus, setFileStatus] = useState<File | null>("idle");
+
+  type UploadStatus = "idle" | "uploading" | "success" | "error";
+const [fileStatus, setFileStatus] = useState<UploadStatus>("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
     setErrorMsg('');
 
+
     try {
+      const fd = new FormData();
+
+      fd.append("name", formData.name);
+      fd.append("email", formData.email);
+      fd.append("phone", formData.phone);
+      fd.append("location", formData.location);
+      fd.append("type", formData.type);
+      fd.append("details", formData.details);
+
+      if (file){
+        fd.append("file",file)
+      }
+
+      console.log(fd);
       const res = await fetch('/api/presupuesto', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: fd,
       });
 
       const data = await res.json().catch(() => ({}));
@@ -54,7 +70,8 @@ const PresupuestoPage: React.FC = () => {
         phone: '',
         location: '',
         type: 'residencial',
-        details: ''
+        details: '',
+        file: null
       });
 
       // volver a estado idle después de 5s (si querés)
@@ -189,10 +206,16 @@ const PresupuestoPage: React.FC = () => {
                 ></textarea>
               </div>
 
-              <FileUploader file={file} setFile= {setFile} fileStatus={fileStatus} setFileStatus={setFileStatus}/>
+              <FileUploader
+                file={file}
+                setFile={setFile}
+                fileStatus={fileStatus}
+                setFileStatus={setFileStatus}
+              />
+
               <button
                 type="submit"
-                disabled={status === 'loading' || fileStatus === 'uploading'}
+                disabled={status === 'loading'}
                 className={`w-full py-5 rounded-2xl font-black text-lg transition-all shadow-xl ${buttonClass}`}
               >
                 {buttonText}

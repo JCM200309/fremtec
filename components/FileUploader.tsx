@@ -1,35 +1,34 @@
-import { ChangeEvent, useState } from 'react';
+// FileUploader.tsx
+import { ChangeEvent } from "react";
 
 type UploadStatus = "idle" | "uploading" | "success" | "error";
 
-export default function FileUploader() {
-    const [file, setFile] = useState<File | null>(null);
-    const [fileStatus, setFileStatus] = useState<UploadStatus>("idle");
+type Props = {
+  file: File | null;
+  setFile: (f: File | null) => void;
+  fileStatus: UploadStatus;
+  setFileStatus: (s: UploadStatus) => void;
+};
 
-    function handleFileChange(e: ChangeEvent<HTMLInputElement>){
-        {/*Guardamos solo el primer archivo*/}
-        if (e.target.files){
-            setFile(e.target.files[0])
-        }
-    }
+export default function FileUploader({ file, setFile, fileStatus, setFileStatus }: Props) {
+  function handleFileChange(e: ChangeEvent<HTMLInputElement>) {
+    const selected = e.target.files?.[0] ?? null;
+    setFile(selected);
+    setFileStatus("idle");
+  }
 
-    function handleFileUpload() {
-        if (!file) return;
-
-        setFileStatus("uploading");
-
-        
-    }
-
-    return (
+  return (
     <div>
-        <input type = "file" onChange={handleFileChange}/>
-        {file && (
-            <div>
-                <p>File name: {file.name}</p>
-                <p>Size: {(file.size / 1024).toFixed(2)} KB</p>
-            </div>
-        )}
+      <input type="file" onChange={handleFileChange} accept=".pdf,.png,.jpg,.jpeg" />
 
-    </div>);
+      {file && (
+        <div>
+          <p>File name: {file.name}</p>
+          <p>Size: {(file.size / 1024).toFixed(2)} KB</p>
+        </div>
+      )}
+
+      {fileStatus === "uploading" && <p>Subiendo...</p>}
+    </div>
+  );
 }
