@@ -1,3 +1,4 @@
+import FileUploader from '@/components/FileUploader';
 import React, { useState } from 'react';
 
 type FormData = {
@@ -7,6 +8,7 @@ type FormData = {
   location: string;
   type: string;
   details: string;
+  file: File;
 };
 
 const PresupuestoPage: React.FC = () => {
@@ -16,11 +18,14 @@ const PresupuestoPage: React.FC = () => {
     phone: '',
     location: '',
     type: 'residencial',
-    details: ''
+    details: '',
+    file: ''
   });
 
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState<string>('');
+  const [file, setFile] = useState<File | null>(null);
+  const [fileStatus, setFileStatus] = useState<File | null>("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -184,9 +189,10 @@ const PresupuestoPage: React.FC = () => {
                 ></textarea>
               </div>
 
+              <FileUploader file={file} setFile= {setFile} fileStatus={fileStatus} setFileStatus={setFileStatus}/>
               <button
                 type="submit"
-                disabled={status === 'loading'}
+                disabled={status === 'loading' || fileStatus === 'uploading'}
                 className={`w-full py-5 rounded-2xl font-black text-lg transition-all shadow-xl ${buttonClass}`}
               >
                 {buttonText}
@@ -206,8 +212,8 @@ const PresupuestoPage: React.FC = () => {
                   <div key={idx} className="flex gap-6">
                     <span className="material-symbols-outlined text-secondary text-4xl">{item.i}</span>
                     <div>
-                      <h4 className="font-bold text-xl mb-1">{item.t}</h4>
-                      <p className="text-gray-400 text-sm leading-relaxed">{item.d}</p>
+                      <h4 className="font-bold text-xl xl:text-2xl mb-1">{item.t}</h4>
+                      <p className="text-gray-400 text-sm xl:text-xl leading-relaxed">{item.d}</p>
                     </div>
                   </div>
                 ))}

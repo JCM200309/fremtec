@@ -32,6 +32,8 @@ const DomesticPage: React.FC = () => {
                         Nuestros proyectos residenciales
                       </Link>
                     </div>
+
+          
         </div>
       </section>
 

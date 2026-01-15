@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   try {
-    const { name, email, phone, location, type, details } = req.body || {};
+    const { name, email, phone, location, type, details , file} = req.body || {};
 
     if (!name || !email || !phone || !location) {
       return res.status(400).json({ error: "Faltan campos obligatorios." });
@@ -28,6 +28,11 @@ export default async function handler(req, res) {
       subject: `Pedido de presupuesto - ${name} (${type})`,
       replyTo: email,                       // responder al cliente
       html,
+      attachments:[
+        {
+          filename: file.name
+        },
+      ]
     });
 
     return res.status(200).json({ ok: true });
