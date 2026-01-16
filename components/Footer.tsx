@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
               <a href="https://www.instagram.com/fremtec.energiasolar/?hl=es-la" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                 <img src="/fotos/logotipo-de-instagram.png" alt="Instagram" className="size-7 opacity-80 hover:opacity-100"/>
               </a>
-              <a href="mailto:fremtec@fremtec.com" className="hover:scale-110 transition-transform">
+              <a href="/presupuesto" className="hover:scale-110 transition-transform">
                 <img src="/fotos/gmail.png" alt="Email" className="size-7 opacity-80 hover:opacity-100"/>
               </a>
               <a href="https://wa.me/541112345678" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
@@ -39,7 +39,6 @@ const Footer: React.FC = () => {
             <h4 className="text-[#111418] font-bold text-lg">Empresa</h4>
             <div className="flex flex-col gap-3">
               <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/">Inicio</a>
-              <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/otras-soluciones">Otras Soluciones</a>
               <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/galeria">Galería</a>
               <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/faq">FAQ</a>
             </div>
@@ -49,9 +48,9 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-6">
             <h4 className="text-[#111418] font-bold text-lg">Servicios</h4>
             <div className="flex flex-col gap-3">
-              {['Instalación Industrial', 'Paneles Residenciales', 'Mantenimiento', 'Consultoría Energética'].map((link) => (
-                <a key={link} className="text-gray-500 hover:text-primary transition-colors text-base" href="#">{link}</a>
-              ))}
+              <a href="/industrial" className="text-gray-500 hover:text-primary transition-colors text-base">Industrial</a>
+              <a href="/residencial" className="text-gray-500 hover:text-primary transition-colors text-base">Residencial</a>
+              <a href="/otras-soluciones" className="text-gray-500 hover:text-primary transition-colors text-base">Otras Soluciones</a>
             </div>
           </div>
           
@@ -77,10 +76,6 @@ const Footer: React.FC = () => {
         
         <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-gray-400 text-sm">© 2023 Fremtec. Todos los derechos reservados.</p>
-          <div className="flex gap-8 text-sm text-gray-400">
-            <a className="hover:text-primary transition-colors" href="#">Privacidad</a>
-            <a className="hover:text-primary transition-colors" href="#">Términos</a>
-          </div>
         </div>
       </div>
     </footer>

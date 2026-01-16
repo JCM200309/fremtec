@@ -2,6 +2,7 @@
 import React from 'react';
 import IndustrialSolutions from '../components/IndustrialSolutions';
 import { Link } from 'react-router-dom';
+import { HashLink } from "react-router-hash-link"
 
 const IndustrialPage: React.FC = () => {
   return (
@@ -24,11 +25,9 @@ const IndustrialPage: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto buttons-hero-texts">
-            <Link 
-              to="/presupuesto" 
-              className="flex items-center justify-center rounded-xl px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto h-14 buttons-hero-size">
+            <HashLink smooth to="/galeria#galeria_industrial" className="flex items-center justify-center rounded-xl px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto h-14 buttons-hero-size">
               Nuestros proyectos industriales
-            </Link>
+            </HashLink>
           </div>
         </div>
       </section>
@@ -68,6 +67,11 @@ const IndustrialPage: React.FC = () => {
                     title: "Ingeniería On-Grid", 
                     desc: "Sistemas de inyección de alta potencia para reducir drásticamente los costos fijos mensuales y la dependencia de red.",
                     icon: "electric_bolt" 
+                  },
+                  { 
+                    title: "Venta de energia a cooperativas (CAMBIAR TITULO)", 
+                    desc: "El excedente se puede vender a distintas cooperativas para asi obtener un ingreso extra (CAMBIAR texto)",
+                    icon: "Attach_Money" 
                   }
                 ].map((service, i) => (
                   <div key={i} className="flex gap-8 group">

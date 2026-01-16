@@ -30,7 +30,7 @@ const GalleryPage: React.FC = () => {
       </div>
 
       <div className="max-w-[1280px] mx-auto px-6 py-16">
-        <section className="mb-20">
+        <section className="mb-20" id="galeria_industrial">
           <h2 className="text-3xl font-bold text-[#111418] mb-4 flex items-center gap-3">
             <span className="w-2 h-8 bg-primary rounded-full"></span>
             Sector Industrial
@@ -51,7 +51,7 @@ const GalleryPage: React.FC = () => {
           </div>
         </section>
 
-        <section>
+        <section id="galeria_residencial">
           <h2 className="text-3xl font-bold text-[#111418] mb-4 flex items-center gap-3">
             <span className="w-2 h-8 bg-secondary rounded-full"></span>
             Sector Residencial

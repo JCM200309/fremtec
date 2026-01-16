@@ -5,12 +5,6 @@ import Logo from './Logo';
 
 const Hero: React.FC = () => {
   const navigate = useNavigate();
-  {/* Este es el que funciona en version desktop pero no mobile
-    className="relative w-full h-screen md:h-[calc(100vh-80px)] flex items-center justify-center bg-cover bg-center overflow-hidden"
-    
-    h-[calc(100vh-220px)] Optimizado para SE, h-[calc(100vh-400px)] Optimizado para iphone 12
-    
-    */}
 
   return (
     
@@ -47,7 +41,7 @@ const Hero: React.FC = () => {
             Comenzar mi Proyecto
           </Link>
           <button 
-            onClick={() => navigate('/industrial')} 
+            onClick={() => navigate('/Galeria')} 
             className="flex items-center justify-center rounded-xl px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium transition-all w-full sm:w-auto  buttons-hero-size"
           >
             Casos de Éxito

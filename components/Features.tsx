@@ -18,11 +18,18 @@ const Features: React.FC = () => {
       iconColor: "text-secondary"
     },
     {
-      title: "Tecnología Arg",
-      desc: "Soporte técnico local y garantía asegurada en todo el país.",
-      icon: "engineering",
+      title: "Gestion de trámite bidireccional",
+      desc: "Ayudamos a realizar el trámite que va a permitir reinsertar leagalmente energia a la red",
+      icon: "Contract",
       bgColor: "bg-blue-50",
       iconColor: "text-primary"
+    },
+    {
+      title: "Estudio de Carbono y eficiencia energetica",
+      desc: "Junto a nuestros ingenieros realizaremos estudios para determinar la mejor configuracion para instalar",
+      icon: "Co2",
+      bgColor: "bg-green-50",
+      iconColor: "text-secondary"
     }
   ];
 
