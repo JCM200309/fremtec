@@ -280,8 +280,8 @@ const PresupuestoPage: React.FC = () => {
                   <div key={idx} className="flex gap-6">
                     <span className="material-symbols-outlined text-secondary text-4xl">{item.i}</span>
                     <div>
-                      <h4 className="font-bold text-xl xl:text-2xl mb-1">{item.t}</h4>
-                      <p className="text-gray-400 text-sm xl:text-xl leading-relaxed">{item.d}</p>
+                      <h4 className="font-bold text-xl mb-1">{item.t}</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">{item.d}</p>
                     </div>
                   </div>
                 ))}
