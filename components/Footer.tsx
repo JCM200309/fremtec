@@ -22,11 +22,16 @@ const Footer: React.FC = () => {
               Liderando la revolución solar en Argentina. Compromiso, calidad y eficiencia energética para un futuro sostenible.
             </p>
             <div className="flex gap-5">
-              {['public', 'share', 'mail'].map((icon) => (
-                <a key={icon} className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-blue-50 transition-all" href="#">
-                  <span className="material-symbols-outlined">{icon}</span>
-                </a>
-              ))}
+              <a href="https://www.instagram.com/fremtec.energiasolar/?hl=es-la">
+                <img src="/fotos/logotipo-de-instagram.png" alt="Visité nuestro instagram" className="size-7"/>
+              </a>
+              <a href="mailto:fremtec@fremtec.com">
+                <img src="/fotos/gmail.png" alt="Contactenos por mail" className="size-7"/>
+              </a>
+              <a href="https://wa.me/521234567890?text=Hola%20quiero%20más%20información%20sobre%20paneles%20solares">
+                <img src="/fotos/whatsapp.png" alt="Contactenos por mail" className="size-7"/>
+              </a>
+              
             </div>
           </div>
           
