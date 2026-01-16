@@ -6,7 +6,8 @@ type presupuestoForm = {
   email: string;
   phone: string;
   location: string;
-  type: string;
+  type: 'residencial' | 'industrial' | 'agro' | 'otro' | '';
+  subType: '' | 'OffGrid' | 'Hibrido' | 'OnGrid';
   details: string;
   file: File | null;
 };
@@ -17,7 +18,8 @@ const PresupuestoPage: React.FC = () => {
     email: '',
     phone: '',
     location: '',
-    type: 'residencial',
+    type: 'Industrial',
+    subType: '',
     details: '',
     file: null 
   });
@@ -26,13 +28,24 @@ const PresupuestoPage: React.FC = () => {
   const [errorMsg, setErrorMsg] = useState<string>('');
   const [file, setFile] = useState<File | null>(null);
 
+  const showResidentialSubType = formData.type === 'residencial';
+
   type UploadStatus = "idle" | "uploading" | "success" | "error";
-const [fileStatus, setFileStatus] = useState<UploadStatus>("idle");
+  const [fileStatus, setFileStatus] = useState<UploadStatus>("idle");
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
     setErrorMsg('');
+
+    // ✅ Validación condicional (antes del fetch)
+    if (formData.type === 'residencial' && !formData.subType) {
+      setStatus('error');
+      setErrorMsg('Si elegís "Residencial", seleccioná el tipo de solucion.');
+      setTimeout(() => setStatus('idle'), 6000);
+      return;
+    }
 
 
     try {
@@ -43,6 +56,7 @@ const [fileStatus, setFileStatus] = useState<UploadStatus>("idle");
       fd.append("phone", formData.phone);
       fd.append("location", formData.location);
       fd.append("type", formData.type);
+      fd.append("Subtype", formData.subType)
       fd.append("details", formData.details);
 
       if (file){
@@ -184,22 +198,47 @@ const [fileStatus, setFileStatus] = useState<UploadStatus>("idle");
                   disabled={status === 'loading'}
                 />
               </div>
-
+              
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Tipo de Solución</label>
                 <select
                   className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
                   value={formData.type}
-                  onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                  onChange={(e) => {
+
+                    const nextType = e.target.value as presupuestoForm['type'];
+
+                    // ✅ Si deja de ser industrial, reseteo subType
+                    setFormData((prev) => ({
+                      ...prev,
+                      type: nextType,
+                      subType: nextType === 'residencial' ? prev.subType : '',
+                    }));
+                  }}
                   disabled={status === 'loading'}
                 >
                   <option value="residencial">Residencial (Hogar)</option>
                   <option value="industrial">Industrial / Corporativo</option>
-                  <option value="agro">Agropecuario (Bombeo)</option>
-                  <option value="otro">Otro</option>
+                  <option value="otro">Otro</option>  
                 </select>
               </div>
-
+              {showResidentialSubType && ( 
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">Tipo de Solución residencial</label>
+                  <select
+                    className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
+                    value={formData.subType}
+                      onChange={(e) =>
+                        setFormData({ ...formData, subType: e.target.value as presupuestoForm['subType'] })
+                      }
+                    disabled={status === 'loading'}
+                  >
+                    <option value="OnGrid">OnGrid (Hogar)</option>
+                    <option value="Hibrido">Híbrido</option>
+                    <option value="OffGrid">OffGrid</option>
+                  </select>
+                </div>
+              )}
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Detalles del Proyecto / Consumo Mensual (kWh)</label>
                 <textarea
