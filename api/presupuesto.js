@@ -36,6 +36,7 @@ export default async function handler(req, res) {
     const phone = fields.phone?.toString() || "";
     const location = fields.location?.toString() || "";
     const type = fields.type?.toString() || "";
+    const subType = fields.subType?.toString() || "";
     const details = fields.details?.toString() || "";
 
     if (!name || !email || !phone || !location) {
@@ -56,6 +57,7 @@ export default async function handler(req, res) {
       <p><b>Teléfono:</b> ${phone}</p>
       <p><b>Ubicación:</b> ${location}</p>
       <p><b>Tipo:</b> ${type}</p>
+      <p><b>Subtipo (Solo si selecciono residencial):</p>
       <p><b>Detalles:</b><br/>${String(details || "-").replace(/\n/g, "<br/>")}</p>
     `;
 
