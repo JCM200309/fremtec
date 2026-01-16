@@ -22,10 +22,10 @@ const GalleryPage: React.FC = () => {
 
   return (
     <div className="w-full bg-white pb-20">
-      <div className="py-20 min-h-[30vh]">
-        <div className="max-w-[800px] mx-auto px-6 mb-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-black text-primary mb-4">Nuestra Galería</h1>
-          <p className="text-gray-500 text-xl">Explora nuestros proyectos realizados en los sectores industrial y residencial.</p>
+      <div className="bg-[#111418] py-24 px-6 text-center">
+        <div className="max-w-[800px] mx-auto">
+          <h1 className="text-4xl md:text-6xl font-black text-primary mb-6">Nuestra Galería</h1>
+          <p className="text-gray-400 text-xl">Explora nuestros proyectos realizados en los sectores industrial y residencial.</p>
         </div>
       </div>
 
