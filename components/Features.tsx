@@ -19,14 +19,14 @@ const Features: React.FC = () => {
     },
     {
       title: "Gestion de trámite bidireccional",
-      desc: "Ayudamos a realizar el trámite que va a permitir reinsertar leagalmente energia a la red",
+      desc: "Ayudamos a realizar el trámite que va a permitir reinsertar leagalmente energia a la red (Cambiar texto)",
       icon: "Contract",
       bgColor: "bg-blue-50",
       iconColor: "text-primary"
     },
     {
       title: "Estudio de Carbono y eficiencia energetica",
-      desc: "Junto a nuestros ingenieros realizaremos estudios para determinar la mejor configuracion para instalar",
+      desc: "Junto a nuestros ingenieros realizaremos estudios para determinar la mejor configuracion para instalar (CAMBIAR TEXTO)",
       icon: "Co2",
       bgColor: "bg-green-50",
       iconColor: "text-secondary"

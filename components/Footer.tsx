@@ -60,15 +60,15 @@ const Footer: React.FC = () => {
             <div className="flex flex-col gap-4 text-base text-gray-500">
               <div className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-primary mt-1">location_on</span>
-                <span>Av. Libertador 1234, CABA, Argentina</span>
+                <span>Av. Libertador 1234, CABA, Argentina (CAMBIAR)</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-primary mt-1">call</span>
-                <span>+54 11 1234-5678</span>
+                <span>+54 11 1234-5678 (CAMBIAR)</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-primary mt-1">email</span>
-                <span>info@fremtec.com.ar</span>
+                <span>info@fremtec.com.ar (CAMBIAR)</span>
               </div>
             </div>
           </div>

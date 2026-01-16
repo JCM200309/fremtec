@@ -82,7 +82,7 @@ const PresupuestoPage: React.FC = () => {
         email: '',
         phone: '',
         location: '',
-        type: 'residencial',
+        type: 'industrial',
         details: '',
         file: null
       });
@@ -217,8 +217,8 @@ const PresupuestoPage: React.FC = () => {
                   }}
                   disabled={status === 'loading'}
                 >
+                  <option value="industrial" >Industrial / Corporativo</option>
                   <option value="residencial">Residencial (Hogar)</option>
-                  <option value="industrial">Industrial / Corporativo</option>
                   <option value="otro">Otro</option>  
                 </select>
               </div>
@@ -273,9 +273,9 @@ const PresupuestoPage: React.FC = () => {
               <h3 className="text-3xl font-black mb-6">¿Por qué elegirnos?</h3>
               <div className="space-y-8">
                 {[
-                  { t: "Estudio Personalizado", d: "Analizamos tu factura de luz para darte un ROI exacto.", i: "analytics" },
-                  { t: "Soporte Local", d: "Atención técnica inmediata en toda la Argentina.", i: "engineering" },
-                  { t: "Calidad Certificada", d: "Equipos de primera línea con 25 años de garantía.", i: "verified" }
+                  { t: "Estudio Personalizado", d: "Analizamos tu factura de luz para darte un ROI exacto. (CAMBIAR)", i: "analytics" },
+                  { t: "Soporte Local", d: "Equipo de especialización post venta.", i: "engineering" },
+                  { t: "Calidad Certificada", d: "Equipos de primera línea con garantia de fabrica.", i: "verified" }
                 ].map((item, idx) => (
                   <div key={idx} className="flex gap-6">
                     <span className="material-symbols-outlined text-secondary text-4xl">{item.i}</span>
@@ -293,11 +293,11 @@ const PresupuestoPage: React.FC = () => {
               <div className="flex flex-col gap-3 text-gray-300">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-sm">mail</span>
-                  <span>presupuestos@fremtec.com.ar</span>
+                  <span>presupuestos@fremtec.com.ar (CAMBIAR)</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-sm">call</span>
-                  <span>+54 9 11 5057-2126 (Zona Norte)</span>
+                  <span>+54 9 11 5057-2126 (Zona Norte) (CAMBIAR)</span>
                 </div>
               </div>
             </div>
