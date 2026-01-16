@@ -38,9 +38,9 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-6">
             <h4 className="text-[#111418] font-bold text-lg">Empresa</h4>
             <div className="flex flex-col gap-3">
-              {['Nosotros', 'Proyectos', 'Blog', 'Carreras'].map((link) => (
-                <a key={link} className="text-gray-500 hover:text-primary transition-colors text-base" href="#">{link}</a>
-              ))}
+              <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/">Inicio</a>
+              <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/galeria">Galería</a>
+              <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/faq">FAQ</a>
             </div>
           </div>
           
