@@ -57,7 +57,7 @@ export default async function handler(req, res) {
       <p><b>Teléfono:</b> ${phone}</p>
       <p><b>Ubicación:</b> ${location}</p>
       <p><b>Tipo:</b> ${type}</p>
-      <p><b>Subtipo (Solo si selecciono residencial):</p>
+      <p><b>Subtipo (Solo si selecciono residencial): ${subType}</p>
       <p><b>Detalles:</b><br/>${String(details || "-").replace(/\n/g, "<br/>")}</p>
     `;
 
