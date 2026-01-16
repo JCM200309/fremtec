@@ -9,6 +9,8 @@ import DomesticPage from '../pages/DomesticPage';
 import IndustrialPage from '../pages/IndustrialPage';
 import FAQPage from '../pages/FAQPage';
 import PresupuestoPage from '../pages/PresupuestoPage';
+import GalleryPage from '../pages/GalleryPage';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -42,9 +44,11 @@ const App: React.FC = () => {
               <Route path="/industrial" element={<IndustrialPage />} />
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/presupuesto" element={<PresupuestoPage />} />
+              <Route path="/galeria" element={<GalleryPage />} />
             </Routes>
           </PageWrapper>
         </main>
+        <WhatsAppButton />
         <Footer />
       </div>
     </BrowserRouter>
