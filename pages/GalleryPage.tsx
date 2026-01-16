@@ -33,10 +33,13 @@ const GalleryPage: React.FC = () => {
 
       <div className="max-w-[1280px] mx-auto px-6 py-16">
         <section className="mb-20">
-          <h2 className="text-3xl font-bold text-[#111418] mb-10 flex items-center gap-3">
+          <h2 className="text-3xl font-bold text-[#111418] mb-4 flex items-center gap-3">
             <span className="w-2 h-8 bg-primary rounded-full"></span>
             Sector Industrial
           </h2>
+          <p className="text-gray-600 mb-10 text-lg max-w-3xl">
+            Implementaciones de gran escala diseñadas para optimizar el consumo energético de fábricas, almacenes y complejos industriales. Nuestras soluciones garantizan un retorno de inversión acelerado y una reducción significativa en la huella de carbono corporativa.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industrialImages.map((img, idx) => (
               <div key={idx} className="group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
@@ -51,10 +54,13 @@ const GalleryPage: React.FC = () => {
         </section>
 
         <section>
-          <h2 className="text-3xl font-bold text-[#111418] mb-10 flex items-center gap-3">
+          <h2 className="text-3xl font-bold text-[#111418] mb-4 flex items-center gap-3">
             <span className="w-2 h-8 bg-secondary rounded-full"></span>
             Sector Residencial
           </h2>
+          <p className="text-gray-600 mb-10 text-lg max-w-3xl">
+            Transformamos hogares en espacios autosustentables. Desde paneles fotovoltaicos hasta sistemas de agua caliente solar, brindamos confort y ahorro a las familias argentinas con tecnología de vanguardia y estética cuidada.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {residentialImages.map((img, idx) => (
               <div key={idx} className="group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">

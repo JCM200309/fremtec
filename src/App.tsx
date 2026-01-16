@@ -10,6 +10,7 @@ import IndustrialPage from '../pages/IndustrialPage';
 import FAQPage from '../pages/FAQPage';
 import PresupuestoPage from '../pages/PresupuestoPage';
 import GalleryPage from '../pages/GalleryPage';
+import OtherSolutionsPage from '../pages/OtherSolutionsPage';
 import WhatsAppButton from '../components/WhatsAppButton';
 
 const ScrollToTop = () => {
@@ -42,6 +43,7 @@ const App: React.FC = () => {
               <Route path="/" element={<HomePage />} />
               <Route path="/residencial" element={<DomesticPage />} />
               <Route path="/industrial" element={<IndustrialPage />} />
+              <Route path="/otras-soluciones" element={<OtherSolutionsPage />} />
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/presupuesto" element={<PresupuestoPage />} />
               <Route path="/galeria" element={<GalleryPage />} />

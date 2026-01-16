@@ -39,6 +39,7 @@ const Footer: React.FC = () => {
             <h4 className="text-[#111418] font-bold text-lg">Empresa</h4>
             <div className="flex flex-col gap-3">
               <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/">Inicio</a>
+              <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/otras-soluciones">Otras Soluciones</a>
               <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/galeria">Galería</a>
               <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/faq">FAQ</a>
             </div>
