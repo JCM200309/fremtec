@@ -25,31 +25,12 @@ const OtherSolutionsPage: React.FC = () => {
 
   return (
     <div className="w-full bg-white pb-20">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-[#f8fafd] py-24 md:py-32">
-        {/* Abstract Background Elements */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform origin-top"></div>
-        <div className="absolute bottom-0 left-0 w-1/4 h-2/3 bg-secondary/5 skew-x-12 transform origin-bottom"></div>
-        
-        <div className="relative max-w-[1280px] mx-auto px-6">
-          <div className="flex flex-col items-center text-center">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase mb-4 block">Ecosistema Sustentable</span>
-            <h1 className="text-5xl md:text-7xl font-black text-[#111418] mb-8 leading-tight">
-              Más Allá de los <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-600">Paneles Solares</span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Descubra nuestra gama de tecnologías complementarias diseñadas para maximizar el ahorro y la autonomía energética en cada proyecto.
-            </p>
-            
-            <div className="mt-12 flex flex-wrap justify-center gap-4">
-              {['Termotanques', 'Bombeo Solar', 'Carga Eléctrica'].map((tag) => (
-                <span key={tag} className="px-6 py-2 rounded-full bg-white shadow-sm border border-gray-100 text-gray-600 font-medium">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
+      <div className="bg-[#f8fafd] py-20 px-6">
+        <div className="max-w-[1280px] mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#111418] mb-6">Otras Soluciones Sustentables</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Más allá de los paneles, ofrecemos una gama completa de tecnologías para maximizar su eficiencia energética.
+          </p>
         </div>
       </div>
 

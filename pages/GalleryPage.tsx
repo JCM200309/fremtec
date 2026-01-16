@@ -22,28 +22,13 @@ const GalleryPage: React.FC = () => {
 
   return (
     <div className="w-full bg-white pb-20">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-[#111418] py-24 md:py-32">
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute top-0 -left-1/4 w-1/2 h-full bg-primary/20 blur-[120px] rounded-full"></div>
-          <div className="absolute bottom-0 -right-1/4 w-1/2 h-full bg-secondary/10 blur-[120px] rounded-full"></div>
-        </div>
-        
-        <div className="relative max-w-[1280px] mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            <span className="text-primary text-sm font-bold tracking-widest uppercase">Visualizando el Futuro</span>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tight">
-            Nuestra <span className="text-primary">Galería</span>
-          </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Un recorrido visual por nuestras instalaciones de vanguardia que están transformando la matriz energética argentina.
+      <div className="bg-[#f8fafd] py-20 px-6">
+        <div className="max-w-[1280px] mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#111418] mb-6">Nuestra Galería</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Explora nuestros proyectos realizados en los sectores industrial y residencial.
           </p>
         </div>
-        
-        {/* Decoración inferior */}
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent"></div>
       </div>
 
       <div className="max-w-[1280px] mx-auto px-6 py-16">
