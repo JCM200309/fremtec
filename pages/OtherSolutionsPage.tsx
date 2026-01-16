@@ -25,12 +25,10 @@ const OtherSolutionsPage: React.FC = () => {
 
   return (
     <div className="w-full bg-white pb-20">
-      <div className="bg-[#f8fafd] py-20 px-6">
-        <div className="max-w-[1280px] mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#111418] mb-6">Otras Soluciones Sustentables</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Más allá de los paneles, ofrecemos una gama completa de tecnologías para maximizar su eficiencia energética.
-          </p>
+      <div className="py-20 min-h-[30vh]">
+        <div className="max-w-[1000px] mx-auto px-6 mb-12 text-center">
+          <h1 className="text-4xl md:text-6xl font-black text-primary mb-4">Otras Soluciones Sustentables</h1>
+          <p className="text-gray-500 text-xl">Más allá de los paneles, ofrecemos una gama completa de tecnologías para maximizar su eficiencia energética.</p>
         </div>
       </div>
 
