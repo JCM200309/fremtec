@@ -65,7 +65,7 @@ const FAQ: React.FC = () => {
         
         <div className="mt-16 text-center p-8 bg-gray-50 rounded-2xl border border-dashed border-gray-200">
           <p className="text-gray-600 mb-4">¿Tenés otra duda específica?</p>
-          <a href="#" className="text-primary font-bold hover:underline">Hablá con nuestro equipo técnico</a>
+          <a href="https://wa.me/541112345678" target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:underline">Hablá con nuestro equipo técnico</a>
         </div>
       </div>
     </section>
