@@ -3,7 +3,7 @@ import React from 'react';
 
 const DomesticSolutions: React.FC = () => {
   const benefits = [
-    { title: "Ahorro Inmediato", desc: "Reduce hasta un 70% tu factura de luz desde el primer día.", icon: "account_balance_wallet" },
+    { title: "Ahorro Inmediato", desc: "Reduce hasta un 90% tu factura de luz desde el primer día.", icon: "account_balance_wallet" },
     { title: "Valorización", desc: "Una casa con paneles solares incrementa su valor de mercado significativamente.", icon: "trending_up" },
     { title: "Independencia", desc: "Protegete contra los aumentos de tarifas y cortes de suministro.", icon: "bolt" },
     { title: "Fácil Instalación", desc: "Nuestros sistemas se instalan en menos de 48 horas sin obras complejas.", icon: "build" }
@@ -43,7 +43,7 @@ const DomesticSolutions: React.FC = () => {
               />
             </div>
             <div className="absolute -bottom-10 -left-10 bg-white p-10 rounded-[40px] shadow-2xl border border-gray-50 hidden md:block max-w-[280px]">
-              <div className="text-primary text-5xl font-black mb-2 italic">70%</div>
+              <div className="text-primary text-5xl font-black mb-2 italic">85%</div>
               <div className="text-gray-900 text-sm font-bold uppercase tracking-widest">Ahorro promedio reportado por nuestros clientes</div>
             </div>
           </div>

@@ -5,6 +5,12 @@ import Logo from './Logo';
 
 const Hero: React.FC = () => {
   const navigate = useNavigate();
+  {/* Este es el que funciona en version desktop pero no mobile
+    className="relative w-full h-screen md:h-[calc(100vh-80px)] flex items-center justify-center bg-cover bg-center overflow-hidden"
+    
+    h-[calc(100vh-220px)] Optimizado para SE, h-[calc(100vh-400px)] Optimizado para iphone 12
+    
+    */}
 
   return (
     
@@ -12,8 +18,7 @@ const Hero: React.FC = () => {
     
   className="hero-correct-size flex items-center justify-center bg-cover bg-center overflow-hidden"
   style={{
-    backgroundImage: `linear-gradient(rgba(10, 26, 26, 0.45) 0%, rgba(10, 26, 26, 0.85) 100%), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`,
-    backgroundPosition: "center 80%"
+    backgroundImage: `linear-gradient(rgba(10, 26, 26, 0.45) 0%, rgba(10, 26, 26, 0.85) 100%), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`
   }}
 >
       
@@ -30,29 +35,29 @@ const Hero: React.FC = () => {
           <span className="text-secondary italic">Tus Manos</span>
         </h1>
         
-        <p className="text-red-700 text-base p-hero-texts font-light leading-relaxed max-w-[720px] mb-12 border-l-2 border-secondary/30 pl-6 text-left md:text-center md:border-l-0 md:pl-0">
-          Soluciones fotovoltaicas de alta ingeniería para el sector residencial e industrial de Argentina. (Cambiar)
+        <p className="text-gray-200 text-base p-hero-texts font-light leading-relaxed max-w-[720px] mb-12 border-l-2 border-secondary/30 pl-6 text-left md:text-center md:border-l-0 md:pl-0">
+          Soluciones fotovoltaicas de alta ingeniería para el sector residencial e industrial de Argentina.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 lg:w-full lg:justify-center sm:w-auto buttons-hero-texts buttons-hero-size">
           <Link 
             to="/presupuesto" 
-            className="flex items-center justify-center rounded-xl px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto buttons-hero-size"
+            className="flex items-center justify-center rounded-xl px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto "
           >
             Comenzar mi Proyecto
           </Link>
           <button 
-            onClick={() => navigate('/Galeria')} 
-            className="flex items-center justify-center rounded-xl px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium transition-all w-full sm:w-auto  buttons-hero-size"
+            onClick={() => navigate('/industrial')} 
+            className="flex items-center justify-center rounded-xl px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium transition-all w-full sm:w-auto "
           >
-            Nuestros trabajos
+            Casos de Éxito
           </button>
         </div>
       </div>
       
       {/* Indicador de scroll - ARREGLADO Y ANIMADO */}
     
-     <div className="hidden sm:flex md:flex lg:flex absolute bottom-4 sm:bottom-1 md:bottom-2 left-1/2 right-1/2 -translate-x-1/2 animate-bounce-slow z-30 flex-col items-center pointer-events-none">
+     <div className="hidden sm:flex md:flex lg:flex absolute bottom-4 sm:bottom-1 md:bottom-2 left-1/2 -translate-x-1/2 animate-bounce-slow z-30 flex-col items-center pointer-events-none">
 
       <span className="text-white text-[9px] uppercase tracking-[0.6em] mb-4 font-black opacity-60">Explorar</span>
       <div className="w-0.5 h-14 md:h-16 bg-gradient-to-b from-secondary via-secondary to-transparent rounded-full shadow-[0_0_15px_rgba(251,192,45,0.4)]"></div>

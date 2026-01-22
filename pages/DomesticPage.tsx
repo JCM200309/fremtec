@@ -2,7 +2,6 @@
 import React from 'react';
 import {Link , useNavigate} from 'react-router-dom';
 import DomesticSolutions from '../components/DomesticSolutions';
-import { HashLink } from "react-router-hash-link"
 
 
 const DomesticPage: React.FC = () => {
@@ -13,7 +12,7 @@ const DomesticPage: React.FC = () => {
       <section className="hero-correct-size flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-background-dark/30 z-10"></div>
         <img
-          src="/fotos/paginaWeb/Residencial/residencial_soluciones1.jpeg"
+          src="/fotos/fotos-tio/casa-aereo.jpeg"
           alt="Domestica_hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -26,13 +25,13 @@ const DomesticPage: React.FC = () => {
             Asesoramos y dimensionamos sistemas solares a medida para el confort de tu familia y el ahorro real.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto sm:text-sm py-20 buttons-hero-texts ">                
-            <HashLink smooth to="/galeria#galeria_residencial" className="flex items-center rounded-xl h-14 2xl:h-16 px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto buttons-hero-size">
-              Nuestros proyectos residenciales
-            </HashLink>
-          </div>
-
-          
+          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto sm:text-sm py-20 buttons-hero-texts buttons-hero-size">
+                      <Link 
+                        to="/presupuesto" 
+                        className="flex items-center justify-center rounded-xl h-14 2xl:h-16 px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto ">
+                        Nuestros proyectos residenciales
+                      </Link>
+                    </div>
         </div>
       </section>
 
@@ -53,7 +52,7 @@ const DomesticPage: React.FC = () => {
                 name: "On-Grid", 
                 icon: "settings_input_antenna", 
                 desc: "Conectado a la red eléctrica. Ideal para reducir la factura de luz inyectando excedentes bajo la Ley 27.424.",
-                features: ["Ahorro directo", "Inyección a red", "Bajo mantenimiento","Gestion de trámite bidireccional"]
+                features: ["Ahorro directo", "Inyección a red", "Bajo mantenimiento"]
                 
               },
               { 
@@ -61,7 +60,7 @@ const DomesticPage: React.FC = () => {
                 icon: "battery_charging_full", 
                 active: true,
                 desc: "Backup energético mediante red y baterías. Seguridad ante cortes de suministro y gestión inteligente.",
-                features: ["Respaldo 24/7", "Máxima eficiencia", "Energía ininterrumpida","Gestion de trámite bidireccional"]
+                features: ["Respaldo 24/7", "Máxima eficiencia", "Energía ininterrumpida"]
               },
               { 
                 name: "Off-Grid", 

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 import Logo from './Logo';
 
 const Navbar: React.FC = () => {
@@ -11,7 +10,6 @@ const Navbar: React.FC = () => {
 
   const links = [
     { path: '/', label: 'Inicio' },
-    { path: '/#soluciones', label: 'Soluciones', isHash: true },
     { path: '/residencial', label: 'Residencial' },
     { path: '/industrial', label: 'Industrial' },
     { path: '/faq', label: 'FAQ' }
@@ -20,7 +18,7 @@ const Navbar: React.FC = () => {
   // Cierra el menú cuando cambia la ruta
   React.useEffect(() => {
     setIsOpen(false);
-  }, [location.pathname, location.hash]);
+  }, [location.pathname]);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#f0f2f4] py-2">
@@ -30,35 +28,20 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex flex-1 justify-end gap-10 items-center">
+        <div className="hidden md:flex flex-1 justify-end gap-10 items-center">
           <nav className="flex items-center gap-10">
             {links.map((link) => (
-              link.isHash ? (
-                <HashLink
-                  key={link.path}
-                  smooth
-                  to={link.path}
-                  className={`text-sm font-semibold tracking-wider uppercase transition-all relative py-2
-                    ${location.pathname + location.hash === link.path
-                      ? 'text-primary after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-secondary'
-                      : 'text-gray-600 hover:text-primary'
-                    }`}
-                >
-                  {link.label}
-                </HashLink>
-              ) : (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`text-sm font-semibold tracking-wider uppercase transition-all relative py-2
-                    ${isActive(link.path)
-                      ? 'text-primary after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-secondary'
-                      : 'text-gray-600 hover:text-primary'
-                    }`}
-                >
-                  {link.label}
-                </Link>
-              )
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`text-sm font-semibold tracking-wider uppercase transition-all relative py-2
+                  ${isActive(link.path)
+                    ? 'text-primary after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-secondary'
+                    : 'text-gray-600 hover:text-primary'
+                  }`}
+              >
+                {link.label}
+              </Link>
             ))}
           </nav>
 
@@ -72,7 +55,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-[#111418] p-2"
+          className="md:hidden text-[#111418] p-2"
           onClick={() => setIsOpen((v) => !v)}
           aria-label="Abrir menú"
           aria-expanded={isOpen}
@@ -85,31 +68,18 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="lg:hidden border-t border-[#f0f2f4] bg-white/95 backdrop-blur-md">
+        <div className="md:hidden border-t border-[#f0f2f4] bg-white/95 backdrop-blur-md">
           <nav className="px-6 py-4 flex flex-col gap-3">
             {links.map((link) => (
-              link.isHash ? (
-                <HashLink
-                  key={link.path}
-                  smooth
-                  to={link.path}
-                  className={`py-3 px-2 rounded-lg font-semibold uppercase tracking-wider text-sm transition
-                    ${location.pathname + location.hash === link.path ? 'text-primary bg-primary/5' : 'text-gray-700 hover:bg-gray-100'}
-                  `}
-                >
-                  {link.label}
-                </HashLink>
-              ) : (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`py-3 px-2 rounded-lg font-semibold uppercase tracking-wider text-sm transition
-                    ${isActive(link.path) ? 'text-primary bg-primary/5' : 'text-gray-700 hover:bg-gray-100'}
-                  `}
-                >
-                  {link.label}
-                </Link>
-              )
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`py-3 px-2 rounded-lg font-semibold uppercase tracking-wider text-sm transition
+                  ${isActive(link.path) ? 'text-primary bg-primary/5' : 'text-gray-700 hover:bg-gray-100'}
+                `}
+              >
+                {link.label}
+              </Link>
             ))}
 
             <Link
