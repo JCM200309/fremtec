@@ -9,8 +9,8 @@ const Solutions: React.FC = () => {
     {
       title: "Soluciones Industriales",
       subtitle: "INDUSTRIA",
-      description: "Impulse su industria con energia solar: menos costos, mayor eficiencia, más competitividad y un futuro sostenible. (CAMBIAR FOTO)",
-      image: "/fotos/fotos-tio/industrial-centro.jpeg",
+      description: "Impulse su industria con energia solar: menos costos, mayor eficiencia, más competitividad y un futuro sostenible.",
+      image: "/fotos/paginaWeb/Industrial/industrialCampo.jpeg",
       icon: "factory",
       path: "/industrial",
       color: "primary"
@@ -18,8 +18,8 @@ const Solutions: React.FC = () => {
     {
       title: "Soluciones Domésticas",
       subtitle: "HOGAR",
-      description: "Independencia energética y ahorro significativo en su factura de luz residencial con kits de fácil instalación. (CAMBIAR TEXTO Y FOTO)",
-      image: "/fotos/fotos-tio/panel-domestico-index.jpeg",
+      description: "Independencia energética y ahorro significativo en su factura de luz residencial con kits de fácil instalación.",
+      image: "/fotos/paginaWeb/Residencial/residencial_soluciones3.jpeg",
       icon: "home",
       path: "/residencial",
       color: "secondary"
@@ -34,13 +34,14 @@ const Solutions: React.FC = () => {
           <p className="text-gray-600 max-w-[600px] text-lg">Diseñamos sistemas energéticos a medida para cada necesidad. Elija su sector para comenzar el cambio.</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
           {solutions.map((sol, idx) => (
             <div key={idx} className="group relative flex flex-col overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100">
-              <div className="h-72 w-full overflow-hidden">
+              <div className="h-80 w-full overflow-hidden">
                 <div 
                   className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" 
-                  style={{ backgroundImage: `url("${sol.image}")` }}
+                  style={{ backgroundImage: `url("${sol.image}")` 
+                }}
                 />
               </div>
               <div className="p-10 flex flex-col flex-1">
