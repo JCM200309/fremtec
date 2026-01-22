@@ -12,7 +12,7 @@ const IndustrialPage: React.FC = () => {
       <section className="hero-correct-size relative flex items-center justify-center bg-background-dark text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="decor-circle w-[600px] h-[600px] -top-1/2 -left-40 opacity-20"></div>
-          <div className="absolute inset-0 opacity-45 bg-[url('/fotos/fotos-tio/industrial-header.jpeg')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 opacity-45 bg-[url('/fotos/paginaWeb/Industrial/industrialCampo.jpeg')] bg-cover bg-center"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background-dark/90"></div>
         </div>
         
