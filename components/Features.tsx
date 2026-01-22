@@ -37,7 +37,7 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <section className="w-full py-20 px-4 md:px-10 bg-white border-t border-gray-100">
+    <section className="w-full py-24 px-4 md:px-10 bg-[#f8fafd] border-y border-gray-100">
       <div className="max-w-[1100px] mx-auto">
         <div className="flex flex-col md:flex-row gap-16 items-start">
           <div className="flex flex-col gap-6 md:w-2/5">

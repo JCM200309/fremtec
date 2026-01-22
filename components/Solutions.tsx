@@ -27,7 +27,7 @@ const Solutions: React.FC = () => {
   ];
 
   return (
-    <section className="w-full py-20 px-4 md:px-10 bg-background-light">
+    <section className="w-full py-20 px-4 md:px-10 bg-white">
       <div className="max-w-[1100px] mx-auto">
         <div className="flex flex-col items-center text-center mb-16">
           <h2 className="text-[#111418] text-3xl md:text-5xl font-bold leading-tight tracking-[-0.015em] mb-4">Nuestras Soluciones</h2>
