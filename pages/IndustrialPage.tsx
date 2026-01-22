@@ -2,6 +2,7 @@
 import React from 'react';
 import IndustrialSolutions from '../components/IndustrialSolutions';
 import { Link } from 'react-router-dom';
+import { HashLink } from "react-router-hash-link"
 
 const IndustrialPage: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const IndustrialPage: React.FC = () => {
       <section className="hero-correct-size relative flex items-center justify-center bg-background-dark text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="decor-circle w-[600px] h-[600px] -top-1/2 -left-40 opacity-20"></div>
-          <div className="absolute inset-0 opacity-45 bg-[url('/fotos/fotos-tio/industrial-header.jpeg')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 opacity-45 bg-[url('/fotos/paginaWeb/Industrial/industrialCampo.jpeg')] bg-cover bg-center"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background-dark/90"></div>
         </div>
         
@@ -23,12 +24,10 @@ const IndustrialPage: React.FC = () => {
             Optimizamos costos operativos mediante ingeniería solar de alta precisión y servicios de auditoría energética especializada.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto buttons-hero-texts buttons-hero-size">
-            <Link 
-              to="/presupuesto" 
-              className="flex items-center justify-center rounded-xl px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto h-14">
+          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto buttons-hero-texts">
+            <HashLink smooth to="/galeria#galeria_industrial" className="flex items-center justify-center rounded-xl px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto h-14 buttons-hero-size">
               Nuestros proyectos industriales
-            </Link>
+            </HashLink>
           </div>
         </div>
       </section>
@@ -68,6 +67,11 @@ const IndustrialPage: React.FC = () => {
                     title: "Ingeniería On-Grid", 
                     desc: "Sistemas de inyección de alta potencia para reducir drásticamente los costos fijos mensuales y la dependencia de red.",
                     icon: "electric_bolt" 
+                  },
+                  { 
+                    title: "Venta de energia a cooperativas (CAMBIAR TITULO)", 
+                    desc: "El excedente se puede vender a distintas cooperativas para asi obtener un ingreso extra (CAMBIAR texto)",
+                    icon: "Attach_Money" 
                   }
                 ].map((service, i) => (
                   <div key={i} className="flex gap-8 group">
@@ -86,31 +90,7 @@ const IndustrialPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Products Grid */}
-      <section className="bg-gray-50 py-24 px-6 border-t border-gray-100">
-        <div className="max-w-[1100px] mx-auto text-center">
-          <h2 className="text-4xl font-black mb-16 underline decoration-primary decoration-4 underline-offset-8">Garantía de Trabajo</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="flex flex-col items-center">
-              {/* Imagen: termotanque */}
-              <img src="/fotos/termotanque.jpg" className="w-full h-72 object-cover rounded-[40px] mb-8 shadow-xl" alt="Termotanque Solar" />
-              <h3 className="text-2xl font-bold mb-2">Termotanques Industriales</h3>
-              <p className="text-gray-500">Capacidad de alto rendimiento para consumos comerciales.</p>
-            </div>
-            <div className="flex flex-col items-center">
-              {/* Imagen: bombeo_solar.jpg */}
-              <img src="/fotos/bombeo_solar.jpg" className="w-full h-72 object-cover rounded-[40px] mb-8 shadow-xl" alt="Bombeo Solar" />
-              <h3 className="text-2xl font-bold mb-2">Bombeo Solar</h3>
-              <p className="text-gray-500">Soluciones de riego y extracción para el sector agropecuario.</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src="/fotos/fotos-tio/paneles-industrial.jpeg" className="w-full h-72 object-cover rounded-[40px] mb-8 shadow-xl" alt="Estacion Solar" />
-              <h3 className="text-2xl font-bold mb-2">Estaciones de Carga</h3>
-              <p className="text-gray-500">Carga de dispositivos en espacios públicos y privados.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };

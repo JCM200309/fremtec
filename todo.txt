@@ -7,6 +7,10 @@
 SEO:
 1) Mejorar Seo y Seo con IA
 2) Optimizar Imagenes y nombres (Tinipng)
+3) mejorar nombres de fotos sin nombres raros
+4) verificar paths
+5) cambiar fotos online por fotos locales
 
-Proponer:
-1) Boton para Whatsapp
+Diseño:
+1) Mejorar animacion de hover en "Nuestras soluciones"
+2) Ajustar boton de Nuestros proyectos residenciales mas abajo

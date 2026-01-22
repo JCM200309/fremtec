@@ -1,7 +1,10 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const Features: React.FC = () => {
+  const navigate = useNavigate();
   const features = [
     {
       title: "Ahorro Económico",
@@ -18,11 +21,18 @@ const Features: React.FC = () => {
       iconColor: "text-secondary"
     },
     {
-      title: "Tecnología Arg",
-      desc: "Soporte técnico local y garantía asegurada en todo el país.",
-      icon: "engineering",
+      title: "Gestion de trámite bidireccional",
+      desc: "Ayudamos a realizar el trámite que va a permitir reinsertar leagalmente energia a la red (Cambiar texto)",
+      icon: "Contract",
       bgColor: "bg-blue-50",
       iconColor: "text-primary"
+    },
+    {
+      title: "Estudio de Carbono y eficiencia energetica",
+      desc: "Junto a nuestros ingenieros realizaremos estudios para determinar la mejor configuracion para instalar (CAMBIAR TEXTO)",
+      icon: "Co2",
+      bgColor: "bg-green-50",
+      iconColor: "text-secondary"
     }
   ];
 
@@ -37,8 +47,10 @@ const Features: React.FC = () => {
             <p className="text-gray-600 text-xl leading-relaxed">
               Tecnología avanzada y soporte local para su transición energética. Somos su socio estratégico en Argentina para un futuro más verde.
             </p>
-            <button className="w-fit mt-4 text-primary font-bold hover:translate-x-2 transition-transform inline-flex items-center text-lg">
-              Sobre Nosotros <span className="material-symbols-outlined ml-2">chevron_right</span>
+            <button 
+            onClick={() => navigate("/faq")}
+            className="w-fit mt-4 text-primary font-bold hover:translate-x-2 transition-transform inline-flex items-center text-lg" >
+              Preguntas comunes <span className="material-symbols-outlined ml-2">chevron_right</span>
             </button>
           </div>
           

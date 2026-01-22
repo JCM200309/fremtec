@@ -1,39 +1,73 @@
+import FileUploader from '@/components/FileUploader';
 import React, { useState } from 'react';
 
-type FormData = {
+type presupuestoForm = {
   name: string;
   email: string;
   phone: string;
   location: string;
-  type: string;
+  type: 'residencial' | 'industrial' | 'agro' | 'otro' | '';
+  subType: '' | 'OffGrid' | 'Hibrido' | 'OnGrid';
   details: string;
+  file: File | null;
 };
 
 const PresupuestoPage: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<presupuestoForm>({
     name: '',
     email: '',
     phone: '',
     location: '',
-    type: 'residencial',
-    details: ''
+    type: 'Industrial',
+    subType: '',
+    details: '',
+    file: null 
   });
 
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState<string>('');
+  const [file, setFile] = useState<File | null>(null);
+
+  const showResidentialSubType = formData.type === 'residencial';
+
+  type UploadStatus = "idle" | "uploading" | "success" | "error";
+  const [fileStatus, setFileStatus] = useState<UploadStatus>("idle");
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
     setErrorMsg('');
 
+    // ✅ Validación condicional (antes del fetch)
+    if (formData.type === 'residencial' && !formData.subType) {
+      setStatus('error');
+      setErrorMsg('Si elegís "Residencial", seleccioná el tipo de solucion.');
+      setTimeout(() => setStatus('idle'), 6000);
+      return;
+    }
+
+
     try {
+      const fd = new FormData();
+
+      fd.append("name", formData.name);
+      fd.append("email", formData.email);
+      fd.append("phone", formData.phone);
+      fd.append("location", formData.location);
+      fd.append("type", formData.type);
+      fd.append("Subtype", formData.subType)
+      fd.append("details", formData.details);
+
+      if (file){
+        fd.append("file",file)
+      }
+
+      console.log(fd);
       const res = await fetch('/api/presupuesto', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: fd,
       });
-
       const data = await res.json().catch(() => ({}));
 
       if (!res.ok) {
@@ -48,17 +82,25 @@ const PresupuestoPage: React.FC = () => {
         email: '',
         phone: '',
         location: '',
-        type: 'residencial',
-        details: ''
+        type: 'industrial',
+        details: '',
+        file: null
       });
 
       // volver a estado idle después de 5s (si querés)
       setTimeout(() => setStatus('idle'), 5000);
+
+    {/* Logueo error anterior   
     } catch (err: any) {
       setStatus('error');
       setErrorMsg(err?.message || 'Error enviando el formulario.');
       setTimeout(() => setStatus('idle'), 6000);
+    }*/}
+    } catch (e) {
+      console.error("ERROR /api/presupuesto:", e);
+      console.error("STACK:", e?.stack);
     }
+
   };
 
   const buttonText =
@@ -156,22 +198,47 @@ const PresupuestoPage: React.FC = () => {
                   disabled={status === 'loading'}
                 />
               </div>
-
+              
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Tipo de Solución</label>
                 <select
                   className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
                   value={formData.type}
-                  onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                  onChange={(e) => {
+
+                    const nextType = e.target.value as presupuestoForm['type'];
+
+                    // ✅ Si deja de ser industrial, reseteo subType
+                    setFormData((prev) => ({
+                      ...prev,
+                      type: nextType,
+                      subType: nextType === 'residencial' ? prev.subType : '',
+                    }));
+                  }}
                   disabled={status === 'loading'}
                 >
+                  <option value="industrial" >Industrial / Corporativo</option>
                   <option value="residencial">Residencial (Hogar)</option>
-                  <option value="industrial">Industrial / Corporativo</option>
-                  <option value="agro">Agropecuario (Bombeo)</option>
-                  <option value="otro">Otro</option>
+                  <option value="otro">Otro</option>  
                 </select>
               </div>
-
+              {showResidentialSubType && ( 
+                <div>
+                  <label className="block text-sm font-bold text-gray-700 mb-2">Tipo de Solución residencial</label>
+                  <select
+                    className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
+                    value={formData.subType}
+                      onChange={(e) =>
+                        setFormData({ ...formData, subType: e.target.value as presupuestoForm['subType'] })
+                      }
+                    disabled={status === 'loading'}
+                  >
+                    <option value="OnGrid">OnGrid (Hogar)</option>
+                    <option value="Hibrido">Híbrido</option>
+                    <option value="OffGrid">OffGrid</option>
+                  </select>
+                </div>
+              )}
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Detalles del Proyecto / Consumo Mensual (kWh)</label>
                 <textarea
@@ -183,6 +250,13 @@ const PresupuestoPage: React.FC = () => {
                   disabled={status === 'loading'}
                 ></textarea>
               </div>
+
+              <FileUploader
+                file={file}
+                setFile={setFile}
+                fileStatus={fileStatus}
+                setFileStatus={setFileStatus}
+              />
 
               <button
                 type="submit"
@@ -199,9 +273,9 @@ const PresupuestoPage: React.FC = () => {
               <h3 className="text-3xl font-black mb-6">¿Por qué elegirnos?</h3>
               <div className="space-y-8">
                 {[
-                  { t: "Estudio Personalizado", d: "Analizamos tu factura de luz para darte un ROI exacto.", i: "analytics" },
-                  { t: "Soporte Local", d: "Atención técnica inmediata en toda la Argentina.", i: "engineering" },
-                  { t: "Calidad Certificada", d: "Equipos de primera línea con 25 años de garantía.", i: "verified" }
+                  { t: "Estudio Personalizado", d: "Analizamos tu factura de luz para darte un ROI exacto. (CAMBIAR)", i: "analytics" },
+                  { t: "Soporte Local", d: "Equipo de especialización post venta.", i: "engineering" },
+                  { t: "Calidad Certificada", d: "Equipos de primera línea con garantia de fabrica.", i: "verified" }
                 ].map((item, idx) => (
                   <div key={idx} className="flex gap-6">
                     <span className="material-symbols-outlined text-secondary text-4xl">{item.i}</span>
@@ -219,11 +293,11 @@ const PresupuestoPage: React.FC = () => {
               <div className="flex flex-col gap-3 text-gray-300">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-sm">mail</span>
-                  <span>presupuestos@fremtec.com.ar</span>
+                  <span>presupuestos@fremtec.com.ar (CAMBIAR)</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-sm">call</span>
-                  <span>+54 9 11 5057-2126 (Zona Norte)</span>
+                  <span>+54 9 11 5057-2126 (Zona Norte) (CAMBIAR)</span>
                 </div>
               </div>
             </div>

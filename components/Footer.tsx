@@ -22,11 +22,15 @@ const Footer: React.FC = () => {
               Liderando la revolución solar en Argentina. Compromiso, calidad y eficiencia energética para un futuro sostenible.
             </p>
             <div className="flex gap-5">
-              {['public', 'share', 'mail'].map((icon) => (
-                <a key={icon} className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-blue-50 transition-all" href="#">
-                  <span className="material-symbols-outlined">{icon}</span>
-                </a>
-              ))}
+              <a href="https://www.instagram.com/fremtec.energiasolar/?hl=es-la" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                <img src="/fotos/logotipo-de-instagram.png" alt="Instagram" className="size-7 opacity-80 hover:opacity-100"/>
+              </a>
+              <a href="/presupuesto" className="hover:scale-110 transition-transform">
+                <img src="/fotos/gmail.png" alt="Email" className="size-7 opacity-80 hover:opacity-100"/>
+              </a>
+              <a href="https://wa.me/541112345678" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                <img src="/fotos/whatsapp.png" alt="WhatsApp" className="size-7 opacity-80 hover:opacity-100"/>
+              </a>
             </div>
           </div>
           
@@ -34,9 +38,9 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-6">
             <h4 className="text-[#111418] font-bold text-lg">Empresa</h4>
             <div className="flex flex-col gap-3">
-              {['Nosotros', 'Proyectos', 'Blog', 'Carreras'].map((link) => (
-                <a key={link} className="text-gray-500 hover:text-primary transition-colors text-base" href="#">{link}</a>
-              ))}
+              <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/">Inicio</a>
+              <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/galeria">Galería</a>
+              <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/faq">FAQ</a>
             </div>
           </div>
           
@@ -44,9 +48,9 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-6">
             <h4 className="text-[#111418] font-bold text-lg">Servicios</h4>
             <div className="flex flex-col gap-3">
-              {['Instalación Industrial', 'Paneles Residenciales', 'Mantenimiento', 'Consultoría Energética'].map((link) => (
-                <a key={link} className="text-gray-500 hover:text-primary transition-colors text-base" href="#">{link}</a>
-              ))}
+              <a href="/industrial" className="text-gray-500 hover:text-primary transition-colors text-base">Industrial</a>
+              <a href="/residencial" className="text-gray-500 hover:text-primary transition-colors text-base">Residencial</a>
+              <a href="/otras-soluciones" className="text-gray-500 hover:text-primary transition-colors text-base">Otras Soluciones</a>
             </div>
           </div>
           
@@ -56,15 +60,15 @@ const Footer: React.FC = () => {
             <div className="flex flex-col gap-4 text-base text-gray-500">
               <div className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-primary mt-1">location_on</span>
-                <span>Av. Libertador 1234, CABA, Argentina</span>
+                <span>Av. Libertador 1234, CABA, Argentina (CAMBIAR)</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-primary mt-1">call</span>
-                <span>+54 11 1234-5678</span>
+                <span>+54 11 1234-5678 (CAMBIAR)</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-primary mt-1">email</span>
-                <span>info@fremtec.com.ar</span>
+                <span>info@fremtec.com.ar (CAMBIAR)</span>
               </div>
             </div>
           </div>
@@ -72,10 +76,6 @@ const Footer: React.FC = () => {
         
         <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-gray-400 text-sm">© 2023 Fremtec. Todos los derechos reservados.</p>
-          <div className="flex gap-8 text-sm text-gray-400">
-            <a className="hover:text-primary transition-colors" href="#">Privacidad</a>
-            <a className="hover:text-primary transition-colors" href="#">Términos</a>
-          </div>
         </div>
       </div>
     </footer>
