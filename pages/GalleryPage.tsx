@@ -1,5 +1,5 @@
-
 import React from 'react';
+import PageHero from '../components/PageHero';
 
 const GalleryPage: React.FC = () => {
   const industrialImages = [
@@ -22,12 +22,11 @@ const GalleryPage: React.FC = () => {
 
   return (
     <div className="w-full bg-white pb-20">
-      <div className="py-20 min-h-[30vh]">
-        <div className="max-w-[800px] mx-auto px-6 mb-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-black text-primary mb-4">Nuestra Galería</h1>
-          <p className="text-gray-500 text-xl">Explora nuestros proyectos realizados en los sectores industrial y residencial.</p>
-        </div>
-      </div>
+      <PageHero 
+        title="Nuestra Galería" 
+        subtitle="Explora nuestros proyectos realizados en los sectores industrial y residencial."
+        backgroundImage="https://images.unsplash.com/photo-1509391366360-feaffa64d4c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      />
 
       <div className="max-w-[1280px] mx-auto px-6 py-16">
         <section className="mb-20" id="galeria_industrial">

@@ -1,15 +1,19 @@
 
 import React from 'react';
 import FAQ from '../components/FAQ';
+import PageHero from '../components/PageHero';
 
 const FAQPage: React.FC = () => {
   return (
-    <div className="py-20 min-h-[60vh]">
-      <div className="max-w-[800px] mx-auto px-6 mb-12 text-center">
-        <h1 className="text-4xl md:text-6xl font-black text-primary mb-4">Centro de Soporte</h1>
-        <p className="text-gray-500 text-xl">Todo lo que necesitás saber sobre la energía solar en Argentina.</p>
+    <div className="w-full bg-white">
+      <PageHero 
+        title="Centro de Soporte" 
+        subtitle="Todo lo que necesitás saber sobre la energía solar en Argentina."
+        backgroundImage="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      />
+      <div className="py-12">
+        <FAQ />
       </div>
-      <FAQ />
     </div>
   );
 };

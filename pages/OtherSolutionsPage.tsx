@@ -1,5 +1,5 @@
-
 import React from 'react';
+import PageHero from '../components/PageHero';
 
 const OtherSolutionsPage: React.FC = () => {
   const solutions = [
@@ -25,12 +25,11 @@ const OtherSolutionsPage: React.FC = () => {
 
   return (
     <div className="w-full bg-white pb-20">
-      <div className="py-20 min-h-[30vh]">
-        <div className="max-w-[1000px] mx-auto px-6 mb-12 text-center">
-          <h1 className="text-4xl md:text-6xl font-black text-primary mb-4">Otras Soluciones Sustentables</h1>
-          <p className="text-gray-500 text-xl">Más allá de los paneles, ofrecemos una gama completa de tecnologías para maximizar su eficiencia energética.</p>
-        </div>
-      </div>
+      <PageHero 
+        title="Otras Soluciones" 
+        subtitle="Más allá de los paneles, ofrecemos una gama completa de tecnologías para maximizar su eficiencia energética."
+        backgroundImage="https://images.unsplash.com/photo-1466611653911-95282fc365d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      />
 
       <div className="max-w-[1280px] mx-auto px-6 py-16">
         <div className="flex flex-col gap-24">
