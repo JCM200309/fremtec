@@ -28,7 +28,7 @@ const OtherSolutionsPage: React.FC = () => {
       <PageHero 
         title="Otras Soluciones" 
         subtitle="Más allá de los paneles, ofrecemos una gama completa de tecnologías para maximizar su eficiencia energética."
-        backgroundImage="https://images.unsplash.com/photo-1466611653911-95282fc365d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+
       />
 
       <div className="max-w-[1280px] mx-auto px-6 py-16">

@@ -4,20 +4,20 @@ import PageHero from '../components/PageHero';
 const GalleryPage: React.FC = () => {
   const industrialImages = [
     { src: '/fotos/fotos-tio/industrial-header.jpeg', alt: 'Planta Industrial Solar 1' },
-    { src: '/fotos/fotos-tio/industrial-centro.jpeg', alt: 'Instalación Central' },
-    { src: '/fotos/fotos-tio/industrial-costado.jpeg', alt: 'Vista Lateral Industrial' },
-    { src: '/fotos/fotos-tio/paneles-industrial.jpeg', alt: 'Paneles Industriales' },
-    { src: '/fotos/fotos-tio/paneles-industrial2.jpeg', alt: 'Sistema Industrial' },
-    { src: '/fotos/fotos-tio/industrial-techo.jpeg', alt: 'Instalación en Techo Industrial' },
+    { src: '/fotos/paginaWeb/Industrial/industrial1.jpg', alt: 'Instalación Central' },
+    { src: '/fotos/paginaWeb/Industrial/industrial2.jpg', alt: 'Vista Lateral Industrial' },
+    { src: '/fotos/paginaWeb/Industrial/industrial3.jpeg', alt: 'Paneles Industriales' },
+    { src: '/fotos/paginaWeb/Industrial/industrialTecnico.jpeg', alt: 'Sistema Industrial' },
+    { src: '/fotos/paginaWeb/Industrial/tablero2.jpg', alt: 'Instalación en Techo Industrial' },
   ];
 
   const residentialImages = [
-    { src: '/fotos/fotos-tio/paneles-domestico.jpeg', alt: 'Paneles Residenciales' },
+    { src: '/fotos/paginaWeb/Residencial/residencial_soluciones3.jpeg', alt: 'Paneles Residenciales' },
     { src: '/fotos/fotos-tio/casa-aereo.jpeg', alt: 'Vista Aérea Residencial' },
     { src: '/fotos/fotos-tio/panel-domestico-index.jpeg', alt: 'Panel Hogar' },
-    { src: '/fotos/termotanque.jpg', alt: 'Termotanque Solar' },
-    { src: '/fotos/bombeo_solar.jpg', alt: 'Bombeo Solar' },
-    { src: '/fotos/Casa ejemplo Domestica.jpg', alt: 'Casa Sustentable' },
+    { src: '/fotos/paginaWeb/Residencial/residencial1.jpeg', alt: 'Casa residencial' },
+    { src: '/fotos/paginaWeb/Residencial/residencial2.jpeg', alt: 'Bombeo Solar' },
+    { src: '/fotos/paginaWeb/Residencial/residencialCasaArriba.jpg', alt: 'Casa Sustentable' },
   ];
 
   return (
@@ -25,7 +25,6 @@ const GalleryPage: React.FC = () => {
       <PageHero 
         title="Nuestra Galería" 
         subtitle="Explora nuestros proyectos realizados en los sectores industrial y residencial."
-        backgroundImage="https://images.unsplash.com/photo-1509391366360-feaffa64d4c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
       />
 
       <div className="max-w-[1280px] mx-auto px-6 py-16">

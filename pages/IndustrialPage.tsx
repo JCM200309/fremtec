@@ -12,7 +12,8 @@ const IndustrialPage: React.FC = () => {
       <section className="hero-correct-size relative flex items-center justify-center bg-background-dark text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="decor-circle w-[600px] h-[600px] -top-1/2 -left-40 opacity-20"></div>
-          <div className="absolute inset-0 opacity-45 bg-[url('/fotos/paginaWeb/Industrial/industrialCampo.jpeg')] bg-cover bg-center"></div>
+          {/* Esta foto queda mucho mejor [url('/fotos/paginaWeb/Industrial/industrialCampo.jpeg')]*/}
+          <div className="absolute inset-0 opacity-45 bg-[url('/fotos/heroIndustrial.jpeg')] bg-cover bg-center"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background-dark/90"></div>
         </div>
         
@@ -40,8 +41,8 @@ const IndustrialPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="rounded-[60px] overflow-hidden shadow-2xl relative z-20">
-                <img 
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                <img //https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80
+                  src="fotos/ingeniero.jpeg" 
                   alt="Industria Solar" 
                   className="w-full h-[650px] object-cover"
                 />
