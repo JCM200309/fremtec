@@ -23,7 +23,7 @@ const DomesticSolutions: React.FC = () => {
             <p className="text-gray-600 text-lg mb-10 leading-relaxed">
               En Argentina, el sol es un recurso inagotable. Con Fremtec Doméstica, podés generar tu propia energía, inyectar el excedente a la red mediante la Ley de Generación Distribuida y ahorrar miles de pesos anualmente.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
               {benefits.map((b, i) => (
                 <div key={i} className="flex flex-col gap-2 p-4 rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100">
                   <span className="material-symbols-outlined text-primary text-3xl mb-1">{b.icon}</span>
@@ -31,6 +31,15 @@ const DomesticSolutions: React.FC = () => {
                   <p className="text-gray-500 text-sm leading-relaxed">{b.desc}</p>
                 </div>
               ))}
+            </div>
+            <div className="flex justify-start">
+              <a 
+                href="/presupuesto" 
+                className="flex items-center justify-center rounded-xl h-14 px-10 bg-primary hover:bg-teal-700 text-white font-bold shadow-lg hover:shadow-2xl transition-all hover:scale-105 active:scale-95"
+              >
+                Comenzar mi cambio solar
+                <span className="material-symbols-outlined ml-2">arrow_forward</span>
+              </a>
             </div>
           </div>
           <div className="relative">
