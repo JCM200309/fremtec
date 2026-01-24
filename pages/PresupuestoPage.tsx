@@ -260,7 +260,7 @@ const PresupuestoPage: React.FC = () => {
                 fileStatus={fileStatus}
                 setFileStatus={setFileStatus}
               />
-              <div>
+              <div className='justify-center'>
                   <ReCAPTCHA
                     sitekey="6LdcTVUsAAAAAOuGZr8ltQ4x7BQvtLbwRJjrRWFs"
                     onChange={(val: string | null) => setCapVal(val)}
