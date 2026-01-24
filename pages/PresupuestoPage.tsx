@@ -1,5 +1,6 @@
 import FileUploader from '@/components/FileUploader';
 import React, { useState } from 'react';
+import ReCAPTCHA from "react-google-recaptcha"
 
 type presupuestoForm = {
   name: string;
@@ -18,12 +19,13 @@ const PresupuestoPage: React.FC = () => {
     email: '',
     phone: '',
     location: '',
-    type: 'Industrial',
+    type: 'industrial',
     subType: '',
     details: '',
     file: null 
   });
 
+  const [capVal, setCapVal] = useState<string | null>(null)
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState<string>('');
   const [file, setFile] = useState<File | null>(null);
@@ -83,6 +85,7 @@ const PresupuestoPage: React.FC = () => {
         phone: '',
         location: '',
         type: 'industrial',
+        subType: '',
         details: '',
         file: null
       });
@@ -257,10 +260,16 @@ const PresupuestoPage: React.FC = () => {
                 fileStatus={fileStatus}
                 setFileStatus={setFileStatus}
               />
+              <div>
+                  <ReCAPTCHA
+                    sitekey="6LdcTVUsAAAAAOuGZr8ltQ4x7BQvtLbwRJjrRWFs"
+                    onChange={(val: string | null) => setCapVal(val)}
+                  />
+                </div>
 
               <button
                 type="submit"
-                disabled={status === 'loading'}
+                disabled={status === 'loading' || !capVal}
                 className={`w-full py-5 rounded-2xl font-black text-lg transition-all shadow-xl ${buttonClass}`}
               >
                 {buttonText}
