@@ -6,7 +6,7 @@ const OtherSolutionsPage: React.FC = () => {
     {
       title: 'Termotanques Industriales',
       description: 'Sistemas de calentamiento de agua a gran escala para industrias, hoteles y centros deportivos. Reducen drásticamente el costo operativo utilizando la energía térmica del sol.',
-      image: '/fotos/termotanque.jpg',
+      image: '/fotos/paginaWeb/Otras/termotanque.jpeg',
       features: ['Alta eficiencia térmica', 'Tanques de gran capacidad', 'Larga vida útil', 'Bajo mantenimiento']
     },
     {
@@ -16,9 +16,9 @@ const OtherSolutionsPage: React.FC = () => {
       features: ['Funcionamiento autónomo', 'Sin costos de combustible', 'Apto para pozos profundos', 'Instalación modular']
     },
     {
-      title: 'Estaciones de Carga (EV)',
+      title: 'Carpot Solares',
       description: 'Infraestructura de carga para vehículos eléctricos integrada con sistemas fotovoltaicos. El futuro de la movilidad sostenible alimentado por energía limpia.',
-      image: '/fotos/fotos-tio/instalacion-tecnico.jpeg',
+      image: '/fotos/paginaWeb/Otras/carPot.jpg',
       features: ['Carga rápida y ultra-rápida', 'Gestión inteligente de energía', 'Compatibilidad universal', 'Escalable']
     }
   ];
@@ -40,7 +40,7 @@ const OtherSolutionsPage: React.FC = () => {
                   <img 
                     src={solution.image} 
                     alt={solution.title} 
-                    className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+                    className="w-full h-[700px] object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
               </div>

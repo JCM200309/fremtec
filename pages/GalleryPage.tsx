@@ -1,29 +1,30 @@
-import React from 'react';
-import PageHero from '../components/PageHero';
+import React from "react";
+import PageHero from "../components/PageHero";
+import ImageCarousel from "../components/ImageCarousel";
 
 const GalleryPage: React.FC = () => {
   const industrialImages = [
-    { src: '/fotos/fotos-tio/industrial-header.jpeg', alt: 'Planta Industrial Solar 1' },
-    { src: '/fotos/paginaWeb/Industrial/industrial1.jpg', alt: 'Instalación Central' },
-    { src: '/fotos/paginaWeb/Industrial/industrial2.jpg', alt: 'Vista Lateral Industrial' },
-    { src: '/fotos/paginaWeb/Industrial/industrial3.jpeg', alt: 'Paneles Industriales' },
-    { src: '/fotos/paginaWeb/Industrial/industrialTecnico.jpeg', alt: 'Sistema Industrial' },
-    { src: '/fotos/paginaWeb/Industrial/tablero2.jpg', alt: 'Instalación en Techo Industrial' },
+    { src: "/fotos/fotos-tio/industrial-header.jpeg", alt: "Planta Industrial Solar 1" },
+    { src: "/fotos/paginaWeb/Industrial/industrial1.jpg", alt: "Instalación Central" },
+    { src: "/fotos/paginaWeb/Industrial/industrial2.jpg", alt: "Vista Lateral Industrial" },
+    { src: "/fotos/paginaWeb/Industrial/industrial3.jpeg", alt: "Paneles Industriales" },
+    { src: "/fotos/paginaWeb/Industrial/industrialTecnico.jpeg", alt: "Sistema Industrial" },
+    { src: "/fotos/paginaWeb/Industrial/tablero2.jpg", alt: "Instalación en Techo Industrial" },
   ];
 
   const residentialImages = [
-    { src: '/fotos/paginaWeb/Residencial/residencial_soluciones3.jpeg', alt: 'Paneles Residenciales' },
-    { src: '/fotos/fotos-tio/casa-aereo.jpeg', alt: 'Vista Aérea Residencial' },
-    { src: '/fotos/fotos-tio/panel-domestico-index.jpeg', alt: 'Panel Hogar' },
-    { src: '/fotos/paginaWeb/Residencial/residencial1.jpeg', alt: 'Casa residencial' },
-    { src: '/fotos/paginaWeb/Residencial/residencial2.jpeg', alt: 'Bombeo Solar' },
-    { src: '/fotos/paginaWeb/Residencial/residencialCasaArriba.jpg', alt: 'Casa Sustentable' },
+    { src: "/fotos/paginaWeb/Residencial/residencial_soluciones3.jpeg", alt: "Paneles Residenciales" },
+    { src: "/fotos/fotos-tio/casa-aereo.jpeg", alt: "Vista Aérea Residencial" },
+    { src: "/fotos/fotos-tio/panel-domestico-index.jpeg", alt: "Panel Hogar" },
+    { src: "/fotos/paginaWeb/Residencial/residencial1.jpeg", alt: "Casa residencial",  },
+    { src: "/fotos/paginaWeb/Residencial/tableroHorizontal.jpg", alt: "Casa residencial"},
+    { src: "/fotos/paginaWeb/Residencial/residencialCasaArriba.jpg", alt: "Casa Sustentable" },
   ];
 
   return (
     <div className="w-full bg-white pb-20">
-      <PageHero 
-        title="Nuestra Galería" 
+      <PageHero
+        title="Nuestra Galería"
         subtitle="Explora nuestros proyectos realizados en los sectores industrial y residencial."
       />
 
@@ -36,17 +37,16 @@ const GalleryPage: React.FC = () => {
           <p className="text-gray-600 mb-10 text-lg max-w-3xl">
             Implementaciones de gran escala diseñadas para optimizar el consumo energético de fábricas, almacenes y complejos industriales. Nuestras soluciones garantizan un retorno de inversión acelerado y una reducción significativa en la huella de carbono corporativa.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industrialImages.map((img, idx) => (
-              <div key={idx} className="group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-                <img 
-                  src={img.src} 
-                  alt={img.alt} 
-                  className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
+
+          <ImageCarousel
+            images={industrialImages}
+            autoplay
+            intervalMs={3500}
+            aspectClassName="h-[480px] md:h-[640px]"
+            fit="cover"
+          />
+
+
         </section>
 
         <section id="galeria_residencial">
@@ -57,17 +57,16 @@ const GalleryPage: React.FC = () => {
           <p className="text-gray-600 mb-10 text-lg max-w-3xl">
             Transformamos hogares en espacios autosustentables. Desde paneles fotovoltaicos hasta sistemas de agua caliente solar, brindamos confort y ahorro a las familias argentinas con tecnología de vanguardia y estética cuidada.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {residentialImages.map((img, idx) => (
-              <div key={idx} className="group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-                <img 
-                  src={img.src} 
-                  alt={img.alt} 
-                  className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
+
+          <ImageCarousel
+            images={residentialImages}
+            autoplay
+            intervalMs={3800}
+            aspectClassName="h-[480px] md:h-[640px]"
+            fit="cover"
+            className="[&_.bg-primary]:bg-secondary"
+          />
+
         </section>
       </div>
     </div>
