@@ -20,6 +20,12 @@ const OtherSolutionsPage: React.FC = () => {
       description: 'Infraestructura de carga para vehículos eléctricos integrada con sistemas fotovoltaicos. El futuro de la movilidad sostenible alimentado por energía limpia.',
       image: '/fotos/paginaWeb/Otras/carPot.jpg',
       features: ['Carga rápida y ultra-rápida', 'Gestión inteligente de energía', 'Compatibilidad universal', 'Escalable']
+    },
+    {
+      title: 'Cargadores para vehículos eléctricos',
+      description: 'Infraestructura de carga para vehículos eléctricos integrada con sistemas fotovoltaicos. El futuro de la movilidad sostenible alimentado por energía limpia.',
+      image: '/fotos/paginaWeb/Otras/pinDeCargaAuto.jpg',
+      features: ['Carga rápida y ultra-rápida', 'Gestión inteligente de energía', 'Compatibilidad universal', 'Escalable']
     }
   ];
 
