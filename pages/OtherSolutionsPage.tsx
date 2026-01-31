@@ -10,6 +10,12 @@ const OtherSolutionsPage: React.FC = () => {
       features: ['Carga rápida y ultra-rápida', 'Gestión inteligente de energía', 'Compatibilidad universal', 'Escalable']
     },
     {
+      title: 'Carpot Solares',
+      description: 'Infraestructura de carga para vehículos eléctricos integrada con sistemas fotovoltaicos. El futuro de la movilidad sostenible alimentado por energía limpia.',
+      image: '/fotos/paginaWeb/Otras/carPotNuevo.png',
+      features: ['Carga rápida y ultra-rápida', 'Gestión inteligente de energía', 'Compatibilidad universal', 'Escalable']
+    },
+    {
       title: 'Termotanques Industriales',
       description: 'Sistemas de calentamiento de agua a gran escala para industrias, hoteles y centros deportivos. Reducen drásticamente el costo operativo utilizando la energía térmica del sol.',
       image: '/fotos/paginaWeb/Otras/termotanque.jpeg',
@@ -20,13 +26,8 @@ const OtherSolutionsPage: React.FC = () => {
       description: 'Soluciones de extracción de agua para el sector agropecuario e industrial sin dependencia de la red eléctrica o combustibles fósiles. Ideal para zonas remotas.',
       image: '/fotos/bombeo_solar.jpg',
       features: ['Funcionamiento autónomo', 'Sin costos de combustible', 'Apto para pozos profundos', 'Instalación modular']
-    },
-    {
-      title: 'Carpot Solares',
-      description: 'Infraestructura de carga para vehículos eléctricos integrada con sistemas fotovoltaicos. El futuro de la movilidad sostenible alimentado por energía limpia.',
-      image: '/fotos/paginaWeb/Otras/carPot.jpg',
-      features: ['Carga rápida y ultra-rápida', 'Gestión inteligente de energía', 'Compatibilidad universal', 'Escalable']
     }
+    
     
   ];
 
