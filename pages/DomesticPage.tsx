@@ -13,7 +13,8 @@ const DomesticPage: React.FC = () => {
       <section className="hero-correct-size flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-background-dark/30 z-10"></div>
         <img
-          src="/fotos/paginaWeb/Residencial/residencial4.jpeg"
+          //src="/fotos/paginaWeb/Residencial/residencial4.jpeg"
+          src="/fotos/paginaWeb/Residencial/heroResidencial.jpeg"
           alt="Domestica_hero"
           className="absolute inset-0 w-full h-full object-cover"
         />

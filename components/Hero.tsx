@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
     
   className="hero-correct-size flex items-center justify-center bg-cover bg-center overflow-hidden"
   style={{
-    backgroundImage: `linear-gradient(rgba(10, 26, 26, 0.45) 0%, rgba(10, 26, 26, 0.85) 100%), url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")`,
+    backgroundImage: `linear-gradient(rgba(10, 26, 26, 0.45) 0%, rgba(10, 26, 26, 0.85) 100%), url("/fotos/heroPrincipal.jpg")`,
     backgroundPosition: "center 80%"
   }}
 >

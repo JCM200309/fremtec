@@ -19,7 +19,7 @@ const Solutions: React.FC = () => {
       title: "Soluciones Domésticas",
       subtitle: "HOGAR",
       description: "Independencia energética y ahorro significativo en su factura de luz residencial con kits de fácil instalación.",
-      image: "/fotos/paginaWeb/Residencial/residencial_soluciones3.jpeg",
+      image: "/fotos/paginaWeb/Residencial/residencialNueva.jpeg",
       icon: "home",
       path: "/residencial",
       color: "secondary"
