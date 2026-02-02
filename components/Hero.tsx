@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
           <span className="text-secondary italic">Tus Manos</span>
         </h1>
         
-        <p className="text-red-700 text-base p-hero-texts font-light leading-relaxed max-w-[720px] mb-12 border-l-2 border-secondary/30 pl-6 text-left md:text-center md:border-l-0 md:pl-0">
+        <p className="text-white text-base p-hero-texts font-light leading-relaxed max-w-[720px] mb-12 border-l-2 border-secondary/30 pl-6 text-left md:text-center md:border-l-0 md:pl-0">
           Soluciones fotovoltaicas de alta ingeniería para el sector residencial e industrial de Argentina. (Cambiar)
         </p>
 
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
             onClick={() => navigate('/Galeria')} 
             className="flex items-center justify-center rounded-xl px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium transition-all w-full sm:w-auto  buttons-hero-size mt-4 sm:mt-0"
           >
-            Nuestros proyectos residenciales
+            Nuestros proyectos <br></br>residenciales
           </button>
         </div>
       </div>
