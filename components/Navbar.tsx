@@ -12,9 +12,9 @@ const Navbar: React.FC = () => {
     { path: '/', label: 'Inicio' },
     { path: '/residencial', label: 'Residencial' },
     { path: '/industrial', label: 'Industrial' },
-    { path: '/otras-soluciones', label: 'Más Soluciones' },
+    { path: '/otras-soluciones', label: 'Otras Soluciones' },
     { path: '/galeria', label: 'Galería' },
-    { path: '/faq', label: 'FAQ' }
+    { path: '/faq', label: 'Preguntas Frecuentes' }
   ];
 
   // Cierra el menú cuando cambia la ruta

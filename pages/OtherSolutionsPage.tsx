@@ -11,19 +11,19 @@ const OtherSolutionsPage: React.FC = () => {
     },
     {
       title: 'Carpot Solares',
-      description: 'Infraestructura de carga para vehículos eléctricos integrada con sistemas fotovoltaicos. El futuro de la movilidad sostenible alimentado por energía limpia.',
+      description: 'Estructuras de estacionamiento diseñadas para proteger vehículos, que integran paneles fotovoltaicos en su cubierta. Transforman un espacio pasivo (el parking) en una central de generación eléctrica, permitiendo alimentar las instalaciones de la empresa o cargar flotas de vehículos eléctricos.',
       image: '/fotos/paginaWeb/Otras/carPotNuevo.png',
       features: ['Carga rápida y ultra-rápida', 'Gestión inteligente de energía', 'Compatibilidad universal', 'Escalable']
     },
     {
       title: 'Termotanques Industriales',
-      description: 'Sistemas de calentamiento de agua a gran escala para industrias, hoteles y centros deportivos. Reducen drásticamente el costo operativo utilizando la energía térmica del sol.',
+      description: 'Sistemas de captación térmica diseñados para calentar agua utilizando exclusivamente la radiación solar. Gracias a sus tubos de vacío de alta eficiencia y tanques térmicos aislados, permiten cubrir hasta el 80% de las necesidades de agua caliente anuales, eliminando la dependencia de combustibles fósiles o resistencias eléctricas.',
       image: '/fotos/paginaWeb/Otras/termotanque.jpeg',
       features: ['Alta eficiencia térmica', 'Tanques de gran capacidad', 'Larga vida útil', 'Bajo mantenimiento']
     },
     {
       title: 'Bombeo Solar',
-      description: 'Soluciones de extracción de agua para el sector agropecuario e industrial sin dependencia de la red eléctrica o combustibles fósiles. Ideal para zonas remotas.',
+      description: 'Soluciones avanzadas de extracción y movimiento de agua que funcionan directamente con energía fotovoltaica. Estos sistemas eliminan la necesidad de red eléctrica o generadores de combustible, permitiendo el abastecimiento de agua en lugares remotos de forma automatizada y eficiente. ',
       image: '/fotos/bombeo_solar.jpg',
       features: ['Funcionamiento autónomo', 'Sin costos de combustible', 'Apto para pozos profundos', 'Instalación modular']
     }
@@ -35,7 +35,7 @@ const OtherSolutionsPage: React.FC = () => {
     <div className="w-full bg-white pb-20">
       <PageHero 
         title="Otras Soluciones" 
-        subtitle="Más allá de los paneles, ofrecemos una gama completa de tecnologías para maximizar su eficiencia energética."
+        subtitle="Mucho más que paneles: desarrollamos proyectos a medida en movilidad sustentable, gestión hídrica y energía térmica para optimizar todos sus recursos."
 
       />
 

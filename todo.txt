@@ -17,6 +17,11 @@ Diseño:
 3) Establecer un color que diferencia entre las secciones porque elegir fremtec con nuestras soluciones
 4) Mas soluciones, Galeria y FAQ con un Hero mejor
 
-Ultimas modificaciones:
-1) Fotos nuevas de domiciliario para Hero
-2) Cambiar foto de estacion solar y carpot
+Ultimas cosas a cambiar:
+1) Mail de Fremtec?? En presupuesto
+2) Terminar de configurar datos del footer
+3) Terminar de configurar contacto en pagina de presupuesto
+4) Crear mail de Fremtec para resend, captcha y vercel
+5) Terminar de chequear bien la pagina (ver textos (CAMBIAR))
+6) Corroborar TODO
+

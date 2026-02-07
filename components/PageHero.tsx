@@ -28,7 +28,7 @@ const PageHero: React.FC<PageHeroProps> = ({ title, subtitle, backgroundImage })
           {title}
         </h1>
         <div className="w-20 h-1.5 bg-secondary mx-auto mb-8 rounded-full"></div>
-        <p className="text-white/80 text-lg md:text-xl max-w-[700px] mx-auto font-light leading-relaxed">
+        <p className="text-white/80 text-lg md:text-xl lg:text-2xl max-w-[700px] mx-auto leading-relaxed">
           {subtitle}
         </p>
       </div>

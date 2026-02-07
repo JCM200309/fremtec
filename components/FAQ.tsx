@@ -24,6 +24,14 @@ const FAQ: React.FC = () => {
     {
       q: "¿Cómo sé cuántos paneles necesito?",
       a: "Depende de tu consumo histórico (que podés ver en tu factura de luz). Nuestro equipo técnico realiza un dimensionamiento personalizado basado en tus necesidades actuales y futuras."
+    },
+    {
+      q: "¿Cuanto duran las baterías?",
+      a: "En el caso de baterías de Plomo acido rinde entre 2 a 5 años dependiendo del uso y programación del inversor y en el caso de las baterías de LITIO rinden 10 años"
+    },
+    {
+      q: "¿Cual debe ser la orientacion de los paneles?",
+      r: "Siempre deben estar orientados hacia el norte."
     }
   ];
 

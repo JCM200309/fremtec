@@ -23,7 +23,7 @@ const DomesticPage: React.FC = () => {
           <h1 className="text-white font-black mb-6 leading-tight drop-shadow-2xl title-hero-texts">
             Tu Hogar, <span className="text-secondary">Tu Energía</span>
           </h1>
-          <p className="text-white/95 mx-auto drop-shadow-md p-hero-texts">
+          <p className="text-white mx-auto drop-shadow-md p-hero-texts">
             Asesoramos y dimensionamos sistemas solares a medida para el confort de tu familia y el ahorro real.
           </p>
 
@@ -61,7 +61,7 @@ const DomesticPage: React.FC = () => {
                 name: "Híbrido", 
                 icon: "battery_charging_full", 
                 active: true,
-                desc: "Backup energético mediante red y baterías. Seguridad ante cortes de suministro y gestión inteligente.",
+                desc: "Backup energético mediante red y baterías. Seguridad ante cortes de suministro y gestión inteligente.Sistema que sirve de ahorro energético y las batarias cubre ante cortes de luz. Es una combinación del equipo on grid y el off grid",
                 features: ["Respaldo 24/7", "Máxima eficiencia", "Energía ininterrumpida","Gestion de trámite bidireccional"]
               },
               { 

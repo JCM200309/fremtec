@@ -21,7 +21,8 @@ const DomesticSolutions: React.FC = () => {
               Transformá tu hogar en una fuente de energía limpia.
             </h2>
             <p className="text-gray-600 text-lg mb-10 leading-relaxed">
-              En Argentina, el sol es un recurso inagotable. Con Fremtec Doméstica, podés generar tu propia energía, inyectar el excedente a la red mediante la Ley de Generación Distribuida y ahorrar miles de pesos anualmente.
+              En Argentina, el sol es un recurso inagotable. Con Fremtec Doméstica, podés generar tu propia energía, inyectar el excedente a la red mediante la Ley de Generación Distribuida y ahorrar miles de pesos anualmente. 
+              <br></br>Ser totalmente independiente de la energía y contar con una solución ante cortes de luz
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {benefits.map((b, i) => (

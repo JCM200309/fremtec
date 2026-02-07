@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
         </h1>
         
         <p className="text-white text-base p-hero-texts font-light leading-relaxed max-w-[720px] mb-12 border-l-2 border-secondary/30 pl-6 text-left md:text-center md:border-l-0 md:pl-0">
-          Soluciones fotovoltaicas de alta ingeniería para el sector residencial e industrial de Argentina. (Cambiar)
+          Soluciones Fotovoltaica para el sector industrial y residencial.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 lg:w-full lg:justify-center sm:w-auto buttons-hero-texts buttons-hero-size">

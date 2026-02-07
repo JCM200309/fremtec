@@ -15,7 +15,7 @@ const IndustrialSolutions: React.FC = () => {
             Eficiencia Energética para la Industria Argentina.
           </h2>
           <p className="text-gray-600 text-lg max-w-[700px]">
-            Diseñamos parques solares e instalaciones industriales que reducen los costos operativos y mejoran la competitividad de tu empresa.
+            Diseñamos e instalamos parques industriales que reducen los costos operativos y mejoran la competitividad de tu empresa como también parques solares para venta de energia.
           </p>
         </div>
 

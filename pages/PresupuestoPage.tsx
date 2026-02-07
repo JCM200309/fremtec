@@ -306,7 +306,12 @@ const PresupuestoPage: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-sm">call</span>
-                  <span>+54 9 11 5057-2126 (Zona Norte) (CAMBIAR)</span>
+                  <p>+54 9 11 5057-2126 (Zona Norte) </p>
+                  
+                  <span className="material-symbols-outlined text-sm">call</span>
+                  <span>+54 9 11 6208-4045 (Zona Sur) </span>
+                  <span className="material-symbols-outlined text-sm">call</span>
+                  <span>+54 9 11 7176-9809 (Zona Oeste) </span>
                 </div>
               </div>
             </div>

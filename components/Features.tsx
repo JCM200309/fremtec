@@ -22,14 +22,14 @@ const Features: React.FC = () => {
     },
     {
       title: "Gestion de trámite bidireccional",
-      desc: "Ayudamos a realizar el trámite que va a permitir reinsertar leagalmente energia a la red (Cambiar texto)",
+      desc: "Contamos con un gran equipo de ingenieros que hace que el tramite salga rápido y pueda contar con el apoyo necesario  para dicha transición.",
       icon: "Contract",
       bgColor: "bg-blue-50",
       iconColor: "text-primary"
     },
     {
       title: "Estudio de Carbono y eficiencia energetica",
-      desc: "Junto a nuestros ingenieros realizaremos estudios para determinar la mejor configuracion para instalar (CAMBIAR TEXTO)",
+      desc: "Junto a nuestros ingenieros realizaremos estudios de eficiencia energética, evalucion del carbono y certificación de la misma.",
       icon: "Co2",
       bgColor: "bg-green-50",
       iconColor: "text-secondary"
@@ -45,7 +45,7 @@ const Features: React.FC = () => {
               Por qué elegir Fremtec
             </h2>
             <p className="text-gray-600 text-xl leading-relaxed">
-              Tecnología avanzada y soporte local para su transición energética. Somos su socio estratégico en Argentina para un futuro más verde.
+              Somos una empresa que nos adecuamos a la necesidad de cada cliente, con un equipo de trabajo que asiste las 24hs ante cualquier consulta.
             </p>
             <button 
             onClick={() => navigate("/faq")}
