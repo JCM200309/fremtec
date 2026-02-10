@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Logo from './Logo';
+import { FaInstagram  } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-500 text-base leading-relaxed">
               Liderando la revolución solar en Argentina. Compromiso, calidad y eficiencia energética para un futuro sostenible.
             </p>
+            {/* Social Media Icons 
             <div className="flex gap-5">
               <a href="https://www.instagram.com/fremtec.energiasolar/?hl=es-la" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                 <img src="/fotos/logotipo-de-instagram.png" alt="Instagram" className="size-7 opacity-80 hover:opacity-100"/>
@@ -32,7 +34,9 @@ const Footer: React.FC = () => {
                 <img src="/fotos/whatsapp.png" alt="WhatsApp" className="size-7 opacity-80 hover:opacity-100"/>
               </a>
             </div>
+            */}
           </div>
+          
           
           {/* Links Column */}
           <div className="flex flex-col gap-6">
@@ -59,23 +63,42 @@ const Footer: React.FC = () => {
             <h4 className="text-[#111418] font-bold text-lg">Contacto</h4>
             <div className="flex flex-col gap-4 text-base text-gray-500">
               <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary mt-1">location_on</span>
-                <span>Av. Libertador 1234, CABA, Argentina (CAMBIAR)</span>
+                <a href="https://wa.me/541162084045" target="_blank" rel="noopener noreferrer" className="transition-transform">
+                  <span className="material-symbols-outlined text-primary">call</span>
+                  <span> +54 9 11 6208-4045 (Zona Sur)</span>
+                </a>
+                
               </div>
               <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary mt-1">call</span>
-                <span>+54 11 1234-5678 (CAMBIAR)</span>
+                <a href="https://wa.me/541171769809" target="_blank" rel="noopener noreferrer" className="transition-transform">
+                  <span className="material-symbols-outlined text-primary">call</span>
+                  <span> +54 9 11 7176-9809 (Zona Oeste)</span>
+                </a>
               </div>
               <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary mt-1">email</span>
+                <a href="https://wa.me/541150572126" target="_blank" rel="noopener noreferrer" className="transition-transform">
+                  <span className="material-symbols-outlined text-primary">call</span>
+                  <span> +54 9 11 5057-2126 (Zona Norte)</span>
+                </a>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <span className="material-symbols-outlined text-primary">email</span>
                 <span>info@fremtec.com.ar (CAMBIAR)</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <a href="https://www.instagram.com/fremtec.energiasolar/?hl=es-la" target="_blank" rel="noopener noreferrer" className="transition-transform">
+                  <FaInstagram className=" material-symbols-outlined text-primary mt-1"/>
+                  <span> @fremtec.energiasolar</span>
+                </a>
+                
               </div>
             </div>
           </div>
         </div>
         
         <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-gray-400 text-sm">© 2023 Fremtec. Todos los derechos reservados.</p>
+          <p className="text-gray-400 text-sm">© 2026 Fremtec. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

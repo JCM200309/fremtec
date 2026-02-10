@@ -304,14 +304,29 @@ const PresupuestoPage: React.FC = () => {
                   <span className="material-symbols-outlined text-sm">mail</span>
                   <span>presupuestos@fremtec.com.ar (CAMBIAR)</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-sm">call</span>
-                  <p>+54 9 11 5057-2126 (Zona Norte) </p>
-                  
-                  <span className="material-symbols-outlined text-sm">call</span>
-                  <span>+54 9 11 6208-4045 (Zona Sur) </span>
-                  <span className="material-symbols-outlined text-sm">call</span>
-                  <span>+54 9 11 7176-9809 (Zona Oeste) </span>
+                <div className="flex-col items-center gap-3">
+                  <div className='mb-2'>
+                    <a href="https://wa.me/541150572126" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                      <span className="material-symbols-outlined text-sm">call</span>
+                      <span>+54 9 11 5057-2126 (Zona Norte)</span>
+                    </a>
+                    
+                  </div>
+                  <div className='mb-2'>
+                    <a href="https://wa.me/541162084045" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                      <span className="material-symbols-outlined text-sm">call</span>
+                      <span>+54 9 11 6208-4045 (Zona Sur) </span>
+                    </a>
+                    
+                  </div>
+                  <div className='mb-2'>
+                    <a href="https://wa.me/541171769809" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                      <span className="material-symbols-outlined text-sm">call</span>
+                      <span>+54 9 11 7176-9809 (Zona Oeste) </span>
+                    </a>
+                    
+                    
+                  </div>
                 </div>
               </div>
             </div>

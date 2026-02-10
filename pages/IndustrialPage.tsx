@@ -61,18 +61,13 @@ const IndustrialPage: React.FC = () => {
                   },
                   { 
                     title: "Huella de Carbono", 
-                    desc: "Certificamos la reducción de emisiones de CO2, mejorando el posicionamiento corporativo y cumpliendo normas internacionales.",
+                    desc: "Estudio de huella de carbono Certificacion , mejorando el posicionamiento corporativo",
                     icon: "eco" 
                   },
                   { 
                     title: "Ingeniería On-Grid", 
-                    desc: "Sistemas de inyección de alta potencia para reducir drásticamente los costos fijos mensuales y la dependencia de red.",
+                    desc: "Sistemas de inyección de alta potencia para reducir drásticamente los costos fijos mensuales y la dependencia de red. Esto de ROA ( Retorno de inversion )",
                     icon: "electric_bolt" 
-                  },
-                  { 
-                    title: "Venta de energia a cooperativas (CAMBIAR TITULO)", 
-                    desc: "El excedente se puede vender a distintas cooperativas para asi obtener un ingreso extra (CAMBIAR texto)",
-                    icon: "Attach_Money" 
                   }
                 ].map((service, i) => (
                   <div key={i} className="flex gap-8 group">

@@ -11,12 +11,12 @@ const DomesticPage: React.FC = () => {
     <div className="flex flex-col">
       {/* Sector Hero Hogar - Imagen: Domestica_hero.jpg */}
       <section className="hero-correct-size flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-background-dark/30 z-10"></div>
+        <div className="absolute inset-0 bg-background-dark/30 z-10 "></div>
         <img
           //src="/fotos/paginaWeb/Residencial/residencial4.jpeg"
           src="/fotos/paginaWeb/Residencial/heroResidencial.jpeg"
           alt="Domestica_hero"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-90"
         />
         <div className="relative z-20 text-center px-6 max-w-[900px]">
           <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-background-dark text-xs font-black uppercase tracking-widest mb-6 shadow-xl">Hogar Sustentable</span>

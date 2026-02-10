@@ -12,7 +12,7 @@ const IndustrialSolutions: React.FC = () => {
             <span className="material-symbols-outlined text-sm">factory</span> Energía Corporativa
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-[#111418] mb-6 max-w-[800px]">
-            Eficiencia Energética para la Industria Argentina.
+            Eficiencia Energética para la Industria.
           </h2>
           <p className="text-gray-600 text-lg max-w-[700px]">
             Diseñamos e instalamos parques industriales que reducen los costos operativos y mejoran la competitividad de tu empresa como también parques solares para venta de energia.
@@ -38,14 +38,15 @@ const IndustrialSolutions: React.FC = () => {
             <div className="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-all">
               <span className="material-symbols-outlined text-3xl">payments</span>
             </div>
-            <h3 className="text-xl font-bold mb-4">Beneficios Impositivos</h3>
+            <h3 className="text-xl font-bold mb-4">Leyes que regulan</h3>
             <p className="text-gray-500 leading-relaxed mb-6">
-              Aprovechá los incentivos fiscales de la Ley 27.424, amortización acelerada e IVA para inversiones renovables.
+              <strong>Ley 27.424, Generacion Distribuida:</strong>
+              Esta es la ley que permite a una empresa ser "Usuario-Generador".
+              <br></br>
+              <strong>Ley 27.191, Régimen de Fomento para Grandes Usuarios: </strong>
+               Para clientes que consuman más de 300 kW de potencia, la ley lo obliga a que una parte de su energía sea renovable (la meta para 2025/2026 es del 20%)
             </p>
-            <ul className="space-y-3 text-sm font-medium text-gray-700">
-              <li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-sm">check_circle</span> Crédito Fiscal FODIS</li>
-              <li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary text-sm">check_circle</span> Amortización Impositiva</li>
-            </ul>
+            
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all group">
