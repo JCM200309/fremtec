@@ -67,7 +67,7 @@ const IndustrialSolutions: React.FC = () => {
         <div className="mt-16 bg-primary rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden relative">
           <div className="relative z-10">
             <h3 className="text-white text-3xl font-bold mb-2">¿Tu empresa gasta mucho en energía?</h3>
-            <p className="text-teal-50 text-lg">Realizamos auditorías energéticas gratuitas para proyectos industriales.</p>
+            <p className="text-teal-50 text-lg">Realizamos auditorías energéticas para proyectos industriales.</p>
           </div>
           <button
            onClick={() => navigate('/presupuesto')}
