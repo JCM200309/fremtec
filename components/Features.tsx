@@ -45,7 +45,7 @@ const Features: React.FC = () => {
               Por qué elegir Fremtec
             </h2>
             <p className="text-gray-600 text-xl leading-relaxed">
-              Somos una empresa que nos adecuamos a la necesidad de cada cliente, con un equipo de trabajo que asiste las 24hs ante cualquier consulta.
+              Somos una empresa que nos adecuamos a la necesidad de cada cliente, con un equipo de trabajo postventa que asiste las 24hs ante cualquier consulta.
             </p>
             <button 
             onClick={() => navigate("/faq")}

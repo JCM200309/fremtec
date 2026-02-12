@@ -66,7 +66,7 @@ const IndustrialPage: React.FC = () => {
                   },
                   { 
                     title: "Ingeniería On-Grid", 
-                    desc: "Sistemas de inyección de alta potencia para reducir drásticamente los costos fijos mensuales y la dependencia de red. Esto de ROA ( Retorno de inversion )",
+                    desc: "Sistemas de inyección de alta potencia para reducir drásticamente los costos fijos mensuales y la dependencia de red.",
                     icon: "electric_bolt" 
                   }
                 ].map((service, i) => (

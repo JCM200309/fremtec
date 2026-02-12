@@ -4,7 +4,7 @@ import React from 'react';
 const Stats: React.FC = () => {
   const stats = [
     { label: "Instalaciones", value: "+500" },
-    { label: "Años de Garantía", value: "25" },
+    { label: "Años de vida útil", value: "25" },
     { label: "Soporte Local", value: "100%" },
     { label: "Monitoreo", value: "24/7" }
   ];
