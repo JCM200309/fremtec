@@ -38,7 +38,7 @@ const DomesticSolutions: React.FC = () => {
             <div className="aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl">
               {/* Imagen: Casa ejemplo domestica.jpg */}
               <img 
-                src="/fotos/Casa ejemplo Domestica.jpg" 
+                src="/fotos/CasaEjemploDomestica.jpg" 
                 alt="Casa ejemplo domestica" 
                 className="w-full h-full object-cover"
               />
