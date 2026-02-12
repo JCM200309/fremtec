@@ -18,9 +18,9 @@ Diseño:
 4) Mas soluciones, Galeria y FAQ con un Hero mejor
 
 Ultimas cosas a cambiar:
-1) Mail de Fremtec?? En presupuesto
 2) Terminar de configurar datos del footer (MAIL FALTA NOMAS)
 4) Crear mail de Fremtec para resend, captcha y vercel
 5) Terminar de chequear bien la pagina (ver textos (CAMBIAR))
 6) Corroborar TODO
+
 

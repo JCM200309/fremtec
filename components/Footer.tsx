@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
 
               <div className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-primary">email</span>
-                <span>info@fremtec.com.ar (CAMBIAR)</span>
+                <span>fremtecargentina@gmail.com</span>
               </div>
               <div className="flex items-start gap-3">
                 <a href="https://www.instagram.com/fremtec.energiasolar/?hl=es-la" target="_blank" rel="noopener noreferrer" className="transition-transform">

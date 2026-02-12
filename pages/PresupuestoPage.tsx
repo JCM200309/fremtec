@@ -262,7 +262,7 @@ const PresupuestoPage: React.FC = () => {
               />
               <div className='justify-center'>
                   <ReCAPTCHA
-                    sitekey="6LdcTVUsAAAAAOuGZr8ltQ4x7BQvtLbwRJjrRWFs"
+                    sitekey="6LeMOGksAAAAAKxbCkj0uifvuL0ZtRc_a9374PaV"
                     onChange={(val: string | null) => setCapVal(val)}
                   />
                 </div>
@@ -302,27 +302,27 @@ const PresupuestoPage: React.FC = () => {
               <div className="flex flex-col gap-3 text-gray-300">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-sm">mail</span>
-                  <span>presupuestos@fremtec.com.ar (CAMBIAR)</span>
+                  <span>fremtecargentina@gmail.com</span>
                 </div>
                 <div className="flex-col items-center gap-3">
                   <div className='mb-2'>
                     <a href="https://wa.me/541150572126" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                       <span className="material-symbols-outlined text-sm">call</span>
-                      <span>+54 9 11 5057-2126 (Zona Norte)</span>
+                      <span> +54 9 11 5057-2126 (Zona Norte)</span>
                     </a>
                     
                   </div>
                   <div className='mb-2'>
                     <a href="https://wa.me/541162084045" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                       <span className="material-symbols-outlined text-sm">call</span>
-                      <span>+54 9 11 6208-4045 (Zona Sur) </span>
+                      <span> +54 9 11 6208-4045 (Zona Sur) </span>
                     </a>
                     
                   </div>
                   <div className='mb-2'>
                     <a href="https://wa.me/541171769809" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                       <span className="material-symbols-outlined text-sm">call</span>
-                      <span>+54 9 11 7176-9809 (Zona Oeste) </span>
+                      <span> +54 9 11 7176-9809 (Zona Oeste) </span>
                     </a>
                     
                     
