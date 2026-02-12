@@ -282,7 +282,7 @@ const PresupuestoPage: React.FC = () => {
               <h3 className="text-3xl font-black mb-6">¿Por qué elegirnos?</h3>
               <div className="space-y-8">
                 {[
-                  { t: "Estudio Personalizado", d: "Analizamos tu factura de luz para darte un ROI exacto. (CAMBIAR)", i: "analytics" },
+                  { t: "Estudio Personalizado", d: "Analizamos tu factura de luz para darte un ROI exacto", i: "analytics" },
                   { t: "Soporte Local", d: "Equipo de especialización post venta.", i: "engineering" },
                   { t: "Calidad Certificada", d: "Equipos de primera línea con garantia de fabrica.", i: "verified" }
                 ].map((item, idx) => (

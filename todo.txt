@@ -1,19 +1,2 @@
-1) Ver si es seguro la forma de mandar mails
-2) Tema dominio mas hosting en vercel
-3) Mejorar la visualizacion en mobile
-4) Limpiar archivos basura
-
-
-SEO:
-1) Mejorar Seo y Seo con IA
-2) Optimizar Imagenes y nombres (Tinipng)
-3) mejorar nombres de fotos sin nombres raros
-4) verificar paths
-5) cambiar fotos online por fotos locales
-
-
-Ultimas cosas a cambiar:
-5) Terminar de chequear bien la pagina (ver textos (CAMBIAR))
-6) Corroborar TODO
 
 
