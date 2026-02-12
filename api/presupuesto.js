@@ -77,9 +77,9 @@ export default async function handler(req, res) {
     }
 
     const result = await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "Fremtec <no-reply@mail.fremtec.com.ar>",
       to: process.env.TO_EMAIL,
-      subject: `Pedido de presupuesto - ${name} (${type || "-"})`,
+      subject: `Pedido de presupuesto desde la Pagina Web - ${name} (${type || "-"})`,
       replyTo: email,
       html,
       ...(attachments.length ? { attachments } : {}),
