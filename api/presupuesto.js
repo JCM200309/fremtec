@@ -68,9 +68,13 @@ export default async function handler(req, res) {
     if (!name || !email || !phone || !location) {
       return res.status(400).json({ error: "Faltan campos obligatorios." });
     }
-    res_captcha = verifyRecaptcha(token);
-    if (!res_captcha.success) {
-      return res.status(403).json({ error: "Captcha fallo", details: result["error-codes"]  })
+    const res_captcha = await verifyRecaptcha(token);
+
+    if (!res_captcha?.success) {
+      return res.status(403).json({
+        error: "Captcha falló",
+        details: res_captcha?.["error-codes"],
+      });
     }
 
     // Logs útiles para Vercel
