@@ -58,7 +58,7 @@ export default async function handler(req, res) {
     const type = fields.type?.toString() || "";
     const subType = fields.subType?.toString() || "";
     const details = fields.details?.toString() || "";
-    const token = fields.recaptchaToken?.tostring() || "";
+    const token = fields.recaptchaToken?.toString() || "";
   
 
     if (!token) {
