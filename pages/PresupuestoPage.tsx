@@ -47,8 +47,6 @@ const PresupuestoPage: React.FC = () => {
       //setStatus('error');
       //setErrorMsg('Si elegís "Residencial", seleccioná el tipo de solucion.');
       formData.subType = 'OnGrid'
-      setTimeout(() => setStatus('idle'), 6000);
-      return;
     }
 
 
