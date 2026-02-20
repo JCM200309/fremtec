@@ -42,9 +42,11 @@ const PresupuestoPage: React.FC = () => {
     setErrorMsg('');
 
     // ✅ Validación condicional (antes del fetch)
-    if (formData.type === 'residencial' && !formData.subType) {
-      setStatus('error');
-      setErrorMsg('Si elegís "Residencial", seleccioná el tipo de solucion.');
+    if (formData.type === 'residencial' && !formData.subType){
+      //Caso que eligio residencial y dejo por default el subtype = onGrid
+      //setStatus('error');
+      //setErrorMsg('Si elegís "Residencial", seleccioná el tipo de solucion.');
+      formData.subType = 'OnGrid'
       setTimeout(() => setStatus('idle'), 6000);
       return;
     }
@@ -178,7 +180,9 @@ const PresupuestoPage: React.FC = () => {
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">WhatsApp / Teléfono</label>
                   <input
-                    type="tel"
+                    type="numeric"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
                     required
                     className="w-full px-5 py-4 rounded-2xl bg-gray-50 border-transparent focus:bg-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all outline-none"
                     placeholder="+54 9 11 ..."
