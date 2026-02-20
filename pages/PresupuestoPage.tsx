@@ -49,6 +49,12 @@ const PresupuestoPage: React.FC = () => {
       formData.subType = 'OnGrid'
     }
 
+    if (!capVal) {
+    setStatus('error');
+    setErrorMsg('Por favor completá el captcha.');
+    return;
+  }
+
 
     try {
       const fd = new FormData();
@@ -60,6 +66,7 @@ const PresupuestoPage: React.FC = () => {
       fd.append("type", formData.type);
       fd.append("Subtype", formData.subType)
       fd.append("details", formData.details);
+      fd.append("recaptchaToken", capVal);
 
       if (file){
         fd.append("file",file)
