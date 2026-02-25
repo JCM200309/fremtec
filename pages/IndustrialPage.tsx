@@ -45,10 +45,12 @@ const IndustrialPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="rounded-[60px] overflow-hidden shadow-2xl relative z-20">
-                <img //https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80
-                  src="fotos/ingeniero.jpeg" 
-                  alt="Ingeniero de Fremtec en proyecto de energía solar industrial en Argentina" 
+<img
+                  src="fotos/ingeniero.jpeg"
+                  alt="Ingeniero de Fremtec en proyecto de energía solar industrial en Argentina"
                   className="w-full h-[650px] object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="absolute -bottom-10 -left-10 w-full h-full bg-primary/10 rounded-[60px] -z-10 translate-x-4 translate-y-4"></div>

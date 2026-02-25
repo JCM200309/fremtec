@@ -50,10 +50,12 @@ const OtherSolutionsPage: React.FC = () => {
             <div key={idx} className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}>
               <div className="flex-1 w-full">
                 <div className="overflow-hidden rounded-3xl shadow-2xl">
-                  <img 
-                    src={solution.image} 
-                    alt={solution.title} 
+                  <img
+                    src={solution.image}
+                    alt={solution.title}
                     className="w-full h-[700px] object-cover hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

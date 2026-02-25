@@ -58,6 +58,8 @@ export default function Lightbox({ images, index, onClose, onPrev, onNext }: Pro
             alt={img.alt}
             className="w-full max-h-[82vh] object-contain select-none"
             draggable={false}
+            loading="lazy"
+            decoding="async"
           />
 
           <button
