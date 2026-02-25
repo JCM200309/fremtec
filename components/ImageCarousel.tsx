@@ -104,6 +104,8 @@ export default function ImageCarousel({
                 alt={img.alt}
                 className={`w-full h-full ${objectClass} select-none`}
                 draggable={false}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           ))}

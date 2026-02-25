@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #36aba1;
+  --color-secondary: #fbc02d;
+  --color-background-dark: #0a1a1a;
+  --font-family-display: "Barlow", sans-serif;
+  --font-family-body: "Barlow", sans-serif;
+}
 
 @layer components {
   .title-hero-texts {
