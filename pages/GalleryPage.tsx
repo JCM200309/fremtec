@@ -1,6 +1,7 @@
 import React from "react";
 import PageHero from "../components/PageHero";
 import ImageCarousel from "../components/ImageCarousel";
+import Seo from "../components/Seo";
 
 const GalleryPage: React.FC = () => {
   const industrialImages = [
@@ -23,6 +24,10 @@ const GalleryPage: React.FC = () => {
 
   return (
     <div className="w-full bg-white pb-20">
+      <Seo
+        title="Galería de Proyectos | Instalaciones Solares | Fremtec"
+        description="Proyectos de energía solar realizados por Fremtec en Argentina: instalaciones residenciales e industriales. Conocé nuestro trabajo y resultados."
+      />
       <PageHero
         title="Nuestra Galería"
         subtitle="Explora nuestros proyectos realizados en los sectores industrial y residencial."

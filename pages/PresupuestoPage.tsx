@@ -1,6 +1,7 @@
 import FileUploader from '@/components/FileUploader';
 import React, { useState } from 'react';
-import ReCAPTCHA from "react-google-recaptcha"
+import ReCAPTCHA from "react-google-recaptcha";
+import Seo from '@/components/Seo';
 
 type presupuestoForm = {
   name: string;
@@ -127,6 +128,10 @@ const PresupuestoPage: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-20 pb-20 px-6">
+      <Seo
+        title="Solicitar Presupuesto | Energía Solar | Fremtec"
+        description="Pedí tu presupuesto de instalación de paneles solares en Argentina. Residencial, industrial u otras soluciones. Un ingeniero de Fremtec te contacta para un dimensionamiento a medida."
+      />
       <div className="max-w-[1000px] mx-auto">
         <div className="text-center mb-16">
           <span className="text-primary font-bold uppercase tracking-widest text-sm">Cotización Online</span>
