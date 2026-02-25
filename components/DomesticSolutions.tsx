@@ -37,10 +37,12 @@ const DomesticSolutions: React.FC = () => {
           <div className="relative">
             <div className="aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl">
               {/* Imagen: Casa ejemplo domestica.jpg */}
-              <img 
-                src="/fotos/CasaEjemploDomestica.jpg" 
-                alt="Vivienda con instalación de paneles solares residenciales en Argentina" 
+<img
+                src="/fotos/CasaEjemploDomestica.jpg"
+                alt="Vivienda con instalación de paneles solares residenciales en Argentina"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="absolute -bottom-10 -left-10 bg-white p-10 rounded-[40px] shadow-2xl border border-gray-50 hidden md:block max-w-[280px]">
