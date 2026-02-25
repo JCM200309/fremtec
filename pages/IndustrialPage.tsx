@@ -1,12 +1,16 @@
 
 import React from 'react';
 import IndustrialSolutions from '../components/IndustrialSolutions';
-import { Link } from 'react-router-dom';
-import { HashLink } from "react-router-hash-link"
+import { HashLink } from "react-router-hash-link";
+import Seo from '../components/Seo';
 
 const IndustrialPage: React.FC = () => {
   return (
     <div className="flex flex-col">
+      <Seo
+        title="Energía Solar Industrial | Fremtec Argentina"
+        description="Energía solar para empresas e industrias en Argentina. Ingeniería fotovoltaica, auditoría energética y optimización de costos. Proyectos a medida para plantas y comercios."
+      />
       {/* Industrial Hero - Imagen: industria.jpg */}
       
       <section className="hero-correct-size relative flex items-center justify-center bg-background-dark text-white overflow-hidden">
@@ -43,7 +47,7 @@ const IndustrialPage: React.FC = () => {
               <div className="rounded-[60px] overflow-hidden shadow-2xl relative z-20">
                 <img //https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80
                   src="fotos/ingeniero.jpeg" 
-                  alt="Industria Solar" 
+                  alt="Ingeniero de Fremtec en proyecto de energía solar industrial en Argentina" 
                   className="w-full h-[650px] object-cover"
                 />
               </div>

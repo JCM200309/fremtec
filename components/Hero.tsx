@@ -26,12 +26,12 @@ const Hero: React.FC = () => {
       <div className="container px-4 md:px-6 max-w-[1280px] text-center flex flex-col items-center justify-center z-10 min-h-[60vh]">
         
         <h1 className="text-white title-hero-texts font-black leading-tight tracking-[-0.03em] max-w-[1000px] mb-8">
-          El Poder del Sol en <br className="hidden md:block" />
-          <span className="text-secondary italic">Tus Manos</span>
+          Empresa líder en energía solar <br className="hidden md:block" />
+          <span className="text-secondary italic">Hogares e Industrias</span>
         </h1>
         
         <p className="text-white text-base p-hero-texts font-light leading-relaxed max-w-[720px] mb-12 border-l-2 border-secondary/30 pl-6 text-left md:text-center md:border-l-0 md:pl-0">
-          Soluciones Fotovoltaica para el sector industrial y residencial.
+          Soluciones solares a medida para todas las necesidades.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 lg:w-full lg:justify-center sm:w-auto buttons-hero-texts buttons-hero-size">

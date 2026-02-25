@@ -39,7 +39,7 @@ const DomesticSolutions: React.FC = () => {
               {/* Imagen: Casa ejemplo domestica.jpg */}
               <img 
                 src="/fotos/CasaEjemploDomestica.jpg" 
-                alt="Casa ejemplo domestica" 
+                alt="Vivienda con instalación de paneles solares residenciales en Argentina" 
                 className="w-full h-full object-cover"
               />
             </div>

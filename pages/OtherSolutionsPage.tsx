@@ -1,5 +1,6 @@
 import React from 'react';
 import PageHero from '../components/PageHero';
+import Seo from '../components/Seo';
 
 const OtherSolutionsPage: React.FC = () => {
   const solutions = [
@@ -33,6 +34,10 @@ const OtherSolutionsPage: React.FC = () => {
 
   return (
     <div className="w-full bg-white pb-20">
+      <Seo
+        title="Otras Soluciones Solares | Carpot, Bombeo, EV | Fremtec"
+        description="Cargadores para autos eléctricos, carport solares, termotanques solares industriales y bombeo solar en Argentina. Soluciones a medida más allá de los paneles fotovoltaicos."
+      />
       <PageHero 
         title="Otras Soluciones" 
         subtitle="Mucho más que paneles: desarrollamos proyectos a medida en movilidad sustentable, gestión hídrica y energía térmica para optimizar todos sus recursos."

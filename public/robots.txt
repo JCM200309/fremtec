@@ -1,0 +1,5 @@
+# Fremtec - Energía Solar Argentina
+User-agent: *
+Allow: /
+
+Sitemap: https://www.fremtec.com.ar/sitemap.xml

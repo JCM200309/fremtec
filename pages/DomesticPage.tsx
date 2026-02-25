@@ -1,21 +1,25 @@
 
 import React from 'react';
-import {Link , useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import DomesticSolutions from '../components/DomesticSolutions';
-import { HashLink } from "react-router-hash-link"
-
+import { HashLink } from "react-router-hash-link";
+import Seo from '../components/Seo';
 
 const DomesticPage: React.FC = () => {
   const navigate = useNavigate();
   return (
     <div className="flex flex-col">
+      <Seo
+        title="Energía Solar Residencial | Fremtec Argentina"
+        description="Sistemas solares para tu hogar en Argentina: on-grid, híbridos y off-grid. Ahorro en la factura de luz, respaldo ante cortes y gestión de trámites Ley 27.424. Presupuesto gratuito."
+      />
       {/* Sector Hero Hogar - Imagen: Domestica_hero.jpg */}
       <section className="hero-correct-size flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-background-dark/30 z-10 "></div>
         <img
           //src="/fotos/paginaWeb/Residencial/residencial4.jpeg"
           src="/fotos/paginaWeb/Residencial/heroResidencial.jpeg"
-          alt="Domestica_hero"
+          alt="Instalación de paneles solares residenciales en un hogar en Argentina"
           className="absolute inset-0 w-full h-full object-cover opacity-90"
         />
         <div className="relative z-20 text-center px-6 max-w-[900px]">
