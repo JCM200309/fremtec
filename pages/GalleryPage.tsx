@@ -17,8 +17,8 @@ const GalleryPage: React.FC = () => {
     { src: "/fotos/paginaWeb/Residencial/residencial_soluciones3.jpeg", alt: "Paneles Residenciales" },
     { src: "/fotos/fotos-tio/casa-aereo.jpeg", alt: "Vista Aérea Residencial" },
     { src: "/fotos/fotos-tio/panel-domestico-index.jpeg", alt: "Panel Hogar" },
-    { src: "/fotos/paginaWeb/Residencial/residencial1.jpeg", alt: "Casa residencial",  },
-    { src: "/fotos/paginaWeb/Residencial/tableroHorizontal.jpg", alt: "Casa residencial"},
+    { src: "/fotos/paginaWeb/Residencial/residencial1.jpeg", alt: "Casa residencial", },
+    { src: "/fotos/paginaWeb/Residencial/tableroHorizontal.jpg", alt: "Casa residencial" },
     { src: "/fotos/paginaWeb/Residencial/residencialCasaArriba.jpg", alt: "Casa Sustentable" },
   ];
 
@@ -27,6 +27,8 @@ const GalleryPage: React.FC = () => {
       <Seo
         title="Galería de Proyectos | Instalaciones Solares | Fremtec"
         description="Proyectos de energía solar realizados por Fremtec en Argentina: instalaciones residenciales e industriales. Conocé nuestro trabajo y resultados."
+        image="/fotos/fotos-tio/industrial-header.jpeg"
+        url="/galeria"
       />
       <PageHero
         title="Nuestra Galería"

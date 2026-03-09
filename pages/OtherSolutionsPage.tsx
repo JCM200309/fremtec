@@ -28,8 +28,8 @@ const OtherSolutionsPage: React.FC = () => {
       image: '/fotos/bombeo_solar.jpg',
       features: ['Funcionamiento autónomo', 'Sin costos de combustible', 'Apto para pozos profundos', 'Instalación modular']
     }
-    
-    
+
+
   ];
 
   return (
@@ -37,9 +37,11 @@ const OtherSolutionsPage: React.FC = () => {
       <Seo
         title="Otras Soluciones Solares | Carpot, Bombeo, EV | Fremtec"
         description="Cargadores para autos eléctricos, carport solares, termotanques solares industriales y bombeo solar en Argentina. Soluciones a medida más allá de los paneles fotovoltaicos."
+        image="/fotos/paginaWeb/Otras/carPotNuevo.png"
+        url="/otras-soluciones"
       />
-      <PageHero 
-        title="Otras Soluciones" 
+      <PageHero
+        title="Otras Soluciones"
         subtitle="Mucho más que paneles: desarrollamos proyectos a medida en movilidad sustentable, gestión hídrica y energía térmica para optimizar todos sus recursos."
 
       />

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Logo from './Logo';
-import { FaInstagram  } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
@@ -12,12 +12,12 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-2 text-[#111418]">
               {/* LOGO PROTAGONISTA */}
-        
+
               <div className="animate-brand-entry w-40 md:w-48 opacity-90">
-                <Logo/>
+                <Logo />
               </div>
-              
-             
+
+
             </div>
             <p className="text-gray-500 text-base leading-relaxed">
               Liderando la revolución solar en Argentina. Compromiso, calidad y eficiencia energética para un futuro sostenible.
@@ -36,67 +36,67 @@ const Footer: React.FC = () => {
             </div>
             */}
           </div>
-          
-          
+
+
           {/* Links Column */}
           <div className="flex flex-col gap-6">
             <h4 className="text-[#111418] font-bold text-lg">Empresa</h4>
             <div className="flex flex-col gap-3">
-              <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/">Inicio</a>
-              <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/galeria">Galería</a>
-              <a className="text-gray-500 hover:text-primary transition-colors text-base" href="/faq">FAQ</a>
+              <a className="text-gray-500 hover:text-primary transition-colors text-base py-2 min-h-[44px] flex items-center" href="/">Inicio</a>
+              <a className="text-gray-500 hover:text-primary transition-colors text-base py-2 min-h-[44px] flex items-center" href="/galeria">Galería</a>
+              <a className="text-gray-500 hover:text-primary transition-colors text-base py-2 min-h-[44px] flex items-center" href="/faq">FAQ</a>
             </div>
           </div>
-          
+
           {/* Services Column */}
           <div className="flex flex-col gap-6">
             <h4 className="text-[#111418] font-bold text-lg">Servicios</h4>
             <div className="flex flex-col gap-3">
-              <a href="/industrial" className="text-gray-500 hover:text-primary transition-colors text-base">Industrial</a>
-              <a href="/residencial" className="text-gray-500 hover:text-primary transition-colors text-base">Residencial</a>
-              <a href="/otras-soluciones" className="text-gray-500 hover:text-primary transition-colors text-base">Otras Soluciones</a>
+              <a href="/industrial" className="text-gray-500 hover:text-primary transition-colors text-base py-2 min-h-[44px] flex items-center">Industrial</a>
+              <a href="/residencial" className="text-gray-500 hover:text-primary transition-colors text-base py-2 min-h-[44px] flex items-center">Residencial</a>
+              <a href="/otras-soluciones" className="text-gray-500 hover:text-primary transition-colors text-base py-2 min-h-[44px] flex items-center">Otras Soluciones</a>
             </div>
           </div>
-          
+
           {/* Contact Column */}
           <div className="flex flex-col gap-6">
             <h4 className="text-[#111418] font-bold text-lg">Contacto</h4>
             <div className="flex flex-col gap-4 text-base text-gray-500">
               <div className="flex items-start gap-3">
-                <a href="https://wa.me/541162084045" target="_blank" rel="noopener noreferrer" className="transition-transform">
+                <a href="https://wa.me/541162084045" target="_blank" rel="noopener noreferrer" className="transition-transform py-2 min-h-[44px] flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary">call</span>
                   <span> +54 9 11 6208-4045 (Zona Sur)</span>
                 </a>
-                
+
               </div>
               <div className="flex items-start gap-3">
-                <a href="https://wa.me/541171769809" target="_blank" rel="noopener noreferrer" className="transition-transform">
+                <a href="https://wa.me/541171769809" target="_blank" rel="noopener noreferrer" className="transition-transform py-2 min-h-[44px] flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary">call</span>
                   <span> +54 9 11 7176-9809 (Zona Oeste)</span>
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <a href="https://wa.me/541150572126" target="_blank" rel="noopener noreferrer" className="transition-transform">
+                <a href="https://wa.me/541150572126" target="_blank" rel="noopener noreferrer" className="transition-transform py-2 min-h-[44px] flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary">call</span>
                   <span> +54 9 11 5057-2126 (Zona Norte)</span>
                 </a>
               </div>
 
               <div className="flex items-start gap-3">
-                <span className="material-symbols-outlined text-primary">email</span>
-                <span>fremtecargentina@gmail.com</span>
+                <span className="material-symbols-outlined text-primary py-2">email</span>
+                <span className="py-2 min-h-[44px] flex items-center">fremtecargentina@gmail.com</span>
               </div>
               <div className="flex items-start gap-3">
-                <a href="https://www.instagram.com/fremtec.energiasolar/?hl=es-la" target="_blank" rel="noopener noreferrer" className="transition-transform">
-                  <FaInstagram className=" material-symbols-outlined text-primary mt-1"/>
+                <a href="https://www.instagram.com/fremtec.energiasolar/?hl=es-la" target="_blank" rel="noopener noreferrer" className="transition-transform py-2 min-h-[44px] flex items-center gap-3">
+                  <FaInstagram className=" material-symbols-outlined text-primary" />
                   <span> @fremtec.energiasolar</span>
                 </a>
-                
+
               </div>
             </div>
           </div>
         </div>
-        
+
         <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-gray-400 text-sm">© 2026 Fremtec. Todos los derechos reservados.</p>
         </div>

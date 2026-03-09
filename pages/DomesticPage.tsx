@@ -12,6 +12,8 @@ const DomesticPage: React.FC = () => {
       <Seo
         title="Energía Solar Residencial | Fremtec Argentina"
         description="Sistemas solares para tu hogar en Argentina: on-grid, híbridos y off-grid. Ahorro en la factura de luz, respaldo ante cortes y gestión de trámites Ley 27.424. Presupuesto gratuito."
+        image="/fotos/paginaWeb/Residencial/heroResidencial.jpeg"
+        url="/residencial"
       />
       {/* Sector Hero Hogar - Imagen: Domestica_hero.jpg */}
       <section className="hero-correct-size flex items-center justify-center overflow-hidden">
@@ -31,13 +33,13 @@ const DomesticPage: React.FC = () => {
             Asesoramos y dimensionamos sistemas solares a medida para el confort de tu familia y el ahorro real.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto sm:text-sm py-20 buttons-hero-texts ">                
+          <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto sm:text-sm py-20 buttons-hero-texts ">
             <HashLink smooth to="/galeria#galeria_residencial" className="flex items-center rounded-xl h-14 2xl:h-16 px-12 bg-primary hover:bg-teal-600 text-white font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 w-full sm:w-auto buttons-hero-size">
               Nuestros proyectos residenciales
             </HashLink>
           </div>
 
-          
+
         </div>
       </section>
 
@@ -51,26 +53,26 @@ const DomesticPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4 underline decoration-secondary decoration-4 underline-offset-8">Tecnología para tu Vivienda</h2>
             <p className="text-gray-500 max-w-[600px] mx-auto">Nos especializamos en el diseño e instalación de sistemas adaptados a tus necesidades extraídas de nuestra experiencia en Argentina.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { 
-                name: "On-Grid", 
-                icon: "settings_input_antenna", 
+              {
+                name: "On-Grid",
+                icon: "settings_input_antenna",
                 desc: "Conectado a la red eléctrica. Ideal para reducir la factura de luz inyectando excedentes bajo la Ley 27.424.",
-                features: ["Ahorro directo", "Inyección a red", "Bajo mantenimiento","Gestion de trámite bidireccional"]
-                
+                features: ["Ahorro directo", "Inyección a red", "Bajo mantenimiento", "Gestion de trámite bidireccional"]
+
               },
-              { 
-                name: "Híbrido", 
-                icon: "battery_charging_full", 
+              {
+                name: "Híbrido",
+                icon: "battery_charging_full",
                 active: true,
                 desc: "Backup energético mediante red y baterías. Seguridad ante cortes de suministro y gestión inteligente.Sistema que sirve de ahorro energético y las batarias cubre ante cortes de luz. Es una combinación del equipo on grid y el off grid",
-                features: ["Respaldo 24/7", "Máxima eficiencia", "Energía ininterrumpida","Gestion de trámite bidireccional"]
+                features: ["Respaldo 24/7", "Máxima eficiencia", "Energía ininterrumpida", "Gestion de trámite bidireccional"]
               },
-              { 
-                name: "Off-Grid", 
-                icon: "power_off", 
+              {
+                name: "Off-Grid",
+                icon: "power_off",
                 desc: "Independencia total. Ideal para zonas aisladas o campos donde la red no llega, con almacenamiento de alta capacidad.",
                 features: ["100% Autónomo", "Baterías de Litio", "Zonas remotas"]
               }
@@ -89,11 +91,11 @@ const DomesticPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <button 
+                <button
                   onClick={() => navigate('/presupuesto')}
                   className={`w-full py-4 rounded-2xl font-black transition-all ${system.active ? 'bg-secondary text-background-dark hover:brightness-110' : 'bg-primary text-white hover:bg-teal-700'}`} link>
-                    Solicitar Presupuesto
-                  
+                  Solicitar Presupuesto
+
                 </button>
               </div>
             ))}

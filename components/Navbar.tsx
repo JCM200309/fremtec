@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-[#111418] p-2"
+          className="lg:hidden text-[#111418] p-3 min-h-[48px] min-w-[48px] flex items-center justify-center rounded-lg"
           onClick={() => setIsOpen((v) => !v)}
           aria-label="Abrir menú"
           aria-expanded={isOpen}
@@ -70,13 +70,13 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="lg:hidden border-t border-[#f0f2f4] bg-white/95 backdrop-blur-md">
+        <div className="lg:hidden absolute top-full left-0 w-full border-t border-[#f0f2f4] bg-white/95 backdrop-blur-md shadow-lg shadow-black/5">
           <nav className="px-6 py-4 flex flex-col gap-3">
             {links.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`py-3 px-2 rounded-lg font-semibold uppercase tracking-wider text-sm transition
+                className={`py-4 px-3 rounded-lg font-semibold uppercase tracking-wider text-sm transition min-h-[48px] flex items-center
                   ${isActive(link.path) ? 'text-primary bg-primary/5' : 'text-gray-700 hover:bg-gray-100'}
                 `}
               >

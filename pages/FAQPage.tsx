@@ -10,9 +10,10 @@ const FAQPage: React.FC = () => {
       <Seo
         title="Preguntas Frecuentes | Energía Solar | Fremtec"
         description="Respuestas a las dudas más comunes sobre energía solar en Argentina: instalación, costos, Ley de Generación Distribuida, mantenimiento y plazos. Fremtec te asesora."
+        url="/faq"
       />
-      <PageHero 
-        title="Centro de Soporte" 
+      <PageHero
+        title="Centro de Soporte"
         subtitle="Todo lo que necesitás saber sobre la energía solar en Argentina."
       />
       <div className="py-12">

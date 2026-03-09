@@ -10,9 +10,11 @@ const IndustrialPage: React.FC = () => {
       <Seo
         title="Energía Solar Industrial | Fremtec Argentina"
         description="Energía solar para empresas e industrias en Argentina. Ingeniería fotovoltaica, auditoría energética y optimización de costos. Proyectos a medida para plantas y comercios."
+        image="/fotos/heroIndustrial.jpeg"
+        url="/industrial"
       />
       {/* Industrial Hero - Imagen: industria.jpg */}
-      
+
       <section className="hero-correct-size relative flex items-center justify-center bg-background-dark text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="decor-circle w-[600px] h-[600px] -top-1/2 -left-40 opacity-20"></div>
@@ -20,10 +22,10 @@ const IndustrialPage: React.FC = () => {
           <div className="absolute inset-0 opacity-45 bg-[url('/fotos/heroIndustrial.jpeg')] bg-cover bg-center"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background-dark/90"></div>
         </div>
-        
+
         <div className="relative z-10 container px-4 md:px-6 max-w-[1280px] text-center flex flex-col items-center justify-center min-h-[60vh]">
           <h1 className="title-hero-texts font-black mb-6 leading-tight tracking-tighter drop-shadow-xl">
-            Energía para <br/><span className="text-primary italic">Tu Industria</span>
+            Energía para <br /><span className="text-primary italic">Tu Industria</span>
           </h1>
           <p className="text-xl text-gray-200 max-w-[700px] mx-auto leading-relaxed drop-shadow-md p-hero-texts mb-12">
             Optimizamos costos operativos mediante ingeniería solar de alta precisión y servicios de auditoría energética especializada.
@@ -45,7 +47,7 @@ const IndustrialPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="rounded-[60px] overflow-hidden shadow-2xl relative z-20">
-<img
+                <img
                   src="fotos/ingeniero.jpeg"
                   alt="Ingeniero de Fremtec en proyecto de energía solar industrial en Argentina"
                   className="w-full h-[650px] object-cover"
@@ -60,20 +62,20 @@ const IndustrialPage: React.FC = () => {
               <h2 className="text-4xl md:text-5xl font-black mb-10 text-gray-900 leading-tight">Servicios de Ingeniería</h2>
               <div className="space-y-12">
                 {[
-                  { 
-                    title: "Eficiencia Energética", 
+                  {
+                    title: "Eficiencia Energética",
                     desc: "Analizamos el perfil de carga y calidad de energía para detectar fugas y optimizar consumos críticos en plantas industriales.",
-                    icon: "query_stats" 
+                    icon: "query_stats"
                   },
-                  { 
-                    title: "Huella de Carbono", 
+                  {
+                    title: "Huella de Carbono",
                     desc: "Estudio de huella de carbono Certificacion , mejorando el posicionamiento corporativo",
-                    icon: "eco" 
+                    icon: "eco"
                   },
-                  { 
-                    title: "Ingeniería On-Grid", 
+                  {
+                    title: "Ingeniería On-Grid",
                     desc: "Sistemas de inyección de alta potencia para reducir drásticamente los costos fijos mensuales y la dependencia de red.",
-                    icon: "electric_bolt" 
+                    icon: "electric_bolt"
                   }
                 ].map((service, i) => (
                   <div key={i} className="flex gap-8 group">
@@ -92,7 +94,7 @@ const IndustrialPage: React.FC = () => {
         </div>
       </section>
 
-      
+
     </div>
   );
 };

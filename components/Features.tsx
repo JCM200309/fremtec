@@ -47,13 +47,13 @@ const Features: React.FC = () => {
             <p className="text-gray-600 text-xl leading-relaxed">
               Somos una empresa que nos adecuamos a la necesidad de cada cliente, con un equipo de trabajo postventa que asiste las 24hs ante cualquier consulta.
             </p>
-            <button 
-            onClick={() => navigate("/faq")}
-            className="w-fit mt-4 text-primary font-bold hover:translate-x-2 transition-transform inline-flex items-center text-lg" >
+            <button
+              onClick={() => navigate("/faq")}
+              className="w-fit mt-4 text-primary font-bold hover:translate-x-2 transition-transform inline-flex items-center text-lg py-2 min-h-[44px]" >
               Preguntas comunes <span className="material-symbols-outlined ml-2">chevron_right</span>
             </button>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:w-3/5">
             {features.map((f, i) => (
               <div key={i} className="flex flex-col gap-5 rounded-2xl border border-gray-100 bg-gray-50/50 p-8 hover:bg-white hover:shadow-xl transition-all duration-300">
