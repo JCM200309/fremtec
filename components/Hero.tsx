@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
 
       {/* Indicador de scroll - ARREGLADO Y ANIMADO */}
 
-      <div className="flex absolute bottom-4 sm:bottom-1 md:bottom-2 left-1/2 right-1/2 -translate-x-1/2 animate-bounce-slow z-30 flex-col items-center pointer-events-none">
+      <div className="hidden md:flex absolute bottom-4 sm:bottom-1 md:bottom-2 left-1/2 right-1/2 -translate-x-1/2 animate-bounce-slow z-30 flex-col items-center pointer-events-none">
 
         <span className="text-white text-[9px] uppercase tracking-[0.6em] mb-4 font-black opacity-60">Explorar</span>
         <div className="w-0.5 h-10 md:h-16 bg-gradient-to-b from-secondary via-secondary to-transparent rounded-full shadow-[0_0_15px_rgba(251,192,45,0.4)]"></div>
