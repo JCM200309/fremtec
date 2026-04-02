@@ -10,7 +10,7 @@
 
 @layer components {
   .title-hero-texts {
-    @apply text-3xl! sm:text-4xl! md:text-5xl! lg:text-6xl! xl:text-6xl! 2xl:text-7xl! leading-tight! sm:leading-tight!;
+    @apply text-5xl! sm:text-6xl! md:text-7xl! lg:text-7xl! xl:text-8xl! 2xl:text-8xl! leading-tight! sm:leading-tight!;
   }
   
   .p-hero-texts {
@@ -18,7 +18,7 @@
   }
 
   .buttons-hero-texts{
-    @apply text-2xl! 2xl:text-2xl!;
+    @apply text-base! sm:text-lg! lg:text-xl! 2xl:text-2xl!;
   }
 
   .buttons-hero-size{

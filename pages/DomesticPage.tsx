@@ -10,8 +10,8 @@ const DomesticPage: React.FC = () => {
   return (
     <div className="flex flex-col">
       <Seo
-        title="Energía Solar Residencial | Fremtec Argentina"
-        description="Sistemas solares para tu hogar en Argentina: on-grid, híbridos y off-grid. Ahorro en la factura de luz, respaldo ante cortes y gestión de trámites Ley 27.424. Presupuesto gratuito."
+        title="Paneles Solares: Energía Solar Residencial y Eficiente | Fremtec"
+        description="Sistemas de energía solar para tu hogar en Argentina. Soluciones on-grid, híbridos y off-grid para energía eficiente, ahorro real y gestión de trámites Ley 27.424."
         image="/fotos/paginaWeb/Residencial/heroResidencial.jpeg"
         url="/residencial"
       />
@@ -20,17 +20,17 @@ const DomesticPage: React.FC = () => {
         <div className="absolute inset-0 bg-background-dark/30 z-10 "></div>
         <img
           src="/fotos/paginaWeb/Residencial/heroResidencial.jpeg"
-          alt="Instalación de paneles solares residenciales en un hogar en Argentina"
+          alt="Instalación de paneles solares residenciales para energía eficiente en un hogar en Argentina"
           className="absolute inset-0 w-full h-full object-cover opacity-90"
           fetchPriority="high"
         />
         <div className="relative z-20 text-center px-6 max-w-[900px]">
           <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-background-dark text-xs font-black uppercase tracking-widest mb-6 shadow-xl">Hogar Sustentable</span>
           <h1 className="text-white font-black mb-6 leading-tight drop-shadow-2xl title-hero-texts">
-            Tu Hogar, <span className="text-secondary">Tu Energía</span>
+            Energía Eficiente <span className="text-secondary">en Tu Hogar</span>
           </h1>
           <p className="text-white mx-auto drop-shadow-md p-hero-texts">
-            Asesoramos y dimensionamos sistemas solares a medida para el confort de tu familia y el ahorro real.
+            Asesoramos y dimensionamos sistemas de energía solar a medida para tu confort y un ahorro real en la factura.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 w-full justify-center sm:w-auto sm:text-sm py-20 buttons-hero-texts ">
@@ -46,10 +46,10 @@ const DomesticPage: React.FC = () => {
       <DomesticSolutions />
 
       {/* Tipos de Sistemas Residenciales */}
-      <section className="bg-white py-24 px-6 relative overflow-hidden">
+      <section className="bg-white py-12 md:py-24 px-4 md:px-6 relative overflow-hidden">
         <div className="decor-circle w-[400px] h-[400px] -top-20 -right-20 opacity-50"></div>
         <div className="max-w-[1100px] mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 underline decoration-secondary decoration-4 underline-offset-8">Tecnología para tu Vivienda</h2>
             <p className="text-gray-500 max-w-[600px] mx-auto">Nos especializamos en el diseño e instalación de sistemas adaptados a tus necesidades extraídas de nuestra experiencia en Argentina.</p>
           </div>
@@ -82,10 +82,10 @@ const DomesticPage: React.FC = () => {
                   <span className="material-symbols-outlined text-4xl">{system.icon}</span>
                 </div>
                 <h3 className="text-2xl font-black mb-4">{system.name}</h3>
-                <p className={`text-sm leading-relaxed mb-8 flex-grow ${system.active ? 'text-gray-300' : 'text-gray-600'}`}>{system.desc}</p>
+                <p className={`text-base leading-relaxed mb-8 flex-grow ${system.active ? 'text-gray-300' : 'text-gray-600'}`}>{system.desc}</p>
                 <ul className="space-y-3 mb-10">
                   {system.features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-2 text-sm font-bold">
+                    <li key={j} className="flex items-center gap-2 text-base font-bold">
                       <span className={`material-symbols-outlined text-sm ${system.active ? 'text-secondary' : 'text-primary'}`}>check_circle</span>
                       {f}
                     </li>
@@ -93,7 +93,7 @@ const DomesticPage: React.FC = () => {
                 </ul>
                 <button
                   onClick={() => navigate('/presupuesto')}
-                  className={`w-full py-4 rounded-2xl font-black transition-all ${system.active ? 'bg-secondary text-background-dark hover:brightness-110' : 'bg-primary text-white hover:bg-teal-700'}`} link>
+                  className={`w-full py-4 min-h-[48px] rounded-2xl font-black transition-all ${system.active ? 'bg-secondary text-background-dark hover:brightness-110' : 'bg-primary text-white hover:bg-teal-700'}`}>
                   Solicitar Presupuesto
 
                 </button>

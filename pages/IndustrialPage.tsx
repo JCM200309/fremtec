@@ -25,7 +25,7 @@ const IndustrialPage: React.FC = () => {
 
         <div className="relative z-10 container px-4 md:px-6 max-w-[1280px] text-center flex flex-col items-center justify-center min-h-[60vh]">
           <h1 className="title-hero-texts font-black mb-6 leading-tight tracking-tighter drop-shadow-xl">
-            Energía para <br /><span className="text-primary italic">Tu Industria</span>
+            Energía Eficiente <br className="md:hidden" /><span className="text-primary italic">en Tu Industria</span>
           </h1>
           <p className="text-xl text-gray-200 max-w-[700px] mx-auto leading-relaxed drop-shadow-md p-hero-texts mb-12">
             Optimizamos costos operativos mediante ingeniería solar de alta precisión y servicios de auditoría energética especializada.

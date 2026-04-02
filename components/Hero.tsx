@@ -43,9 +43,9 @@ const Hero: React.FC = () => {
           </Link>
           <button
             onClick={() => navigate('/Galeria')}
-            className="flex items-center justify-center rounded-xl px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium transition-all w-full sm:w-auto  buttons-hero-size mt-4 sm:mt-0"
+            className="flex items-center justify-center rounded-xl px-12 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/20 text-white font-medium transition-all w-full sm:w-auto buttons-hero-size"
           >
-            Nuestros proyectos <br></br>residenciales
+            Nuestros proyectos residenciales
           </button>
         </div>
       </div>
