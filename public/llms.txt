@@ -1,0 +1,22 @@
+# Fremtec - Energía Solar Argentina
+
+> Soluciones fotovoltaicas para hogares y empresas en Argentina, diseñadas para optimizar el consumo energético y el ahorro.
+
+Fremtec es una empresa dedicada a la provisión e instalación de sistemas de energía solar (energía fotovoltaica) en Argentina. Ofrecemos sistemas on-grid, off-grid e híbridos, brindando asesoramiento experto y adaptándonos a las necesidades energéticas de cada cliente.
+
+## Servicios Principales
+
+- **Sector Residencial:** Instalación de paneles solares en hogares para reducir la factura de luz y contar con energía limpia y de respaldo ante cortes.
+- **Sector Industrial:** Proyectos de gran escala para fábricas, empresas y sistemas rurales/agropecuarios, optimizando el rendimiento y reduciendo los costos operativos al máximo.
+- **Otras Soluciones Ecológicas:** Implementación de sistemas de bombeo de agua con energía solar, instalación de termotanques solares y climatización de piscinas.
+- **Cálculo y Asesoramiento:** Atención personalizada para dimensionar proyectos, realizar cálculo de consumos y entregar presupuestos adaptados a cada propiedad.
+
+## Enlaces del Sitio
+
+- [Inicio](https://www.fremtec.com.ar/)
+- [Soluciones Residenciales](https://www.fremtec.com.ar/residencial)
+- [Soluciones Industriales](https://www.fremtec.com.ar/industrial)
+- [Otras Soluciones](https://www.fremtec.com.ar/otras-soluciones)
+- [Preguntas Frecuentes (FAQ)](https://www.fremtec.com.ar/faq)
+- [Galería de Proyectos](https://www.fremtec.com.ar/galeria)
+- [Contacto y Solicitar Presupuesto](https://www.fremtec.com.ar/presupuesto)
